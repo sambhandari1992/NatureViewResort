@@ -1,0 +1,135 @@
+mat-toolbar {
+    background: hsl(210, 1%, 56%);
+    color: rgb(237, 239, 243);
+    display: flex;
+    justify-content: space-between;
+  
+    .img-logo {
+      border: none;
+      width: 6em;
+      // height: 150px;
+      // width: 150px;
+      // box-shadow: 10px 10px 10px 10px hsl(210, 1%, 56%);
+      // box-shadow: inset 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+      // box-shadow: 2px 2px 4px #147006;
+    }
+  
+    .links {
+      display: flex;
+      gap: 3em !important;
+    }
+    
+  }
+  
+  mat-sidenav {
+    margin: 16px;
+    width: 270px;
+    border-right: none;
+    background: hsl(200, 96%, 68%);
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .content {
+    height: calc(100vh - 130px);
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+  
+    padding: 16px;
+  
+    overflow: auto;
+  }
+  
+  mat-sidenav-container {
+    height: calc(100vh - 65px);
+  }
+  
+  .menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+  
+    mat-icon {
+      margin-right: 8px;
+    }
+  }
+  
+  .avatar {
+    margin-top: 16px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .name {
+    margin-top: 8px;
+    font-weight: normal;
+  }
+  
+  .designation {
+    margin-top: 2px;
+    font-size: 0.7rem;
+    color: lightgrey;
+  }
+  
+  mat-divider {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  
+  
+  
+  @media (max-width: 900px) {
+    .mat-toolbar {
+      .links {
+        display: none; // Hide the header links
+      }
+    }
+  }
+  @media (min-width: 900px) {
+    .mat-toolbar {
+      .inquire {
+        display: none; // Hide the header links
+      }
+      .img-logo {
+        width: 7em;
+      }
+    }
+  }
+  @media (max-width: 550px) {
+    .mat-toolbar {
+      .inquire {
+        display: none; // Hide the header links
+      }
+    }
+  }
+  
+  // @media (max-width: 900px) {
+  //   .mat-toolbar {
+  //     .links, .inquire {
+  //       display: none; // Hide the header links
+  //     }
+  //   }
+  // }
+  
+  // @media (max-width: 900px) {
+  //   .mat-toolbar {
+  //     .inquire {
+  //       display: none; // Hide the header links
+  //     }
+  //   }
+  // }
+  
+  @media (min-width: 500px) and (max-width:550px){
+    .mat-toolbar {
+      
+    }
+    
+  }
