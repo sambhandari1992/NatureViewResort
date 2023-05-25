@@ -2,6 +2,7 @@
   "name": "hamro-hotel",
   "version": "0.0.0",
   "scripts": {
+    "format": "prettier --write .",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -31,12 +32,19 @@
     "@angular/compiler-cli": "^15.2.0",
     "@ngneat/until-destroy-migration": "^10.0.0-beta.0",
     "@types/jasmine": "~4.3.0",
+    "eslint-config-prettier": "^8.8.0",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "prettier": "2.8.8",
     "typescript": "~4.9.4"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

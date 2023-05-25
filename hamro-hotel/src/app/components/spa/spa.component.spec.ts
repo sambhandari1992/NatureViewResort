@@ -8,9 +8,8 @@ describe('SpaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SpaComponent ]
-    })
-    .compileComponents();
+      declarations: [SpaComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SpaComponent);
     component = fixture.componentInstance;
