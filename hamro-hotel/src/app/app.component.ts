@@ -14,8 +14,20 @@ import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 export class AppComponent {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
+  isAccountComponentVisiable: boolean = false;
 
   constructor(private observer: BreakpointObserver, private router: Router) {}
+
+  openAccountComponent() {
+    console.log('open now');
+    if (!this.isAccountComponentVisiable) {
+      this.isAccountComponentVisiable = true;
+    }
+  }
+  closeAccountComponent(event: MouseEvent) {
+    this.isAccountComponentVisiable = false;
+    event.stopPropagation();
+  }
 
   ngAfterViewInit() {
     this.observer

@@ -8,9 +8,8 @@ describe('WeedingEventComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WeedingEventComponent ]
-    })
-    .compileComponents();
+      declarations: [WeedingEventComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(WeedingEventComponent);
     component = fixture.componentInstance;

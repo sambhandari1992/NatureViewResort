@@ -8,9 +8,8 @@ describe('LocalAttrectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LocalAttrectionComponent ]
-    })
-    .compileComponents();
+      declarations: [LocalAttrectionComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(LocalAttrectionComponent);
     component = fixture.componentInstance;

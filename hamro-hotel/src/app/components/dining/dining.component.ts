@@ -3,8 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-dining',
   templateUrl: './dining.component.html',
-  styleUrls: ['./dining.component.scss']
+  styleUrls: ['./dining.component.scss'],
 })
-export class DiningComponent {
-
-}
+export class DiningComponent {}
