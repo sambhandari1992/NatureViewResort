@@ -1,0 +1,124 @@
+.container {
+    display: flex;
+    padding: 2em;
+    width: 250px;
+    background-color: rgb(184, 194, 224);
+    margin-right: -0.9em;
+    margin-top: 0.55em;
+    background: linear-gradient(to bottom, hsl(210, 1%, 56%), rgb(75, 125, 125));
+  
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      align-self: center;
+    }
+    .name {
+      margin-top: 8px;
+      font-weight: normal;
+      align-self: center;
+    }
+    .designation {
+      margin-top: 2px;
+      font-size: 0.7rem;
+      align-self: center;
+      color: rgb(251, 245, 245);
+    }
+  
+    .feature-container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+  
+      .custom-button {
+        background-color: #95aeb1;
+        color: #000;
+        transition: background-color 0.2s ease-in-out;
+  
+        .left-content {
+          display: flex;
+          margin-right: -9px;
+        }
+        .right-content {
+          margin-right: auto;
+        }
+      }
+      .custom-button:hover {
+        background-color: #bdbdbd;
+      }
+      .icon {
+        margin-top: 7px;
+        font-size: 15px;
+        align-self: center;
+      }
+    }
+  }
+  
+  // mat-toolbar {
+  //   background: #004a9f;
+  //   color: white;
+  // }
+  
+  // mat-sidenav {
+  //   margin: 16px;
+  //   width: 200px;
+  //   border-right: none;
+  //   background: #002b5c;
+  //   color: white;
+  //   border-radius: 10px;
+  //   padding: 16px;
+  //   text-align: center;
+  // }
+  
+  // .content {
+  //   height: calc(100vh - 130px);
+  //   border-radius: 10px;
+  //   margin: 16px;
+  //   margin-left: 32px;
+  
+  //   padding: 16px;
+  
+  //   overflow: auto;
+  // }
+  
+  // mat-sidenav-container {
+  //   height: calc(100vh - 65px);
+  // }
+  
+  // .menu-button {
+  //   width: 100%;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: flex-start;
+  //   font-size: 1rem;
+  
+  //   mat-icon {
+  //     margin-right: 8px;
+  //   }
+  // }
+  
+  // .avatar {
+  //   margin-top: 16px;
+  //   width: 100px;
+  //   height: 100px;
+  //   border-radius: 50%;
+  // }
+  
+  // .name {
+  //   margin-top: 8px;
+  //   font-weight: normal;
+  // }
+  
+  // .designation {
+  //   margin-top: 2px;
+  //   font-size: 0.7rem;
+  //   color: lightgrey;
+  // }
+  
+  // mat-divider {
+  //   margin-top: 16px;
+  //   margin-bottom: 16px;
+  //   background-color: rgba(255, 255, 255, 0.5);
+  // }
+  

@@ -1,28 +1,17 @@
 <mat-toolbar>
-  <button
-    mat-icon-button
-    *ngIf="sidenav.mode === 'over'"
-    (click)="sidenav.toggle()"
-  >
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
     <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
     <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
   </button>
-
   <button mat-button class="inquire">
     <mat-icon>email</mat-icon>
     nvr@gmail.com
   </button>
-  <img
-    class="img-logo"
-    src="../../../assets/images/nature-view-resort 2.jpg"
-    alt="logo"
-    routerLink="/home"
-  />
+  <img class="img-logo" src="../../../assets/images/nature-view-resort 2.jpg" alt="logo" routerLink="/home" />
   <button mat-button class="inquire">
     <mat-icon>phone</mat-icon>
     4123414242
   </button>
-
   <div class="links">
     <button mat-button routerLink="/home">Home</button>
     <button mat-button routerLink="/about">About</button>
@@ -30,65 +19,17 @@
     <button mat-button routerLink="/contact">Contact</button>
     <button mat-button routerLink="/gallery">Gallery</button>
   </div>
-
-  <button
-    mat-icon-button
-    aria-label="Example icon-button with menu icon"
-    cdkOverlayOrigin
-    #trigger="cdkOverlayOrigin"
-    (click)="openAccountComponent()"
-  >
+  <button mat-icon-button aria-label="Example icon-button with menu icon" cdkOverlayOrigin #trigger="cdkOverlayOrigin" (click)="openAccountComponent()">
     <mat-icon class="landscape">manage_accounts </mat-icon>
   </button>
-  <ng-template
-    cdkConnectedOverlay
-    [cdkConnectedOverlayOrigin]="trigger"
-    [cdkConnectedOverlayOpen]="isAccountComponentVisiable"
-    (overlayOutsideClick)="closeAccountComponent($event)"
-  >
-    <app-account></app-account>
+  <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isAccountComponentVisiable" (overlayOutsideClick)="closeAccountComponent($event)">
+    <app-signup-and-login></app-signup-and-login>
+    <!-- <app-logininfo></app-logininfo> -->
   </ng-template>
 </mat-toolbar>
 
-
-
-
-
-
-
-
-
-
-
 <mat-sidenav-container>
   <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
-    <!-- <button mat-button class="menu-button" routerLink="/home">
-      <mat-icon>home</mat-icon>
-      <span>Home</span>
-    </button>
-
-    <button mat-button class="menu-button" routerLink="/about">
-      <mat-icon>info</mat-icon> <span>About</span>
-    </button>
-    <button mat-button class="menu-button" routerLink="/about">
-      <mat-icon>video_camera_front</mat-icon>
-      <span>Blogs</span>
-    </button>
-    <button mat-button class="menu-button" routerLink="/about">
-      <mat-icon>contact_support</mat-icon>
-      <span>Contact</span>
-    </button>
-    
-    <button mat-button class="menu-button" routerLink="/about">
-      <mat-icon>collections_bookmark</mat-icon>
-      <span>Gallery</span>
-    </button> -->
-
-    <button mat-button class="menu-button" routerLink="/profile">
-      <mat-icon>person</mat-icon>
-      <span>Profile</span>
-    </button>
-
     <div class="sidenav-links">
       <button mat-button class="menu-button" routerLink="/home">
         <mat-icon>home</mat-icon>
@@ -117,7 +58,7 @@
     </div>
 
     <mat-divider></mat-divider>
-    Elplore
+    <h4>Explore</h4>
     <mat-divider></mat-divider>
     <button mat-button class="menu-button" routerLink="/local-attraction">
       <span>Local Attraction </span>

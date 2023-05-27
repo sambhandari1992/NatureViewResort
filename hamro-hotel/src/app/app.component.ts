@@ -14,7 +14,7 @@ import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 export class AppComponent {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
-  isAccountComponentVisiable: boolean = false;
+  isAccountComponentVisiable: boolean = true;
 
   constructor(private observer: BreakpointObserver, private router: Router) {}
 
