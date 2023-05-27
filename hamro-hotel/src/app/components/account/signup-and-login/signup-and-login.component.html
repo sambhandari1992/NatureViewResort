@@ -45,7 +45,7 @@
       <mat-form-field appearance="outline">
         <mat-label>email</mat-label>
         <input matInput placeholder="example@abc.com" formControlName="email" />
-        <mat-icon matSuffix>person</mat-icon>
+        <mat-icon matSuffix>email</mat-icon>
         <mat-error *ngIf="email?.errors?.['required']">
           Email address is required
         </mat-error>
@@ -56,7 +56,7 @@
 
       <mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
-        <input matInput placeholder="Awnvjdf8@" formControlName="password" />
+        <input matInput placeholder="Sample75@" formControlName="password" />
         <mat-icon matSuffix>lock</mat-icon>
         <mat-error *ngIf="password?.errors?.['required']">
           Password is required
@@ -64,8 +64,8 @@
       </mat-form-field>
 
       <mat-form-field appearance="outline">
-        <mat-label>Password</mat-label>
-        <input matInput placeholder="Awnvjdf8@" formControlName="password" />
+        <mat-label>Repeat Password</mat-label>
+        <input matInput placeholder="Sample75@" formControlName="password" />
         <mat-icon matSuffix>lock</mat-icon>
         <mat-error *ngIf="password?.errors?.['required']">
           Password is required
