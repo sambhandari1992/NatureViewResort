@@ -156,3 +156,44 @@
       rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+  .container {
+    border: 1px solid red;
+    width: 31em;
+  
+    .form-container-login ,
+    .form-container-signUp {
+      mat-form-field {
+
+        width: 200px;
+        .repeat-password {
+          font-size: smaller;
+        }
+      }
+      .forgot-pass a {
+        margin-left: 0.8em;
+      }
+      .submitBtn {
+        margin-left: 30px;
+      }
+    }
+  }
+  .signUpBtn {
+    margin-top: -1em;
+  }
+
+}

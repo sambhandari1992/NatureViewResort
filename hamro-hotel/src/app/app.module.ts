@@ -29,6 +29,7 @@ import { LogininfoComponent } from './components/account/logininfo/logininfo.com
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/account/login/login.component';
 import { SignUpComponent } from './components/account/sign-up/sign-up.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { SignUpComponent } from './components/account/sign-up/sign-up.component'
     LogininfoComponent,
     LoginComponent,
     SignUpComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
