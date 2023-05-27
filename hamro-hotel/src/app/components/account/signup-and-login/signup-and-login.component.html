@@ -1,8 +1,4 @@
-<div
-  class="container"
-  [class.right-panel-active]="isButtonClicked"
-  [class.left-panel-active]="!isButtonClicked"
->
+<div class="container" [class.right-panel-active]="isButtonClicked" [class.left-panel-active]="!isButtonClicked">
   <div class="form-container-login mat-elevation-z5">
     <h1>Login Form</h1>
     <form [formGroup]="loginForm">
@@ -10,21 +6,15 @@
         <mat-label>email</mat-label>
         <input matInput placeholder="example@abc.com" formControlName="email" />
         <mat-icon matSuffix>person</mat-icon>
-        <mat-error *ngIf="email?.errors?.['required']">
-          Email address is required
-        </mat-error>
-        <mat-error *ngIf="email?.errors?.['email']">
-          Please enter a valid email address
-        </mat-error>
+        <mat-error *ngIf="email?.errors?.['required']"> Email address is required </mat-error>
+        <mat-error *ngIf="email?.errors?.['email']"> Please enter a valid email address </mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
         <input matInput placeholder="Awnvjdf8@" formControlName="password" />
         <mat-icon matSuffix>lock</mat-icon>
-        <mat-error *ngIf="password?.errors?.['required']">
-          Password is required
-        </mat-error>
+        <mat-error *ngIf="password?.errors?.['required']"> Password is required </mat-error>
       </mat-form-field>
 
       <div class="forgot-pass">
@@ -46,30 +36,22 @@
         <mat-label>email</mat-label>
         <input matInput placeholder="example@abc.com" formControlName="email" />
         <mat-icon matSuffix>email</mat-icon>
-        <mat-error *ngIf="email?.errors?.['required']">
-          Email address is required
-        </mat-error>
-        <mat-error *ngIf="email?.errors?.['email']">
-          Please enter a valid email address
-        </mat-error>
+        <mat-error *ngIf="email?.errors?.['required']"> Email address is required </mat-error>
+        <mat-error *ngIf="email?.errors?.['email']"> Please enter a valid email address </mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
         <input matInput placeholder="Sample75@" formControlName="password" />
         <mat-icon matSuffix>lock</mat-icon>
-        <mat-error *ngIf="password?.errors?.['required']">
-          Password is required
-        </mat-error>
+        <mat-error *ngIf="password?.errors?.['required']"> Password is required </mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
-        <mat-label>Repeat Password</mat-label>
+        <mat-label class="repeat-password">Repeat Password</mat-label>
         <input matInput placeholder="Sample75@" formControlName="password" />
         <mat-icon matSuffix>lock</mat-icon>
-        <mat-error *ngIf="password?.errors?.['required']">
-          Password is required
-        </mat-error>
+        <mat-error *ngIf="password?.errors?.['required']"> Password is required </mat-error>
       </mat-form-field>
 
       <button class="submitBtn">Submit</button>
@@ -94,9 +76,7 @@
 
     <div class="overlayRight">
       <h1>Not a member ?</h1>
-      <p>
-        " Enter your personal details and start journey with us from today "
-      </p>
+      <p>" Enter your personal details and start journey with us from today "</p>
 
       <div class="signUpBtn">
         <button
