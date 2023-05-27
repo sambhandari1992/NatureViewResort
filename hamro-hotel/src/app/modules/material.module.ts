@@ -28,8 +28,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { ReactiveFormsModule } from '@angular/forms';
 
-const materialComponents = [
+const materialModules = [
   MatButtonModule,
   MatIconModule,
   MatButtonToggleModule,
@@ -58,10 +59,11 @@ const materialComponents = [
   MatToolbarModule,
 
   OverlayModule,
+  ReactiveFormsModule
 ];
 
 @NgModule({
-  imports: [materialComponents],
-  exports: [materialComponents],
+  imports: [materialModules],
+  exports: [materialModules],
 })
 export class MaterialModule {}

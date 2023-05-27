@@ -1,0 +1,124 @@
+<div
+  class="container"
+  [class.right-panel-active]="isButtonClicked"
+  [class.left-panel-active]="!isButtonClicked"
+>
+  <div class="form-container-login mat-elevation-z5">
+    <h1>Login Form</h1>
+    <form [formGroup]="loginForm">
+      <mat-form-field appearance="outline">
+        <mat-label>email</mat-label>
+        <input matInput placeholder="example@abc.com" formControlName="email" />
+        <mat-icon matSuffix>person</mat-icon>
+        <mat-error *ngIf="email?.errors?.['required']">
+          Email address is required
+        </mat-error>
+        <mat-error *ngIf="email?.errors?.['email']">
+          Please enter a valid email address
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Awnvjdf8@" formControlName="password" />
+        <mat-icon matSuffix>lock</mat-icon>
+        <mat-error *ngIf="password?.errors?.['required']">
+          Password is required
+        </mat-error>
+      </mat-form-field>
+
+      <div class="forgot-pass">
+        <a routerLink="/contact"> Forgot Password? </a>
+      </div>
+      <span class="loginBtn">
+        <a mat-fab extended routerLink=".login">
+          <mat-icon>login</mat-icon>
+          Login
+        </a>
+      </span>
+    </form>
+  </div>
+
+  <div class="form-container-signUp mat-elevation-z5">
+    <h1>Sign Up Form</h1>
+    <form [formGroup]="signUpForm">
+      <mat-form-field appearance="outline">
+        <mat-label>email</mat-label>
+        <input matInput placeholder="example@abc.com" formControlName="email" />
+        <mat-icon matSuffix>person</mat-icon>
+        <mat-error *ngIf="email?.errors?.['required']">
+          Email address is required
+        </mat-error>
+        <mat-error *ngIf="email?.errors?.['email']">
+          Please enter a valid email address
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Awnvjdf8@" formControlName="password" />
+        <mat-icon matSuffix>lock</mat-icon>
+        <mat-error *ngIf="password?.errors?.['required']">
+          Password is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Awnvjdf8@" formControlName="password" />
+        <mat-icon matSuffix>lock</mat-icon>
+        <mat-error *ngIf="password?.errors?.['required']">
+          Password is required
+        </mat-error>
+      </mat-form-field>
+
+      <!-- <button class="submitBtn">
+        <a routerLink=".login">
+          Submit
+        </a>
+      </button> -->
+
+      <button class="submitBtn">Submit</button>
+    </form>
+  </div>
+
+  <div class="overlay-container">
+    <div class="overlayLeft">
+      <h1>Welcome Back</h1>
+      <p>" To keep in touch with us please login with your personal info "</p>
+      <button
+      class="custom-SignIn"
+        (click)="openLeftPanel()"
+        [ngClass]="{
+          'right-panel-active': !isButtonClicked,
+          'left-panel-active': isButtonClicked
+        }"
+      >
+        Sign In
+      </button>
+    </div>
+    <div class="overlayRight">
+      <h1>Not a member ?</h1>
+      <p>
+        " Enter your personal details and start journey with us from today "
+      </p>
+
+      <div class="signUpBtn">
+        <button
+          mat-button
+          id="signUp"
+          (click)="openRightPanel()"
+          [ngClass]="{
+            'right-panel-active': !isButtonClicked,
+            'left-panel-active': isButtonClicked
+          }"
+        >
+          <a mat-fab extended routerLink=".login">
+            <mat-icon>edit_document</mat-icon>
+            Sign Up
+          </a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

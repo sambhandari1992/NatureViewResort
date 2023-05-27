@@ -24,6 +24,11 @@ import { AboutComponent } from './components/about/about.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AccountComponent } from './components/account/account.component';
+import { SignupAndLoginComponent } from './components/account/signup-and-login/signup-and-login.component';
+import { LogininfoComponent } from './components/account/logininfo/logininfo.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/account/login/login.component';
+import { SignUpComponent } from './components/account/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -47,12 +52,17 @@ import { AccountComponent } from './components/account/account.component';
     BlogsComponent,
     ContactComponent,
     AccountComponent,
+    SignupAndLoginComponent,
+    LogininfoComponent,
+    LoginComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
