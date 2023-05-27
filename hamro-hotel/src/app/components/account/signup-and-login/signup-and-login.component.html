@@ -72,12 +72,6 @@
         </mat-error>
       </mat-form-field>
 
-      <!-- <button class="submitBtn">
-        <a routerLink=".login">
-          Submit
-        </a>
-      </button> -->
-
       <button class="submitBtn">Submit</button>
     </form>
   </div>
@@ -87,7 +81,7 @@
       <h1>Welcome Back</h1>
       <p>" To keep in touch with us please login with your personal info "</p>
       <button
-      class="custom-SignIn"
+        class="custom-SignIn"
         (click)="openLeftPanel()"
         [ngClass]="{
           'right-panel-active': !isButtonClicked,
@@ -97,6 +91,7 @@
         Sign In
       </button>
     </div>
+
     <div class="overlayRight">
       <h1>Not a member ?</h1>
       <p>

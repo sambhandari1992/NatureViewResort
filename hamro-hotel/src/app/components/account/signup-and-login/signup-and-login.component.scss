@@ -3,7 +3,6 @@
 }
 
 .container {
-  
   // margin-top: 1.3em;
   &.right-panel-active {
     .overlayRight {
@@ -14,7 +13,6 @@
       transform: translateX(-100%);
       opacity: 1;
       z-index: 2;
-      
     }
   }
   & .left-panel-active {
@@ -23,14 +21,12 @@
       // opacity: 0;
       opacity: 1;
       z-index: 2;
-
     }
     .form-container-signUp {
       transform: translateX(100%);
       opacity: 1;
       z-index: 2;
     }
-
   }
 
   display: flex;
@@ -39,7 +35,8 @@
   margin-top: 0.4em;
   margin-right: -1em;
 
-  .form-container-login, .form-container-signUp {
+  .form-container-login,
+  .form-container-signUp {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,7 +47,6 @@
     mat-form-field {
       width: 100%;
       padding: 0.6em;
-
     }
     .loginBtn {
       display: flex;
@@ -59,7 +55,7 @@
       height: 5em;
     }
 
-    .forgot-pass a{
+    .forgot-pass a {
       // font-size: 16px;
       color: #3498db;
       text-decoration: none;
@@ -67,45 +63,15 @@
         text-decoration: underline;
         color: green;
       }
-      
     }
     .submitBtn {
       margin-left: 50px;
-    
     }
-
-    
-    // .submitBtn {
-    //   background-color: #e92d2d;
-    //   color: #fff;
-    //   box-shadow: -5px -5px 10px #fafafa, 5px 5px 8px #efe8e6;
-    //   text-transform: uppercase;
-    //   border-radius: 20px;
-    //   border: none;
-    //   outline: none;
-    //   font-size: 12px;
-    //   font-weight: bold;
-    //   padding: 15px 45px;
-    //   margin-left: 50px;
-    //   letter-spacing: 1px;
-    //   cursor: pointer;
-    //   transition: transform 80ms ease-in;
-    //   &:hover {
-    //   background-color: #058254;
-    //   }
-      
-    // }
-    // submitBtn:hover{
-    //   color: #3498db;
-    //   box-shadow: inset 2px 2px 5px #BABECC,
-    //              inset -5px -5px 10px #ffffff73;
-    // }
-
   }
 
   .overlay-container {
     .overlayRight {
-      //Not a member 
+      //Not a member
       display: flex;
       justify-content: center;
       align-items: flex-end;
@@ -137,7 +103,6 @@
         align-items: flex-end;
         height: 7em;
         // margin-bottom: -29px;
-  
       }
     }
     .overlayLeft {
@@ -168,65 +133,11 @@
 
   .custom-SignIn {
     margin-top: 5em;
-  
   }
 }
 
-// .signUpContainer {
-//     width: 50%;
-//     height: 100%;
-//     position: absolute;
-//     transition: all 10s;
-// }
-// .signInContainer {
-//     width: 50%;
-//     height: 100%;
-//     position: absolute;
-//     transition: all 10s;
-// }
-
-// .container.right-panel-active .form-container-login {
-//   transform: translateX(100%);
-//   opacity: 0;
-// }
-// .container.right-panel-active .form-container-signUp {
-//   transform: translateX(100%);
-//   opacity: 1;
-//   z-index: 2;
-// }
-// .container.right-panel-active .overlayRight {
-//   transform: translateX(-100%);
-//   opacity: 0;
-// }
-// .container.left-panel-active .overlayLeft {
-//   transform: translateX(-100%);
-//   opacity: 1;
-//   z-index: 2;
-// }
-
-////////////////////////
-///
-/// /* You can add global styles to this file, and also import other style files */
-
-// .center {
-//   display: flex;
-//   justify-content: center;
-// }
-
-// .margin-top {
-//   margin-top: 16px !important;
-// }
-
-// .text-center {
-//   text-align: center;
-// }
-
-
-
-
-
-
-.submitBtn, .custom-SignIn {
+.submitBtn,
+.custom-SignIn {
   background-color: #e45252;
   color: #fff;
   text-transform: uppercase;
@@ -240,9 +151,9 @@
   cursor: pointer;
   transition: transform 80ms ease-in;
   &:hover {
-  background-color: #1e748f;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;  }
-  
+    background-color: #1e748f;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
 }
-
-
