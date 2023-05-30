@@ -21,7 +21,7 @@
         <a routerLink="/contact"> Forgot Password? </a>
       </div>
 
-      <span class="loginBtn">
+      <span class="matLoginBtn">
         <a mat-fab extended routerLink="login">
           <mat-icon>login</mat-icon>
           Sign In
@@ -58,21 +58,17 @@
         <mat-error *ngIf="password?.errors?.['required']"> Password is required </mat-error>
       </mat-form-field>
 
-      <!-- <button class="submitBtn">Submit</button> -->
-      <!-- <button
-      mat-button
-      class="SignUpBtnToHide"
-    >
-      <a mat-fab extended>
+
+    <!-- <button class="SignUpBtnToHide">
+      <mat-icon>edit_document</mat-icon>
+      Submit
+    </button> -->
+    <span class="matSubmitBtn">
+      <a mat-fab extended >
         <mat-icon>edit_document</mat-icon>
         Submit
       </a>
-    </button> -->
-
-    <button class="SignUpBtnToHide">
-      <mat-icon>edit_document</mat-icon>
-      Submit
-    </button>
+    </span>
     
     
     
