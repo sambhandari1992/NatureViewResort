@@ -3,6 +3,11 @@
 }
 
 .container {
+  .SignUpBtnToHide.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
   // margin-top: 1.3em;
   &.right-panel-active {
     .overlayRight {
@@ -54,9 +59,13 @@
       align-items: flex-end;
       height: 5em;
     }
+    .exiting-user,
+    .new-user {
+      display: none;
+    }
 
     .forgot-pass a {
-      // font-size: 16px;
+      margin-left: 1em;
       color: #3498db;
       text-decoration: none;
       &:hover {
@@ -64,8 +73,43 @@
         color: green;
       }
     }
-    .submitBtn {
-      margin-left: 50px;
+
+    .SignUpBtnToHide {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 4em;
+      border-radius: 3em;
+      border: none;
+      background-color: #e45252;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 8px 32px;
+      box-shadow: none;
+      transition: box-shadow 0.3s ease;
+
+      mat-icon {
+        margin-right: 8px;
+      }
+
+      &:active {
+        outline: none;
+        animation: shadowEffect 0.2s linear;
+      }
+
+      @keyframes shadowEffect {
+        0% {
+          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+        }
+        50% {
+          box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        }
+        100% {
+          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+        }
+      }
     }
   }
 
@@ -86,12 +130,7 @@
       right: 0;
       width: 50%;
       height: 100%;
-      background: linear-gradient(
-          217deg,
-          rgba(88, 209, 63, 0.8),
-          rgba(55, 121, 220, 0.8) 70.71%
-        ),
-        linear-gradient(127deg, rgb(111, 103, 113), #4f92d6e7 0.1%),
+      background: linear-gradient(217deg, rgba(88, 209, 63, 0.8), rgba(55, 121, 220, 0.8) 70.71%), linear-gradient(127deg, rgb(111, 103, 113), #4f92d6e7 0.1%),
         linear-gradient(336deg, rgb(129, 128, 130), rgb(171, 90, 187) 70.71%);
       // color: #fff;
       transition: all 0.5s;
@@ -121,12 +160,7 @@
       color: #fff;
       text-align: center;
       transition: all 0.5s;
-      background: linear-gradient(
-          217deg,
-          rgba(5, 133, 116, 0.8),
-          rgba(43, 179, 221, 0.8) 70.71%
-        ),
-        linear-gradient(127deg, rgb(214, 172, 225), #6ea0d1e7 0.1%),
+      background: linear-gradient(217deg, rgba(5, 133, 116, 0.8), rgba(43, 179, 221, 0.8) 70.71%), linear-gradient(127deg, rgb(214, 172, 225), #6ea0d1e7 0.1%),
         linear-gradient(336deg, rgb(205, 148, 215), rgb(207, 76, 236) 70.71%);
     }
   }
@@ -152,48 +186,68 @@
   transition: transform 80ms ease-in;
   &:hover {
     background-color: #1e748f;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 600px) {
   .container {
-    border: 1px solid red;
-    width: 31em;
-  
-    .form-container-login ,
+    .form-container-login,
     .form-container-signUp {
-      mat-form-field {
-
-        width: 200px;
-        .repeat-password {
-          font-size: smaller;
+      .exiting-user,
+      .new-user {
+        color: red;
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+        &:hover {
+          cursor: pointer;
         }
       }
-      .forgot-pass a {
-        margin-left: 0.8em;
+    }
+    mat-form-field {
+      .repeat-password {
+        font-size: smaller;
       }
-      .submitBtn {
-        margin-left: 30px;
+    }
+
+    .form-container-login {
+      position: absolute;
+      &.showLogin {
+        display: none;
+      }
+    }
+    .form-container-signUp {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      &.showSignUp {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    .overlay-container {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .container {
+    .form-container-login,
+    .form-container-signUp {
+      .SignUpBtnToHide {
+        width: 200px;
+        margin: 0px;
+        justify-content: center;
+  
+      }
+      max-width: 250px;
+      mat-form-field {
+        width: 210px;
+        padding: 0.6em;
       }
     }
   }
-  .signUpBtn {
-    margin-top: -1em;
-  }
-
 }

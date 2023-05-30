@@ -10,6 +10,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup-and-login.component.scss']
 })
 export class SignupAndLoginComponent implements OnInit {
+  isButtonClicked: boolean = false;
+  isSignUpFormVisible: boolean = false;
+
+  showSignUpForm(): void {
+    this.isSignUpFormVisible = !this.isSignUpFormVisible;
+    console.log('true now');
+  }
+
+
   loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', Validators.required],
@@ -36,19 +45,11 @@ export class SignupAndLoginComponent implements OnInit {
     return this.loginForm.get('password');
   }
 
-  doSomethings() {
-    console.log('i am doing something');
-  }
-
-  isButtonClicked: boolean = false;
-
   openRightPanel() {
     this.isButtonClicked = !this.isButtonClicked;
-    console.log(this.isButtonClicked);
   }
   openLeftPanel() {
     this.isButtonClicked = !this.isButtonClicked;
-    console.log(this.isButtonClicked);
   }
 
   // submit() {

@@ -1,6 +1,6 @@
-<div class="container" [class.right-panel-active]="isButtonClicked" [class.left-panel-active]="!isButtonClicked">
-  <div class="form-container-login mat-elevation-z5">
-    <h1>Login Form</h1>
+<div class="container" [class.right-panel-active]="isButtonClicked" [class.left-panel-active]="isButtonClicked">
+  <div class="form-container-login mat-elevation-z5" [ngClass]="{ showLogin: isSignUpFormVisible }">
+    <h1>Sign In Form</h1>
     <form [formGroup]="loginForm">
       <mat-form-field appearance="outline">
         <mat-label>email</mat-label>
@@ -20,16 +20,20 @@
       <div class="forgot-pass">
         <a routerLink="/contact"> Forgot Password? </a>
       </div>
+
       <span class="loginBtn">
-        <a mat-fab extended routerLink=".login">
+        <a mat-fab extended routerLink="login">
           <mat-icon>login</mat-icon>
-          Login
+          Sign In
         </a>
       </span>
+      <div class="new-user">
+        <a (click)="showSignUpForm()">New User?</a>
+      </div>
     </form>
   </div>
 
-  <div class="form-container-signUp mat-elevation-z5">
+  <div class="form-container-signUp mat-elevation-z5" [ngClass]="{ showSignUp: isSignUpFormVisible }">
     <h1>Sign Up Form</h1>
     <form [formGroup]="signUpForm">
       <mat-form-field appearance="outline">
@@ -54,8 +58,28 @@
         <mat-error *ngIf="password?.errors?.['required']"> Password is required </mat-error>
       </mat-form-field>
 
-      <button class="submitBtn">Submit</button>
+      <!-- <button class="submitBtn">Submit</button> -->
+      <!-- <button
+      mat-button
+      class="SignUpBtnToHide"
+    >
+      <a mat-fab extended>
+        <mat-icon>edit_document</mat-icon>
+        Submit
+      </a>
+    </button> -->
+
+    <button class="SignUpBtnToHide">
+      <mat-icon>edit_document</mat-icon>
+      Submit
+    </button>
+    
+    
+    
     </form>
+    <div class="exiting-user">
+      <a (click)="showSignUpForm()"> Already have an account? </a>
+    </div>
   </div>
 
   <div class="overlay-container">
@@ -78,22 +102,16 @@
       <h1>Not a member ?</h1>
       <p>" Enter your personal details and start journey with us from today "</p>
 
-      <div class="signUpBtn">
-        <button
-          mat-button
-          id="signUp"
-          (click)="openRightPanel()"
-          [ngClass]="{
-            'right-panel-active': !isButtonClicked,
-            'left-panel-active': isButtonClicked
-          }"
-        >
-          <a mat-fab extended routerLink=".login">
-            <mat-icon>edit_document</mat-icon>
-            Sign Up
-          </a>
-        </button>
-      </div>
+      <button
+        class="custom-SignIn"
+        (click)="openRightPanel()"
+        [ngClass]="{
+          'right-panel-active': !isButtonClicked,
+          'left-panel-active': isButtonClicked
+        }"
+      >
+        Sign Up
+      </button>
     </div>
   </div>
 </div>
