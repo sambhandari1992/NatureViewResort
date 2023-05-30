@@ -3,12 +3,9 @@
 }
 
 .container {
-  .SignUpBtnToHide.show {
-    opacity: 1;
-    visibility: visible;
+  .matSubmitBtn a {
+    color: rgb(59, 123, 251);
   }
-
-  // margin-top: 1.3em;
   &.right-panel-active {
     .overlayRight {
       transform: translateX(-100%);
@@ -23,7 +20,6 @@
   & .left-panel-active {
     .form-container-login {
       transform: translateX(100%);
-      // opacity: 0;
       opacity: 1;
       z-index: 2;
     }
@@ -53,7 +49,7 @@
       width: 100%;
       padding: 0.6em;
     }
-    .loginBtn {
+    .matLoginBtn , .matSubmitBtn{
       display: flex;
       justify-content: center;
       align-items: flex-end;
@@ -71,44 +67,6 @@
       &:hover {
         text-decoration: underline;
         color: green;
-      }
-    }
-
-    .SignUpBtnToHide {
-      display: inline-flex;
-      align-items: center;
-      margin-left: 4em;
-      border-radius: 3em;
-      border: none;
-      background-color: #e45252;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: bold;
-      text-transform: uppercase;
-      cursor: pointer;
-      padding: 8px 32px;
-      box-shadow: none;
-      transition: box-shadow 0.3s ease;
-
-      mat-icon {
-        margin-right: 8px;
-      }
-
-      &:active {
-        outline: none;
-        animation: shadowEffect 0.2s linear;
-      }
-
-      @keyframes shadowEffect {
-        0% {
-          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
-        }
-        50% {
-          box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-        }
-        100% {
-          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
-        }
       }
     }
   }
@@ -186,14 +144,22 @@
   transition: transform 80ms ease-in;
   &:hover {
     background-color: #1e748f;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    // box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -2px 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 2, 2);
+    transition: background-color 0.2s ease-in-out;
+
+
   }
 }
 
 @media (max-width: 600px) {
   .container {
+
+    
     .form-container-login,
     .form-container-signUp {
+      
+      
       .exiting-user,
       .new-user {
         color: red;
@@ -251,3 +217,5 @@
     }
   }
 }
+
+
