@@ -5,6 +5,10 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { delay, filter } from 'rxjs/operators';
 import { NavigationEnd, Router } from '@angular/router';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { ContentService } from 'src/app/services/content.services';
+import { NavData } from './nav.interface'
+
+
 
 @UntilDestroy()
 @Component({
@@ -16,9 +20,15 @@ export class NavComponent {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
   isAccountComponentVisiable: boolean = false;
+  navData: NavData;
 
-  constructor(private observer: BreakpointObserver, private router: Router) {}
 
+
+  constructor(private observer: BreakpointObserver, private router: Router, private contentService: ContentService) {
+    this.navData = this.contentService.navItems as NavData;
+
+  }
+  
   openAccountComponent() {
     console.log('open now');
     if (!this.isAccountComponentVisiable) {

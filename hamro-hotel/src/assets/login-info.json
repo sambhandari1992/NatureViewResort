@@ -1,0 +1,31 @@
+{ 
+    "profileImg": "assets/images/sam.JPG",
+  "personalInfo": {
+    "name": "Sam Bhandari",
+    "designation": "Platinium Guest",
+    "phoneNumber": "98",
+    "email": "sam@example.com",
+    "dateOfBirth": "1990-01-01",
+    "gender": "Male",
+    "address": "123 Main Street, City, Country",
+    "nationality": "Country",
+    "occupation": "Software Engineer",
+    "emergencyContact": {
+      "name": "John Doe",
+      "phoneNumber": "1234567890"
+    },
+    "socialMedia": {
+      "linkedin": "https://www.linkedin.com/in/sambhandari",
+      "twitter": "https://twitter.com/sambhandari",
+      "website": "https://www.sambhandari.com"
+    },
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae metus odio. Aenean fermentum felis at neque vehicula, at volutpat mauris luctus. Suspendisse vel placerat sapien."
+  },
+  "buttons": [
+    { "label": "Account", "icon": "manage_accounts", "path": "/account" },
+    { "label": "Security", "icon": "security", "path": "/security" },
+    { "label": "Preference", "icon": "room_preferences", "path": "/preference" },
+    { "label": "Bookings", "icon": "book_online", "path": "/bookings" },
+    { "label": "Settings", "icon": "settings", "path": "/settings" }
+  ]
+}
