@@ -1,0 +1,72 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .welcome,
+  .resort,
+  .to {
+    min-width: 390px;
+    position: absolute;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(121, 117, 117, 0.7);
+    padding: 10px;
+    opacity: 0; /* Start with opacity 0 */
+  }
+  
+  .carousel img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+.welcome {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translate(-50%, 400%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, 250%);
+    opacity: 1;
+  }
+}
+
+.resort {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 250%);
+    animation: slideDown 5s forwards;
+  }
+  
+  @keyframes slideDown {
+    0% {
+      transform: translate(-50%, 250%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, 350%);
+      opacity: 1;
+    }
+  }
+
+
+
+
+  
+  
+
+
+
+
+  

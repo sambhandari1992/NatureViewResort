@@ -30,6 +30,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/account/login/login.component';
 import { SignUpComponent } from './components/account/sign-up/sign-up.component';
 import { NavComponent } from './components/nav/nav.component';
+import { FancyWordsComponent } from './components/home/fancy-words/fancy-words.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { NavComponent } from './components/nav/nav.component';
     LoginComponent,
     SignUpComponent,
     NavComponent,
+    FancyWordsComponent
   ],
   imports: [
     BrowserModule,
