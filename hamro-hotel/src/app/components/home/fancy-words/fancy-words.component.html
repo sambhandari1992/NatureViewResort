@@ -1,6 +1,7 @@
-<div class="container">
-    <div class="welcome">{{ welcomeText }}</div>
-    <div class="resort">{{ resortText }}</div>
-
+<ng-container *ngFor="let container of containers; let i = index">
+  <div class="container{{ i + 1 }}  sameContainer">
+    <div *ngFor="let item of container | keyvalue">
+      <div class="{{ item.key }} sameValue">{{ item.value }}</div>
+    </div>
   </div>
-  
+</ng-container>

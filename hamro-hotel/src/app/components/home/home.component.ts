@@ -1,39 +1,33 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-home',
-//   templateUrl: './home.component.html',
-//   styleUrls: ['./home.component.scss'],
-// })
-// export class HomeComponent {}
-
-
-
-
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  images: string[] = [
-    '../../../assets/images/home/5.jpeg',
-    '../../../assets/images/home/6.jpeg',
-    '../../../assets/images/home/7.jpeg',
-    // Add more image URLs as needed
-  ];
+  images: string[] = [];
+
   currentImageIndex = 0;
 
   ngOnInit() {
+    this.generateImageURLs();
     setInterval(() => {
       this.changeImage();
-    }, 5000); // Change image every 5 seconds
+    }, 10000); // Change image every 5 seconds
+  }
+
+  generateImageURLs() {
+    const baseURL = '../../../assets/images/home/pic';
+    const totalImages = 9;
+
+    for (let i = 0; i <= totalImages; i++) {
+      const imageURL = `${baseURL}${i}.jpeg`;
+      this.images.push(imageURL);
+    }
   }
 
   changeImage() {
     this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
-    console.log(this.currentImageIndex);
   }
 }
