@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,24 +7,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   images: string[] = [];
-
   currentImageIndex = 0;
+
+  constructor(private ngZone: NgZone) {}
 
   ngOnInit() {
     this.generateImageURLs();
-    setInterval(() => {
-      this.changeImage();
-    }, 10000); // Change image every 5 seconds
+    this.startImageTimer();
   }
 
   generateImageURLs() {
     const baseURL = '../../../assets/images/home/img';
-    const totalImages = 10;
+    const totalImages = 21;
 
     for (let i = 0; i <= totalImages; i++) {
       const imageURL = `${baseURL}${i}.jpeg`;
       this.images.push(imageURL);
     }
+  }
+
+  startImageTimer() {
+    this.ngZone.runOutsideAngular(() => {
+      setInterval(() => {
+        this.ngZone.run(() => {
+          this.changeImage();
+        });
+      }, 5000); // Change image every 5 seconds
+    });
   }
 
   changeImage() {
