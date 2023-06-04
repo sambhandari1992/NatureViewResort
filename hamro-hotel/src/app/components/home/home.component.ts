@@ -18,8 +18,8 @@ export class HomeComponent implements OnInit {
   }
 
   generateImageURLs() {
-    const baseURL = '../../../assets/images/home/pic';
-    const totalImages = 9;
+    const baseURL = '../../../assets/images/home/img';
+    const totalImages = 10;
 
     for (let i = 0; i <= totalImages; i++) {
       const imageURL = `${baseURL}${i}.jpeg`;
