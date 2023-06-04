@@ -66,3 +66,11 @@
 
 
 
+
+
+/* Media Query for smaller viewports */
+@media (max-width: 500px) {
+.sameValue {
+  font-size: 15px;
+}
+}
