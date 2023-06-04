@@ -1,0 +1,68 @@
+.sameContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sameValue {
+  min-width: 12em;
+  position: absolute;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(121, 117, 117, 0.7);
+  padding: 10px;
+  opacity: 0;
+}
+
+@keyframes slideUp {
+  0%, 100% {
+    transform: translate(-50%, 400%);
+  }
+  5%, 90% {
+    transform: translate(-50%, 250%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translate(-50%, 250%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, 349%);
+    opacity: 1;
+  }
+}
+
+@keyframes hideText {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@for $i from 1 through 11 {
+  .container#{$i} {
+    .sameValue {
+      $translateY: calc(#{$i * 100}% + 100%);
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, $translateY);
+      animation: slideUp 10s #{($i - 1) * 10}s forwards;
+
+      &.item2 {
+        animation: slideDown 5s #{($i - 1) * 10}s forwards, hideText 1s #{($i * 10) - 1}s forwards;
+      }
+    }
+  }
+}
+
+
+
+

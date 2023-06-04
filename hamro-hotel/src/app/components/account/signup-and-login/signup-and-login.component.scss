@@ -162,12 +162,13 @@
       
       .exiting-user,
       .new-user {
-        color: red;
+      color: #3498db;
         display: flex;
         justify-content: center;
         margin-top: 1em;
         &:hover {
           cursor: pointer;
+          text-decoration: underline;
         }
       }
     }
@@ -217,5 +218,6 @@
     }
   }
 }
+
 
 

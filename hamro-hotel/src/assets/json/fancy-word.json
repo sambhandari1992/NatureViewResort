@@ -1,0 +1,15 @@
+{
+  "containers": [
+    { "item1": "Welcome To", "item2": "The Nature View Resort" },
+    { "item1": "Your Gateway To", "item2": "Unforgettable Experiences" },
+    { "item1": "A Journey Of", "item2": "Life Experience" },
+    { "item1": "Plan Your Dream Wedding", "item2": "Where Nature's Wonders" },
+    { "item1": "Have A Quality Time ", "item2": "with Your Loved Ones." },
+    { "item1": "Immerse Yourself in", "item2": "Healing Powers of Nature" },
+    { "item1": "A Journey", "item2": "Of Wellness" },
+    { "item1": "Fill The Lifebook With", "item2": "Good Memory" },
+    { "item1": "Enjoy The Beauty", "item2": "Of The Nature" },
+    { "item1": "Embark on a", "item2": "Thrilling Trekking Expedition" },
+    { "item1": "Dive into Sunlit", "item2": "Pools with Majestic Views" }
+  ]
+}
