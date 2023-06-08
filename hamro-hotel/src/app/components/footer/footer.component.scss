@@ -3,79 +3,124 @@ $secondary-color: aqua;
 $accent-color: rgb(214, 67, 187);
 
 footer {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-
-  .section1 {
-    background-color: $primary-color;
-    // display: flex;
-    // flex-basis: 50%;
-
-    .footer-item {
-      padding: 10px;
-      flex-grow: 1;
-      //   &:nth-child(1) {
-      //     flex-grow: 2; /* Increase the flex-grow value to give more space to the second item */
-      //   }
-      //   &:nth-child(2) {
-      //     flex-grow: 2; /* Increase the flex-grow value to give more space to the second item */
-      //   }
-
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5em;
-
-        p {
-          margin: 0; /* Remove default margin for paragraphs */
-        }
-      }
-
-      .contact-info {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-top: 20px;
-
-        mat-icon {
-          margin-right: 5px;
-        }
-
-        h4 {
-          margin: 0;
-        }
-      }
-    }
-  }
-
-  .section2 {
-    justify-content: center;
-    .footer-item {
-      display: flex;
-      gap: 0.4em;
-    }
-
     display: flex;
-    flex-direction: row;
-    // border: 1px solid red;
-    background-color: $primary-color;
-    p {
-      align-self: center;
+    flex-direction: column;
+
+    .section1 {
+        background-color: $primary-color;
+        display: flex;
+        // justify-content: space-between;
+          border-bottom: 1px solid #000;
+
+
+        .footer-item {
+          // flex-basis: 25%; /* Adjust this value to control the width of each item */
+          // border: 1px solid #000;
+          padding: 10px;
+          box-sizing: border-box;
+              // &:nth-child(2) {
+              //   flex-grow: 2; /* Increase the flex-grow value to give more space to the second item */
+              // }
+            //   &:nth-child(2) {
+            //     flex-grow: 2; /* Increase the flex-grow value to give more space to the second item */
+            //   }
+
+            // .container {
+            //     display: flex;
+            //     flex-wrap: wrap;
+            //     gap: 0.5em;
+
+            //     p {
+            //         margin: 0; /* Remove default margin for paragraphs */
+            //     }
+            // }
+
+            .contact-info {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 20px;
+
+                mat-icon {
+                    margin-right: 5px;
+                }
+
+                h4 {
+                    margin: 0;
+                }
+            }
+        }
     }
-    h1 {
-      color: rgb(89, 3, 3);
+
+    .section2 {
+        justify-content: center;
+        .footer-item {
+            display: flex;
+            gap: 0.4em;
+        }
+
+        display: flex;
+        flex-direction: row;
+        // border: 1px solid red;
+        background-color: $primary-color;
+        p {
+            align-self: center;
+        }
+        h1 {
+            color: rgb(89, 3, 3);
+        }
     }
-  }
 }
-@media (max-width: 1050px) {
-  .section2 {
+@media (max-width: 1319px) {
+  .section1 {
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust this value to control the gap between items */
+
     .footer-item {
-      align-items: center;
-      flex-direction: column;
-      p {
-        margin-bottom: -1em;
-      }
+        flex: 0 0 calc(50% - 10px); /* Adjust this value to control the number of items per row */
+        border: 1px solid #000;
+        padding: 10px;
+        box-sizing: border-box;
     }
+}
+    .section2 {
+        .footer-item {
+            align-items: center;
+            flex-direction: column;
+            p {
+                margin-bottom: -1em;
+            }
+        }
+    }
+}
+
+@media (max-width: 1319px) and (min-width: 650px) {
+    // .section1 {
+    //     background-color: red;
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     gap: 10px; /* Adjust this value to control the gap between items */
+
+    //     .footer-item {
+    //         flex: 0 0 calc(50% - 10px); /* Adjust this value to control the number of items per row */
+    //         border: 1px solid #000;
+    //         padding: 10px;
+    //         box-sizing: border-box;
+    //     }
+    // }
+}
+
+@media (max-width: 650px) {
+    .section1 {
+        flex-direction: column;
+    }
+}
+@media (min-width: 1320px) {
+  .section1 {
+      .footer-item {
+        flex-basis: 25%;
+      }
   }
 }
