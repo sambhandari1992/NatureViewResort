@@ -1,9 +1,5 @@
 
 export interface NavData {
-  links: {
-    label: string;
-    path: string;
-  }[];
   sideLinks: {
     label: string;
     path: string;
