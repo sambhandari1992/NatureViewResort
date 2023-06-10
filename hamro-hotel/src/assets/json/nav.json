@@ -1,17 +1,10 @@
 {
-  "links": [
-    { "label": "Home", "path": "/home" },
-    { "label": "About", "path": "/about" },
-    { "label": "Blogs", "path": "/blogs" },
-    { "label": "Contact", "path": "/contact" },
-    { "label": "Gallery", "path": "/gallery" }
-  ],
   "sideLinks": [
     { "label": "Home", "path": "/home", "icon": "home" },
     { "label": "About", "path": "/about", "icon": "info" },
     { "label": "Blogs", "path": "/blogs", "icon": "video_camera_front" },
-    { "label": "Gallery", "path": "/gallery", "icon": "collections_bookmark" },
-    { "label": "Contact", "path": "/contact", "icon": "help" }
+    { "label": "Contact", "path": "/contact", "icon": "help" },
+    { "label": "Gallery", "path": "/gallery", "icon": "collections_bookmark" }
   ],
   "exploreLinks": [
     { "label": "Local Attraction", "path": "/local-attraction" },

@@ -24,6 +24,7 @@
     "@ngneat/until-destroy": "^10.0.0-beta.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "webpack": "^5.86.0",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {

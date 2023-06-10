@@ -1,1 +1,108 @@
-<p>footer works!</p>
+<footer>
+    <section class="section1">
+        <div class="footer-item">
+            <h4>The Nature View Resort</h4>
+            <p>
+                Welcome! to The Nature View Resort where you become our family the moment you walk through our doors. Come join us in this cozy, and affordable hostel that is located in the Heart of
+                Hawkes Bay and experience New Zealand like a local.Welcome! to The Nature View Resort where you become our family the moment you walk through our doors. Come join us in this cozy, and
+            </p>
+        </div>
+
+        <div class="footer-item">
+            <h4>Quick Links</h4>
+            <div class="container">
+                <button mat-button *ngFor="let link of getCombinedLinks()">
+                    <p>{{ link?.label }}</p>
+                </button>
+            </div>
+        </div>
+        <div class="footer-item">
+            <h4>Contact Info</h4>
+            <div class="contact-info">
+                <mat-icon>location_on</mat-icon>
+                <h4>777 Himalayan Road, Kathmandu, Nepal</h4>
+            </div>
+            <div class="contact-info">
+                <mat-icon>email</mat-icon>
+                <h4>nvr@example.com</h4>
+            </div>
+            <div class="contact-info">
+                <mat-icon>phone</mat-icon>
+                <h4>+9779812345678</h4>
+            </div>
+            <div class="contact-info">
+                <mat-icon>facebook</mat-icon>
+                <mat-icon>facebook</mat-icon>
+                <mat-icon>facebook</mat-icon>
+                <mat-icon>facebook</mat-icon>
+            </div>
+            <div class="contact-info">
+                <mat-icon>keyboard_double_arrow_right</mat-icon>
+                <h4>Terms and Conditions</h4>
+            </div>
+        </div>
+
+        <div class="footer-item">
+            <h4>Location</h4>
+            <div class="social-icons">
+                <mat-icon>facebook</mat-icon>
+                <mat-icon>facebook</mat-icon>
+                <mat-icon>facebook</mat-icon>
+                <p>
+                    Welcome! to The Nature View Resort where you become our family the moment you walk through our doors. Come join us in this cozy, and affordable hostel that is located in the Heart
+                    .Welcome! to The Nature View Resort where you become our family the moment you walk through our doors. Come join us in this
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="footer-item">
+            <p>©2023 Nature View Resort PVT LTD.</p>
+            <p>All Rights Reserved | Designed and Hosted by</p>
+            <h1>SBCK Tech Solution Inc</h1>
+        </div>
+    </section>
+</footer>
+
+<!-- <div class="container-contact"> -->
+<!-- <mat-icon>home</mat-icon> -->
+<!-- <div class="footor-contact"> 777 Himalayan Road , Kathmandu, Nepal</div> -->
+<!-- <div class="footor-contact"><mat-icon>email</mat-icon>nvr@example.com</div>
+    <div class="footor-contact"><mat-icon>phone</mat-icon>+9779812345678</div> -->
+<!-- </div> -->
+
+<!-- <div class="footer-item">
+    <h4>Contact Info</h4>
+    <div class="contact-info">
+        <mat-icon>location_on</mat-icon>
+        <h4>777 Himalayan Road, Kathmandu, Nepal</h4>
+    </div>
+    <div class="contact-info">
+        <mat-icon>email</mat-icon>
+        <h4>nvr@example.com</h4>
+    </div>
+    <div class="contact-info">
+        <mat-icon>phone</mat-icon>
+        <h4>+9779812345678</h4>
+    </div>
+    <div class="contact-info">
+        <mat-icon>facebook</mat-icon>
+        <mat-icon>facebook</mat-icon>
+        <mat-icon>facebook</mat-icon>
+        <mat-icon>facebook</mat-icon>
+    </div>
+    <div class="contact-info">
+        <mat-icon>keyboard_double_arrow_right</mat-icon>
+        <h4>Terms and Conditions</h4>
+    </div>
+</div>
+
+<div class="footer-item">
+    <h4>Location</h4>
+    <div class="social-icons">
+        <mat-icon>facebook</mat-icon>
+        <mat-icon>facebook</mat-icon>
+        <mat-icon>facebook</mat-icon>
+    </div>
+</div> -->
