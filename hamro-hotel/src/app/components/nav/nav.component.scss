@@ -1,7 +1,7 @@
-mat-toolbar {
-    background: linear-gradient(to right, hsl(210, 1%, 56%), rgb(75, 125, 125));
+@import '../../styles/color-variables';
 
-    color: rgb(237, 243, 237);
+mat-toolbar {
+    background: linear-gradient(to right, $primary-color, $secondary-color);
     display: flex;
     justify-content: space-between;
 
@@ -84,6 +84,11 @@ mat-divider {
 
 @media (max-width: 900px) {
     .mat-toolbar {
+        .img-logo {
+            border: none;
+            width: 6em;
+            box-shadow: 2px 2px 4px #929391;
+        }
         .links {
             display: none;
         }
@@ -107,13 +112,17 @@ mat-divider {
     }
 }
 
-@media (max-width: 550px) {
-    .mat-toolbar,
-    .sidenav-links {
+@media (max-width: 800px) {
+    mat-toolbar {
+        background: linear-gradient(to right, $primary-color, $primary-color);
+        img {
+                // display: none;
+        }
         .inquire {
-            display: none;
+                display: none;
         }
     }
+   
 }
 .button-active {
     font-weight: bold;

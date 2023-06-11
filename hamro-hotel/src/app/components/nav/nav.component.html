@@ -3,11 +3,11 @@
         <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
         <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
     </button>
+    <img class="img-logo" src="../../../assets/images/nature-view-resort 2.jpg" alt="logo" routerLink="/home" />
     <button mat-button class="inquire">
         <mat-icon>email</mat-icon>
         nvr@gmail.com
     </button>
-    <img class="img-logo" src="../../../assets/images/nature-view-resort 2.jpg" alt="logo" routerLink="/home" />
     <button mat-button class="inquire">
         <mat-icon>phone</mat-icon>
         4123414242
@@ -47,6 +47,6 @@
 </mat-sidenav-container>
 
 <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isAccountComponentVisiable" (overlayOutsideClick)="closeAccountComponent($event)">
-    <!-- <app-signup-and-login></app-signup-and-login> -->
+    <app-signup-and-login></app-signup-and-login>
     <!-- <app-logininfo></app-logininfo> -->
 </ng-template>
