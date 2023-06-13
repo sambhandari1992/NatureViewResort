@@ -3,6 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MaterialModule } from './modules/material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxMapLibreGLModule } from '@maplibre/ngx-maplibre-gl';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { HttpClientModule } from '@angular/common/http';
+
+
+// import { ApiService } from '../app/services/google-api.services';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -31,44 +38,40 @@ import { LoginComponent } from './components/account/login/login.component';
 import { SignUpComponent } from './components/account/sign-up/sign-up.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FancyWordsComponent } from './components/home/fancy-words/fancy-words.component';
+import { GoogleMapComponent } from './components/footer/google-map/google-map.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    BodyComponent,
-    FooterComponent,
-    SidenavComponent,
-    HomeComponent,
-    DiningComponent,
-    AccommodationComponent,
-    FacilitieComponent,
-    WeedingEventComponent,
-    PackagesComponent,
-    SpaComponent,
-    LocalAttrectionComponent,
-    PromotionsComponent,
-    NotFoundComponent,
-    GalleryComponent,
-    AboutComponent,
-    BlogsComponent,
-    ContactComponent,
-    AccountComponent,
-    SignupAndLoginComponent,
-    LogininfoComponent,
-    LoginComponent,
-    SignUpComponent,
-    NavComponent,
-    FancyWordsComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    MaterialModule,
-    ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        BodyComponent,
+        FooterComponent,
+        SidenavComponent,
+        HomeComponent,
+        DiningComponent,
+        AccommodationComponent,
+        FacilitieComponent,
+        WeedingEventComponent,
+        PackagesComponent,
+        SpaComponent,
+        LocalAttrectionComponent,
+        PromotionsComponent,
+        NotFoundComponent,
+        GalleryComponent,
+        AboutComponent,
+        BlogsComponent,
+        ContactComponent,
+        AccountComponent,
+        SignupAndLoginComponent,
+        LogininfoComponent,
+        LoginComponent,
+        SignUpComponent,
+        NavComponent,
+        FancyWordsComponent,
+        GoogleMapComponent,
+    ],
+    imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule, ReactiveFormsModule, NgxMapLibreGLModule, GoogleMapsModule,HttpClientModule],
+    providers: [],
+    bootstrap: [AppComponent],
 })
 export class AppModule {}

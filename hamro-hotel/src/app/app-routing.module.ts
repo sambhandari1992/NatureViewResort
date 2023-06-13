@@ -18,27 +18,27 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'blogs', component: BlogsComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'gallery', component: GalleryComponent },
-  { path: 'account', component: AccountComponent },
-  { path: 'local-attraction', component: LocalAttrectionComponent },
-  { path: 'dining', component: DiningComponent },
-  { path: 'accommodation', component: AccommodationComponent },
-  { path: 'facilities', component: FacilitieComponent },
-  { path: 'promotions', component: PromotionsComponent },
-  { path: 'spa', component: SpaComponent },
-  { path: 'weeding&events', component: WeedingEventComponent },
-  { path: 'packages', component: PackagesComponent },
-  { path: '**', component: NotFoundComponent },
+    { path: '', pathMatch: 'full', redirectTo: 'home' },
+    { path: 'home', component: HomeComponent },
+    { path: 'about', component: AboutComponent },
+    { path: 'blogs', component: BlogsComponent },
+    { path: 'contact', component: ContactComponent },
+    { path: 'gallery', component: GalleryComponent },
+    { path: 'account', component: AccountComponent },
+    { path: 'local-attraction', component: LocalAttrectionComponent },
+    { path: 'dining', component: DiningComponent },
+    { path: 'accommodation', component: AccommodationComponent },
+    { path: 'facilities', component: FacilitieComponent },
+    { path: 'promotions', component: PromotionsComponent },
+    { path: 'spa', component: SpaComponent },
+    { path: 'weeding&events', component: WeedingEventComponent },
+    { path: 'packages', component: PackagesComponent },
+    { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule, RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+    declarations: [],
+    imports: [CommonModule, RouterModule.forRoot(routes)],
+    exports: [RouterModule],
 })
 export class AppRoutingModule {}
