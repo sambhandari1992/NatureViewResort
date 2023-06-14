@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   generateImageURLs() {
-    const baseURL = '../../../assets/images/home/img';
+    const baseURL = '../../../assets/images/home/img-';
     const totalImages = 21;
 
     for (let i = 0; i <= totalImages; i++) {
