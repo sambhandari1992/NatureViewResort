@@ -1,0 +1,25 @@
+{
+    "contactInfo": [
+      {
+        "content": "98 777 7777",
+        "icon": "phone"
+      },
+      {
+        "content": "777 Himalayan Road, Kathmandu, Nepal",
+        "icon": "location_on"
+      },
+      {
+        "content": "nvr@example.com",
+        "icon": "email"
+      },
+      {
+        "content": "nvr@bill.gmail.com",
+        "icon": "contact_support"
+      },
+      {
+        "content": "Website: www.nvr.com",
+        "icon": "language"
+      }
+    ]
+}
+  

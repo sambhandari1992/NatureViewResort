@@ -1,1 +1,42 @@
-<p>contact works!</p>
+<div class="contact-page">
+    <section class="contact-info">
+        <h2>Contact Info</h2>
+        <div class="con" *ngFor="let item of contactInfoData">
+          <mat-icon>{{ item.icon }}</mat-icon>
+          <p>{{ item.content }}</p>
+        </div>
+      </section>
+      
+
+    <section class="contact-form">
+        <h2>Get In Touch With Us</h2>
+        <form>
+            <mat-form-field appearance="outline">
+                <mat-label>Your First Name *</mat-label>
+                <input matInput placeholder="Enter your first name" required />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Your Last Name *</mat-label>
+                <input matInput placeholder="Enter your last name" required />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Your Email *</mat-label>
+                <input matInput type="email" placeholder="Enter your email" required />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Phone Number *</mat-label>
+                <input matInput type="tel" placeholder="Enter your phone number" required />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Your Message *</mat-label>
+                <textarea matInput placeholder="Enter your message" required></textarea>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary">Submit</button>
+        </form>
+    </section>
+</div>
