@@ -13,4 +13,5 @@ export class ContactComponent {
   constructor(private contentService: ContentService) {
     this.contactInfoData = this.contentService.contactInfo;
   }
+
 }

@@ -14,17 +14,32 @@
                 <button mat-button *ngFor="let link of getCombinedLinks()">
                     <p>{{ link?.label }}</p>
                 </button>
+                <div class="contact-info" routerLink="./contact">
+                    <mat-icon>keyboard_double_arrow_right</mat-icon>
+                    <h4>Terms and Conditions</h4>
+                </div>
+                <div class="contact-info" routerLink="./contact">
+                    <mat-icon>keyboard_double_arrow_right</mat-icon>
+                    <h4>Useful Information</h4>
+                </div>
             </div>
         </div>
         <div class="footer-item">
             <h4>Contact Info</h4>
-            <div class="contact-info" *ngFor="let item of contactInfoData">
+            <div class="contact-info" *ngFor="let item of contactInfoData; let i = index">
                 <mat-icon>{{ item.icon }}</mat-icon>
-                <h4>{{ item.content }}</h4>
+                <h4>
+                    <a *ngIf="i >= contactInfoData.length - 2" [href]="item.content" target="_blank" rel="noopener">{{ item.content }}</a>
+                    <ng-container *ngIf="i < contactInfoData.length - 2">{{ item.content }}</ng-container>
+                </h4>
             </div>
             <div class="contact-info" routerLink="./contact">
                 <mat-icon>keyboard_double_arrow_right</mat-icon>
-                <h4>Terms and Conditions</h4>
+                <h4>Fallow Us</h4>
+                <mat-icon svgIcon="facebook"></mat-icon>
+                <mat-icon svgIcon="youtube"></mat-icon>
+                <mat-icon svgIcon="tiktok"></mat-icon>
+                <mat-icon svgIcon="instagram"></mat-icon>
             </div>
         </div>
 
