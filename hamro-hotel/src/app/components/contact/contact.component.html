@@ -2,14 +2,13 @@
     <section class="contact-info">
         <h2>Contact Info</h2>
         <div class="con" *ngFor="let item of contactInfoData; let i = index">
-          <mat-icon>{{ item.icon }}</mat-icon>
-          <p>
-            <a *ngIf="i >= contactInfoData.length - 3" [href]="item.content" target="_blank" rel="noopener">{{ item.content }}</a>
-            <ng-container *ngIf="i < contactInfoData.length - 3">{{ item.content }}</ng-container>
-          </p>
+            <mat-icon>{{ item.icon }}</mat-icon>
+            <p>
+                <a *ngIf="i >= contactInfoData.length - 2" [href]="item.content" target="_blank" rel="noopener">{{ item.content }}</a>
+                <ng-container *ngIf="i < contactInfoData.length - 2">{{ item.content }}</ng-container>
+            </p>
         </div>
-      </section>
-      
+    </section>
 
     <section class="contact-form">
         <h2>Get In Touch With Us</h2>
@@ -43,5 +42,3 @@
         </form>
     </section>
 </div>
-
-

@@ -9,16 +9,16 @@
         "icon": "location_on"
       },
       {
+        "content": "Reception: 8:00am to 8:30pm",
+        "icon": "schedule"
+      },
+      {
         "content": "info_nvr@example.com",
         "icon": "email"
       },
       {
         "content": "support_nvr@bill.gmail.com",
         "icon": "contact_support"
-      },
-      {
-        "content": "www.nvr.com",
-        "icon": "language"
       }
     ]
 }
