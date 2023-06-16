@@ -1,9 +1,12 @@
 <div class="contact-page">
     <section class="contact-info">
         <h2>Contact Info</h2>
-        <div class="con" *ngFor="let item of contactInfoData">
+        <div class="con" *ngFor="let item of contactInfoData; let i = index">
           <mat-icon>{{ item.icon }}</mat-icon>
-          <p>{{ item.content }}</p>
+          <p>
+            <a *ngIf="i >= contactInfoData.length - 3" [href]="item.content" target="_blank" rel="noopener">{{ item.content }}</a>
+            <ng-container *ngIf="i < contactInfoData.length - 3">{{ item.content }}</ng-container>
+          </p>
         </div>
       </section>
       
@@ -40,3 +43,5 @@
         </form>
     </section>
 </div>
+
+

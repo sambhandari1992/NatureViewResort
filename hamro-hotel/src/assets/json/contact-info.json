@@ -1,7 +1,7 @@
 {
     "contactInfo": [
       {
-        "content": "98 777 7777",
+        "content": "+97798 777 7777",
         "icon": "phone"
       },
       {
@@ -9,15 +9,15 @@
         "icon": "location_on"
       },
       {
-        "content": "nvr@example.com",
+        "content": "info_nvr@example.com",
         "icon": "email"
       },
       {
-        "content": "nvr@bill.gmail.com",
+        "content": "support_nvr@bill.gmail.com",
         "icon": "contact_support"
       },
       {
-        "content": "Website: www.nvr.com",
+        "content": "www.nvr.com",
         "icon": "language"
       }
     ]

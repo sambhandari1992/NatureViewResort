@@ -18,25 +18,11 @@
         </div>
         <div class="footer-item">
             <h4>Contact Info</h4>
-            <div class="contact-info">
-                <mat-icon>location_on</mat-icon>
-                <h4>777 Himalayan Road, Kathmandu, Nepal</h4>
+            <div class="contact-info" *ngFor="let item of contactInfoData">
+                <mat-icon>{{ item.icon }}</mat-icon>
+                <h4>{{ item.content }}</h4>
             </div>
-            <div class="contact-info">
-                <mat-icon>email</mat-icon>
-                <h4>nvr@example.com</h4>
-            </div>
-            <div class="contact-info">
-                <mat-icon>phone</mat-icon>
-                <h4>+9779812345678</h4>
-            </div>
-            <div class="contact-info">
-                <mat-icon>facebook</mat-icon>
-                <mat-icon>facebook</mat-icon>
-                <mat-icon>facebook</mat-icon>
-                <mat-icon>facebook</mat-icon>
-            </div>
-            <div class="contact-info">
+            <div class="contact-info" routerLink="./contact">
                 <mat-icon>keyboard_double_arrow_right</mat-icon>
                 <h4>Terms and Conditions</h4>
             </div>
@@ -58,45 +44,3 @@
         </div>
     </section>
 </footer>
-
-<!-- <div class="container-contact"> -->
-<!-- <mat-icon>home</mat-icon> -->
-<!-- <div class="footor-contact"> 777 Himalayan Road , Kathmandu, Nepal</div> -->
-<!-- <div class="footor-contact"><mat-icon>email</mat-icon>nvr@example.com</div>
-    <div class="footor-contact"><mat-icon>phone</mat-icon>+9779812345678</div> -->
-<!-- </div> -->
-
-<!-- <div class="footer-item">
-    <h4>Contact Info</h4>
-    <div class="contact-info">
-        <mat-icon>location_on</mat-icon>
-        <h4>777 Himalayan Road, Kathmandu, Nepal</h4>
-    </div>
-    <div class="contact-info">
-        <mat-icon>email</mat-icon>
-        <h4>nvr@example.com</h4>
-    </div>
-    <div class="contact-info">
-        <mat-icon>phone</mat-icon>
-        <h4>+9779812345678</h4>
-    </div>
-    <div class="contact-info">
-        <mat-icon>facebook</mat-icon>
-        <mat-icon>facebook</mat-icon>
-        <mat-icon>facebook</mat-icon>
-        <mat-icon>facebook</mat-icon>
-    </div>
-    <div class="contact-info">
-        <mat-icon>keyboard_double_arrow_right</mat-icon>
-        <h4>Terms and Conditions</h4>
-    </div>
-</div>
-
-<div class="footer-item">
-    <h4>Location</h4>
-    <div class="social-icons">
-        <mat-icon>facebook</mat-icon>
-        <mat-icon>facebook</mat-icon>
-        <mat-icon>facebook</mat-icon>
-    </div>
-</div> -->
