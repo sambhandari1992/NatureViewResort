@@ -7,6 +7,9 @@ footer {
         display: flex;
         .footer-item {
             padding: 1em;
+            h3 {
+                color: rgb(89, 3, 3);
+            }
             .contact-info {
                 display: flex;
                 align-items: center;
@@ -14,6 +17,13 @@ footer {
                 margin-top: 1em;
                 h4 {
                     margin: 0;
+                }
+            }
+            .container {
+                .footer-links, .add-link {
+                    &:hover {
+                        color: rgb(11, 15, 251);
+                    } 
                 }
             }
         }
