@@ -5,8 +5,6 @@
     align-items: center;
     background-color: rgb(197, 176, 176);
     gap: 1em; /* Add space between the two sections */
-    
-    
 
     .contact-info {
         flex-basis: 30%;
@@ -91,8 +89,28 @@
     }
 }
 
+.schedule {
+    display: flex;
+    flex-direction: column;
 
-// .contact-info p:hover {
-//     color: rgb(249, 49, 9);
-//   }
-  
+    .schedule-title {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .mat-cards {
+        display: flex;
+        justify-content: space-around;
+        padding: 3em;
+        gap: 20px;
+        mat-card {
+            padding: 1em;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .schedule {
+        flex-direction: column;
+    }
+}
