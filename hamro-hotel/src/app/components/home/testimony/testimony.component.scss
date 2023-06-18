@@ -1,0 +1,67 @@
+.testimonial {
+  // background-color: rgb(93, 96, 96);
+  display: flex;
+  flex-direction: column;
+
+  .testimonial-title {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mat-cards {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    padding: 3em;
+    gap: 20px;
+    .testimonial-card{
+      border: 1px solid red;
+      width: 700px;
+    }
+    mat-icon {
+      align-self: center;
+      font-size: xx-large;
+      padding: 1em;
+    }
+
+    mat-card {
+      padding: 1em;
+      opacity: 0;
+      animation: slide 5s infinite;
+      animation-fill-mode: forwards; /* Keep the final animation state */
+    
+
+    }
+    &.disable-animation mat-card {
+      animation: none; /* Disable the animation when disable-animation class is present */
+      opacity: 1; /* Keep the cards visible without animation */
+    }
+  }
+
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+      // opacity: 0; /* Hide the cards */
+    }
+    20% {
+      transform: translateX(0);
+      // opacity: 0; /* Hide the cards */
+    }
+    30% {
+      opacity: 1; /* Show the cards */
+    }
+    70% {
+      opacity: 1; /* Keep the cards visible */
+    }
+    80% {
+      transform: translateX(0);
+      // opacity: 0; /* Hide the cards */
+    }
+    100% {
+      transform: translateX(-100%);
+      // opacity: 0; /* Hide the cards */
+    }
+  }
+  
+}
