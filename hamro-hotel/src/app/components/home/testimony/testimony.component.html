@@ -1,20 +1,27 @@
 <div class="testimonial">
-  <div class="testimonial-title">
-    <h2>Testimonial</h2>
-  </div>
+    <div class="testimonial-title">
+        <h2>Testimonial</h2>
+    </div>
 
-  <div class="mat-cards" [ngClass]="{ 'disable-animation': !animationEnabled }">
-    <mat-icon (click)="slideRight()">arrow_circle_left</mat-icon>
+    <div class="mat-cards" [ngClass]="{ 'disable-animation': !animationEnabled }">
+        <mat-icon class="arrow-icons-up" (click)="slideRight()">arrow_circle_left</mat-icon>
 
-    <ng-container *ngFor="let testimonial of visibleTestimonials">
-      <mat-card class="testimonial-card" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
-        <mat-card-content>
-          <h3>{{ testimonial.name }}</h3>
-          <p>{{ testimonial.message }}</p>
-        </mat-card-content>
-      </mat-card>
-    </ng-container>
+        <ng-container *ngFor="let testimonial of visibleTestimonials">
+            <mat-card class="testimonial-card" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+                <mat-card-content>
+                    <div class="profile">
+                        <h3>- {{ testimonial.name }}</h3>
+                        <img [src]="testimonial.profilePicture" alt=" " class="responsive-image" />
+                    </div>
+                    <p>{{ testimonial.message }}</p>
+                </mat-card-content>
+            </mat-card>
+        </ng-container>
 
-    <mat-icon (click)="slideLeft()">arrow_circle_right</mat-icon>
-  </div>
+        <mat-icon class="arrow-icons-up" (click)="slideLeft()">arrow_circle_right</mat-icon>
+    </div>
+    <div class="arrow-icons-below">
+        <mat-icon (click)="slideRight()">arrow_circle_left</mat-icon>
+        <mat-icon (click)="slideLeft()">arrow_circle_right</mat-icon>
+    </div>
 </div>

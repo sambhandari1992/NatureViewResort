@@ -1,0 +1,163 @@
+[
+    {
+      "name": "John Doe",
+      "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Jane Smith",
+      "message": "Nulla facilisi. Suspendisse sed interdum lorem, non convallis massa.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "David Johnson",
+      "message": "Vestibulum sollicitudin justo et massa commodo, vel mattis nisi pharetra.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Sarah Williams",
+      "message": "Donec placerat mauris a interdum varius.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Michael Brown",
+      "message": "Proin sit amet libero vel dui fermentum viverra vel sed magna.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Jessica Davis",
+      "message": "Sed non nisi consectetur, fermentum turpis vel, dignissim orci.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Christopher Wilson",
+      "message": "Quisque sed justo eu orci hendrerit volutpat.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Emily Johnson",
+      "message": "Fusce rutrum mi quis feugiat lacinia.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Robert Smith",
+      "message": "Pellentesque ut odio at velit consequat luctus a quis nisi.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Jennifer Davis",
+      "message": "Aliquam tincidunt nisi vel est luctus, sit amet dapibus nunc egestas.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Andrew Wilson",
+      "message": "Mauris tristique elit id mauris sollicitudin dictum.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Sophia Miller",
+      "message": "Vivamus vel sapien vel lacus semper interdum.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Joseph Anderson",
+      "message": "Ut non enim at velit lobortis faucibus.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Olivia Brown",
+      "message": "Praesent euismod elit a velit ultrices, vitae tempus magna vulputate.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "William Davis",
+      "message": "Integer interdum ligula sed dapibus tincidunt.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Ava Wilson",
+      "message": "Sed sed ex fringilla, suscipit dui ut, pulvinar ipsum.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Daniel Johnson",
+      "message": "Phasellus in ipsum in ipsum bibendum rutrum.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Mia Taylor",
+      "message": "Quisque eleifend orci at risus tempor, eu rutrum odio commodo.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Ethan Brown",
+      "message": "Vestibulum pharetra dolor ac venenatis scelerisque.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Isabella Wilson",
+      "message": "Curabitur vitae tortor tempor, consequat lorem vitae, commodo mi.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Michael Anderson",
+      "message": "Nullam vel sapien ullamcorper, pharetra sem non, dapibus ligula.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Sophia Davis",
+      "message": "Fusce tristique nunc in mauris pharetra cursus.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Oliver Smith",
+      "message": "Nam ac orci non orci venenatis auctor.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Liam Johnson",
+      "message": "Vestibulum vel nunc euismod, suscipit lacus a, dignissim metus.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Emma Williams",
+      "message": "Cras et tortor sit amet felis commodo bibendum a non mauris.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Noah Davis",
+      "message": "Etiam consequat enim at mi tincidunt interdum.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Ava Johnson",
+      "message": "Suspendisse lacinia ligula vel nisl lobortis, id lobortis nisi egestas.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Sophia Wilson",
+      "message": "In eget turpis consectetur, aliquet metus eget, placerat magna.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Liam Smith",
+      "message": "Proin pellentesque odio vel odio tempor dictum.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Olivia Davis",
+      "message": "Aliquam dapibus metus sit amet est elementum efficitur.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Noah Johnson",
+      "message": "Nulla pretium lectus non ex laoreet, at tincidunt urna rhoncus.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    },
+    {
+      "name": "Emma Smith",
+      "message": "Maecenas et erat nec lorem aliquam aliquam.",
+      "profilePicture": "../../../../assets/images/sam.JPG"
+    }
+  ]
+  

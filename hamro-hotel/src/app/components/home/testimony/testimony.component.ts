@@ -1,6 +1,8 @@
-import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { interval, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { Testimonial } from '../../../modules/testimonial.model';
+import { TestimonialService } from '../../../services/testimonial.service';
 
 @Component({
   selector: 'app-testimony',
@@ -8,53 +10,23 @@ import { takeUntil } from 'rxjs/operators';
   styleUrls: ['./testimony.component.scss'],
 })
 export class TestimonyComponent implements OnInit, OnDestroy {
-  testimonials = [
-  { name: 'John Doe', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-  { name: 'Jane Smith', message: 'Nulla facilisi. Suspendisse sed interdum lorem, non convallis massa.' },
-  { name: 'David Johnson', message: 'Vestibulum sollicitudin justo et massa commodo, vel mattis nisi pharetra.' },
-  { name: 'Sarah Williams', message: 'Donec placerat mauris a interdum varius.' },
-  { name: 'Michael Brown', message: 'Proin sit amet libero vel dui fermentum viverra vel sed magna.' },
-  { name: 'Jessica Davis', message: 'Sed non nisi consectetur, fermentum turpis vel, dignissim orci.' },
-  { name: 'Christopher Wilson', message: 'Quisque sed justo eu orci hendrerit volutpat.' },
-  { name: 'Emily Johnson', message: 'Fusce rutrum mi quis feugiat lacinia.' },
-  { name: 'Robert Smith', message: 'Pellentesque ut odio at velit consequat luctus a quis nisi.' },
-  { name: 'Jennifer Davis', message: 'Aliquam tincidunt nisi vel est luctus, sit amet dapibus nunc egestas.' },
-  { name: 'Andrew Wilson', message: 'Mauris tristique elit id mauris sollicitudin dictum.' },
-  { name: 'Sophia Miller', message: 'Vivamus vel sapien vel lacus semper interdum.' },
-  { name: 'Joseph Anderson', message: 'Ut non enim at velit lobortis faucibus.' },
-  { name: 'Olivia Brown', message: 'Praesent euismod elit a velit ultrices, vitae tempus magna vulputate.' },
-  { name: 'William Davis', message: 'Integer interdum ligula sed dapibus tincidunt.' },
-  { name: 'Ava Wilson', message: 'Sed sed ex fringilla, suscipit dui ut, pulvinar ipsum.' },
-  { name: 'Daniel Johnson', message: 'Phasellus in ipsum in ipsum bibendum rutrum.' },
-  { name: 'Mia Taylor', message: 'Quisque eleifend orci at risus tempor, eu rutrum odio commodo.' },
-  { name: 'Ethan Brown', message: 'Vestibulum pharetra dolor ac venenatis scelerisque.' },
-  { name: 'Isabella Wilson', message: 'Curabitur vitae tortor tempor, consequat lorem vitae, commodo mi.' },
-  { name: 'Michael Anderson', message: 'Nullam vel sapien ullamcorper, pharetra sem non, dapibus ligula.' },
-  { name: 'Sophia Davis', message: 'Fusce tristique nunc in mauris pharetra cursus.' },
-  { name: 'Oliver Smith', message: 'Nam ac orci non orci venenatis auctor.' },
-  { name: 'Liam Johnson', message: 'Vestibulum vel nunc euismod, suscipit lacus a, dignissim metus.' },
-  { name: 'Emma Williams', message: 'Cras et tortor sit amet felis commodo bibendum a non mauris.' },
-  { name: 'Noah Davis', message: 'Etiam consequat enim at mi tincidunt interdum.' },
-  { name: 'Ava Johnson', message: 'Suspendisse lacinia ligula vel nisl lobortis, id lobortis nisi egestas.' },
-  { name: 'Sophia Wilson', message: 'In eget turpis consectetur, aliquet metus eget, placerat magna.' },
-  { name: 'Liam Smith', message: 'Proin pellentesque odio vel odio tempor dictum.' },
-  { name: 'Olivia Davis', message: 'Aliquam dapibus metus sit amet est elementum efficitur.' },
-  { name: 'Noah Johnson', message: 'Nulla pretium lectus non ex laoreet, at tincidunt urna rhoncus.' },
-  { name: 'Emma Smith', message: 'Maecenas et erat nec lorem aliquam aliquam.' }
-];
-
-
-  visibleTestimonials: any[] = [];
+  testimonials: Testimonial[] = [];
+  visibleTestimonials: Testimonial[] = [];
   currentIndex = 0;
   private destroy$ = new Subject<void>();
   private intervalSubscription: any;
   animationEnabled = true;
+  isMobile = false;
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(private testimonialService: TestimonialService) {}
 
   ngOnInit(): void {
-    this.updateVisibleTestimonials();
-    this.startInterval();
+    this.checkViewportSize();
+    this.testimonialService.getTestimonials().subscribe((testimonials) => {
+      this.testimonials = testimonials;
+      this.updateVisibleTestimonials();
+      this.startInterval();
+    });
   }
 
   ngOnDestroy(): void {
@@ -63,16 +35,30 @@ export class TestimonyComponent implements OnInit, OnDestroy {
     this.clearInterval();
   }
 
+  @HostListener('window:resize')
+  checkViewportSize(): void {
+    this.isMobile = window.innerWidth < 1000;
+  }
+
   updateVisibleTestimonials(): void {
+    const count = this.isMobile ? 1 : 2;
     const currentIndex = this.currentIndex;
-    const randomIndexes = this.generateRandomIndexes(currentIndex, this.testimonials.length, 2);
-    const randomTestimonials = randomIndexes.map(index => ({ ...this.testimonials[index] }));
+    const randomIndexes = this.generateRandomIndexes(
+      currentIndex,
+      this.testimonials.length,
+      count
+    );
+    const randomTestimonials = randomIndexes.map(
+      (index) => ({ ...this.testimonials[index] } as Testimonial)
+    );
 
     this.visibleTestimonials = randomTestimonials;
   }
 
   slideLeft(): void {
-    this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
+    this.currentIndex =
+      (this.currentIndex - 1 + this.testimonials.length) %
+      this.testimonials.length;
     this.updateVisibleTestimonials();
     this.resetInterval();
   }
@@ -84,7 +70,7 @@ export class TestimonyComponent implements OnInit, OnDestroy {
   }
 
   startInterval(): void {
-    this.intervalSubscription = interval(5000)
+    this.intervalSubscription = interval(10000)
       .pipe(takeUntil(this.destroy$))
       .subscribe(() => {
         this.slideRight();
@@ -114,7 +100,11 @@ export class TestimonyComponent implements OnInit, OnDestroy {
     this.startInterval();
   }
 
-  generateRandomIndexes(currentIndex: number, length: number, count: number): number[] {
+  generateRandomIndexes(
+    currentIndex: number,
+    length: number,
+    count: number
+  ): number[] {
     const indexes: number[] = [];
 
     while (indexes.length < count) {
