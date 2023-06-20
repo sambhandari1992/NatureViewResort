@@ -16,6 +16,35 @@
 
 @media (min-width: 1400px) {
   .carousel {
-    margin-top: -5em;
+      margin-top: -5em;
   }
+}
+
+@media (max-width: 1400px) {
+.carousel {
+  max-height: 400px; /* Reset the maximum height for smaller viewports */
+}
+}
+
+@media (max-width: 1000px) {
+.carousel {
+  max-height: 350px; /* Reset the maximum height for smaller viewports */
+}
+}
+@media (max-width: 800px) {
+.carousel {
+  max-height: 280px; /* Reset the maximum height for smaller viewports */
+}
+}
+
+@media (max-width: 500px) {
+.carousel {
+  max-height: 200px; /* Reset the maximum height for smaller viewports */
+}
+}
+
+@media (max-width: 400px) {
+.carousel {
+  max-height: 150px; /* Reset the maximum height for smaller viewports */
+}
 }

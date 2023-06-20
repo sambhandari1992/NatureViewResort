@@ -19,7 +19,6 @@ export class FancyWordsComponent implements OnInit {
     ngOnInit(): void {
         const repeatedContainers: Container[] = [];
         const repetitions = 3; // Number of times to repeat the items
-
         for (let i = 0; i < repetitions; i++) {
             repeatedContainers.push(...this.contentService.fancyWords.containers);
         }

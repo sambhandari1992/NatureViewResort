@@ -39,6 +39,7 @@ import { SignUpComponent } from './components/account/sign-up/sign-up.component'
 import { NavComponent } from './components/nav/nav.component';
 import { FancyWordsComponent } from './components/home/fancy-words/fancy-words.component';
 import { GoogleMapComponent } from './components/footer/google-map/google-map.component';
+import { TestimonyComponent } from './components/home/testimony/testimony.component';
 
 @NgModule({
     declarations: [
@@ -69,6 +70,7 @@ import { GoogleMapComponent } from './components/footer/google-map/google-map.co
         NavComponent,
         FancyWordsComponent,
         GoogleMapComponent,
+        TestimonyComponent,
     ],
     imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule, ReactiveFormsModule, NgxMapLibreGLModule, GoogleMapsModule,HttpClientModule],
     providers: [],

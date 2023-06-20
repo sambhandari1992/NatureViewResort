@@ -1,25 +1,24 @@
 {
     "contactInfo": [
-      {
-        "content": "+97798 777 7777",
-        "icon": "phone"
-      },
-      {
-        "content": "777 Himalayan Road, Kathmandu, Nepal",
-        "icon": "location_on"
-      },
-      {
-        "content": "Reception: 8:00am to 8:30pm",
-        "icon": "schedule"
-      },
-      {
-        "content": "info_nvr@example.com",
-        "icon": "email"
-      },
-      {
-        "content": "support_nvr@bill.gmail.com",
-        "icon": "contact_support"
-      }
+        {
+            "content": "+97798 777 7777",
+            "icon": "phone"
+        },
+        {
+            "content": "777 Himalayan Road, Kathmandu, Nepal",
+            "icon": "location_on"
+        },
+        {
+            "content": "Reception: 8:00am to 8:30pm",
+            "icon": "schedule"
+        },
+        {
+            "content": "info_nvr@example.com",
+            "icon": "email"
+        },
+        {
+            "content": "support_nvr@bill.gmail.com",
+            "icon": "contact_support"
+        }
     ]
 }
-  
