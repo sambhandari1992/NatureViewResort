@@ -3,11 +3,11 @@
         <h2>Testimonial</h2>
     </div>
 
-    <div class="mat-cards" [ngClass]="{ 'disable-animation': !animationEnabled }">
+    <div class="mat-cards" [ngClass]="{ 'disable-animation': !animationEnabled }" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
         <mat-icon class="arrow-icons-up" (click)="slideRight()">arrow_circle_left</mat-icon>
 
         <ng-container *ngFor="let testimonial of visibleTestimonials">
-            <mat-card class="testimonial-card" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+            <mat-card class="testimonial-card">
                 <mat-card-content>
                     <div class="profile">
                         <h3>- {{ testimonial.name }}</h3>

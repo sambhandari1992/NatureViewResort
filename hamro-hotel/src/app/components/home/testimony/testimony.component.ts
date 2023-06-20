@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
-import { interval, Subject } from 'rxjs';
+import { interval, Subject, Subscription } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { Testimonial } from '../../../modules/testimonial.model';
 import { TestimonialService } from '../../../services/testimonial.service';
@@ -14,7 +14,7 @@ export class TestimonyComponent implements OnInit, OnDestroy {
   visibleTestimonials: Testimonial[] = [];
   currentIndex = 0;
   private destroy$ = new Subject<void>();
-  private intervalSubscription: any;
+  private intervalSubscription: Subscription;
   animationEnabled = true;
   isMobile = false;
 
@@ -37,28 +37,28 @@ export class TestimonyComponent implements OnInit, OnDestroy {
 
   @HostListener('window:resize')
   checkViewportSize(): void {
+    const previousIsMobile = this.isMobile;
     this.isMobile = window.innerWidth < 1000;
+
+    if (previousIsMobile !== this.isMobile) {
+      this.clearInterval();
+      this.updateVisibleTestimonials();
+      this.resetInterval();
+    }
   }
 
   updateVisibleTestimonials(): void {
     const count = this.isMobile ? 1 : 2;
     const currentIndex = this.currentIndex;
-    const randomIndexes = this.generateRandomIndexes(
-      currentIndex,
-      this.testimonials.length,
-      count
-    );
-    const randomTestimonials = randomIndexes.map(
-      (index) => ({ ...this.testimonials[index] } as Testimonial)
-    );
-
-    this.visibleTestimonials = randomTestimonials;
+    this.visibleTestimonials.splice(0);
+    const randomIndexes = this.generateRandomIndexes(currentIndex, this.testimonials.length, count);
+    randomIndexes.forEach((index) => {
+      this.visibleTestimonials.push({ ...this.testimonials[index] } as Testimonial);
+    });
   }
 
   slideLeft(): void {
-    this.currentIndex =
-      (this.currentIndex - 1 + this.testimonials.length) %
-      this.testimonials.length;
+    this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
     this.updateVisibleTestimonials();
     this.resetInterval();
   }
@@ -70,7 +70,7 @@ export class TestimonyComponent implements OnInit, OnDestroy {
   }
 
   startInterval(): void {
-    this.intervalSubscription = interval(10000)
+    this.intervalSubscription = interval(7000)
       .pipe(takeUntil(this.destroy$))
       .subscribe(() => {
         this.slideRight();
@@ -88,31 +88,37 @@ export class TestimonyComponent implements OnInit, OnDestroy {
     this.startInterval();
   }
 
+  onMouseEnterTimeout: any;
+
   onMouseEnter(): void {
     console.log('Mouse entered');
-    this.animationEnabled = false;
     this.clearInterval();
+
+    this.onMouseEnterTimeout = setTimeout(() => {
+      this.animationEnabled = false;
+    }, 2000);
   }
 
   onMouseLeave(): void {
     console.log('Mouse left');
+    clearTimeout(this.onMouseEnterTimeout);
     this.animationEnabled = true;
     this.startInterval();
   }
 
-  generateRandomIndexes(
-    currentIndex: number,
-    length: number,
-    count: number
-  ): number[] {
-    const indexes: number[] = [];
+  generateRandomIndexes(currentIndex: number, length: number, count: number): number[] {
+    const availableIndexes = Array.from({ length }, (_, i) => i);
+    const remainingIndexes = availableIndexes.filter((index) => index !== currentIndex);
+    const shuffledIndexes = this.shuffleArray(remainingIndexes);
+    return shuffledIndexes.slice(0, count);
+  }
 
-    while (indexes.length < count) {
-      const randomIndex = Math.floor(Math.random() * length);
-      if (randomIndex !== currentIndex && !indexes.includes(randomIndex)) {
-        indexes.push(randomIndex);
-      }
+  shuffleArray(array: any[]): any[] {
+    const newArray = array.slice();
+    for (let i = newArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
     }
-    return indexes;
+    return newArray;
   }
 }

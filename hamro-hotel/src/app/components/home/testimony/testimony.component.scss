@@ -1,11 +1,12 @@
 .testimonial {
-    // background-color: rgb(93, 96, 96);
+    background-image: url("../../../../assets/images/home/testomonial-background.jpeg");
     display: flex;
     flex-direction: column;
 
     .testimonial-title {
         display: flex;
         justify-content: center;
+        color: white;
     }
     .mat-cards {
         // border: 1px solid red;
@@ -26,7 +27,7 @@
         mat-card {
             // padding: 1em;
             opacity: 0;
-            animation: slide 10s infinite;
+            animation: slide 7s infinite;
             animation-fill-mode: forwards; /* Keep the final animation state */
             .profile {
                 display: flex;
@@ -100,3 +101,5 @@
         display: none;
     }
 }
+
+
