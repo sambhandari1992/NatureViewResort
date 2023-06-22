@@ -54,9 +54,6 @@
     }
 }
 
-
-
-
 @media (max-width: 839px) {
     .container {
         .boxes {
@@ -66,5 +63,13 @@
             }
         }
     }
+}
 
+.custom-style {
+    // Add your custom styles here
+    background-color: rgb(17, 241, 17);
+
+    h2 {
+        color: red;
+    }
 }
