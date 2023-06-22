@@ -5,11 +5,11 @@ import { Testimonial } from '../../../models/testimonial.interface';
 import { TestimonialService } from '../../../services/testimonial.service';
 
 @Component({
-    selector: 'app-testimony',
-    templateUrl: './testimony.component.html',
-    styleUrls: ['./testimony.component.scss'],
+    selector: 'app-testomonials',
+    templateUrl: './testomonials.component.html',
+    styleUrls: ['./testomonials.component.scss'],
 })
-export class TestimonyComponent implements OnInit, OnDestroy {
+export class TestomonialsComponent implements OnInit, OnDestroy {
     testimonials: Testimonial[] = [];
     visibleTestimonials: Testimonial[] = [];
     currentIndex = 0;

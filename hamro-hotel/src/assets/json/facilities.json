@@ -1,0 +1,82 @@
+[
+    {
+        "icon": "pool",
+        "name": "Swimming Pool"
+    },
+    {
+        "icon": "restaurant",
+        "name": "Restaurant"
+    },
+    {
+        "icon": "fitness_center",
+        "name": "Fitness Center"
+    },
+    {
+        "icon": "spa",
+        "name": "Spa"
+    },
+    {
+        "icon": "room_service",
+        "name": "Room Service"
+    },
+    {
+        "icon": "wifi",
+        "name": "Free Wi-Fi"
+    },
+    {
+        "icon": "local_parking",
+        "name": "Parking"
+    },
+    {
+        "icon": "business_center",
+        "name": "Business Center"
+    },
+    {
+        "icon": "pets",
+        "name": "Pet-Friendly"
+    },
+    {
+        "icon": "beach_access",
+        "name": "Beach Access"
+    },
+    {
+        "icon": "local_bar",
+        "name": "Bar"
+    },
+    {
+        "icon": "child_friendly",
+        "name": "Child-Friendly"
+    },
+    {
+        "icon": "golf_course",
+        "name": "Golf Course"
+    },
+    {
+        "icon": "local_laundry_service",
+        "name": "Laundry Service"
+    },
+    {
+        "icon": "airport_shuttle",
+        "name": "Airport Shuttle"
+    },
+    {
+        "icon": "room_preferences",
+        "name": "Customizable Rooms"
+    },
+    {
+        "icon": "accessible",
+        "name": "Accessible Facilities"
+    },
+    {
+        "icon": "car_rental",
+        "name": "Car Rental"
+    },
+    {
+        "icon": "beach_access",
+        "name": "Private Beach"
+    },
+    {
+        "icon": "local_cafe",
+        "name": "Cafe"
+    }
+]
