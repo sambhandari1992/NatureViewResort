@@ -11,9 +11,11 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap; /* Allow boxes to wrap to new lines */
+        max-width: 2000px;
+        margin: 0 auto;
 
         .box {
-            width: 300px;
+            width: 200px;
             height: 200px;
             display: flex;
             flex-direction: column;
@@ -53,6 +55,11 @@
         }
     }
 }
+.viewMoreSection {
+    text-align: center;
+    background-color: rgb(234, 229, 229);
+    padding: 1em;
+}
 
 @media (max-width: 839px) {
     .container {
@@ -65,11 +72,8 @@
     }
 }
 
-.custom-style {
-    // Add your custom styles here
-    background-color: rgb(17, 241, 17);
-
-    h2 {
-        color: red;
-    }
+.custom-style-1 {
+    max-height: 36em;
+    overflow: hidden; // Hide the overflow content
+  
 }
