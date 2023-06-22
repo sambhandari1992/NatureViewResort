@@ -5,7 +5,7 @@ import { delay, filter } from 'rxjs/operators';
 import { NavigationEnd, Router } from '@angular/router';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { ContentService } from 'src/app/services/content.services';
-import { NavData } from './nav.interface';
+import { NavData } from '../../models/nav.interface';
 
 @UntilDestroy()
 @Component({

@@ -7,9 +7,7 @@ import { NgxMapLibreGLModule } from '@maplibre/ngx-maplibre-gl';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { HttpClientModule } from '@angular/common/http';
 
-
 // import { ApiService } from '../app/services/google-api.services';
-
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -40,6 +38,8 @@ import { NavComponent } from './components/nav/nav.component';
 import { FancyWordsComponent } from './components/home/fancy-words/fancy-words.component';
 import { GoogleMapComponent } from './components/footer/google-map/google-map.component';
 import { TestimonyComponent } from './components/home/testimony/testimony.component';
+import { SharedFeatureComponent } from './components/shared/shared-feature/shared-feature.component';
+import { TestomonialsComponent } from './components/home/testomonials/testomonials.component';
 
 @NgModule({
     declarations: [
@@ -71,8 +71,10 @@ import { TestimonyComponent } from './components/home/testimony/testimony.compon
         FancyWordsComponent,
         GoogleMapComponent,
         TestimonyComponent,
+        SharedFeatureComponent,
+        TestomonialsComponent,
     ],
-    imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule, ReactiveFormsModule, NgxMapLibreGLModule, GoogleMapsModule,HttpClientModule],
+    imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule, ReactiveFormsModule, NgxMapLibreGLModule, GoogleMapsModule, HttpClientModule],
     providers: [],
     bootstrap: [AppComponent],
 })

@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentService } from '../../../services/content.services';
-
-interface Container {
-    item1: string;
-    item2: string;
-}
+import { FancyWord } from '../../../models/fancy-word.interface'
 
 @Component({
     selector: 'app-fancy-words',
@@ -12,12 +8,12 @@ interface Container {
     styleUrls: ['./fancy-words.component.scss'],
 })
 export class FancyWordsComponent implements OnInit {
-    containers: Container[] = [];
+    containers: FancyWord[] = [];
 
     constructor(private contentService: ContentService) {}
 
     ngOnInit(): void {
-        const repeatedContainers: Container[] = [];
+        const repeatedContainers: FancyWord[] = [];
         const repetitions = 3; // Number of times to repeat the items
         for (let i = 0; i < repetitions; i++) {
             repeatedContainers.push(...this.contentService.fancyWords.containers);
