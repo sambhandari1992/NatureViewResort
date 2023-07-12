@@ -23,7 +23,7 @@
 </mat-toolbar>
 
 <mat-sidenav-container>
-    <mat-sidenav #sidenav="matSidenav">
+    <mat-sidenav #sidenav>
         <div class="sidenav-links">
             <button mat-button class="menu-button" *ngFor="let sideLink of navData.sideLinks" [routerLink]="sideLink.path" routerLinkActive="active">
                 <mat-icon>{{ sideLink.icon }}</mat-icon>

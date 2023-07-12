@@ -7,11 +7,18 @@ import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { ContentService } from 'src/app/services/content.services';
 import { NavData } from '../../models/nav.interface';
 
+
+
+
+
+
+
 @UntilDestroy()
 @Component({
     selector: 'app-nav',
     templateUrl: './nav.component.html',
     styleUrls: ['./nav.component.scss'],
+
 })
 export class NavComponent {
     @ViewChild(MatSidenav)
@@ -32,6 +39,7 @@ export class NavComponent {
     closeAccountComponent(event: MouseEvent) {
         this.isAccountComponentVisiable = false;
         event.stopPropagation();
+        console.log('cdsjkc');
     }
 
     ngAfterViewInit() {
@@ -57,6 +65,17 @@ export class NavComponent {
                 if (this.sidenav.mode === 'over') {
                     this.sidenav.close();
                 }
+                document.querySelector('.mat-sidenav-content').scrollTop = 0;
+
+
             });
     }
+  
 }
+
+
+// ngOnInit() {
+//     this.subscription = this.router.events.pipe(
+//         filter(event => event instanceof NavigationEnd)
+//     ).subscribe(() => window.scrollTo(0, 0));
+// }
