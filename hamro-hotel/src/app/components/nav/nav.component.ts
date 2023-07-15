@@ -39,7 +39,6 @@ export class NavComponent {
     closeAccountComponent(event: MouseEvent) {
         this.isAccountComponentVisiable = false;
         event.stopPropagation();
-        console.log('cdsjkc');
     }
 
     ngAfterViewInit() {
