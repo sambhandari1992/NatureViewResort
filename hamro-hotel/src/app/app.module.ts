@@ -7,7 +7,6 @@ import { NgxMapLibreGLModule } from '@maplibre/ngx-maplibre-gl';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { HttpClientModule } from '@angular/common/http';
 
-// import { ApiService } from '../app/services/google-api.services';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
