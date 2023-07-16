@@ -14,6 +14,7 @@ export class FacilitieComponent implements OnInit {
     constructor(private facilitiesService: FacilitiesService) {}
 
     ngOnInit(): void {
+        console.log('try');
         this.facilitiesService.getFacilities().subscribe((facilities) => {
             for (let i = 0; i < facilities.length; i++) {
                 this.allItems.push(facilities[i]);
