@@ -1,0 +1,31 @@
+<section class="container" [ngClass]="customStyle">
+    <h1>The Nature View Resort</h1>
+    <h1>Facilities</h1>
+    <div class="boxes">
+        <mat-card class="box" *ngFor="let item of allItems">
+            <mat-icon>{{ item.icon }}</mat-icon>
+            <mat-card-content>
+                <span>{{ item.name }}</span>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</section>
+
+<section class="viewMoreSection" [ngClass]="customStyle">
+    <button mat-fab extended color="primary" *ngIf="showButton">View More</button>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
