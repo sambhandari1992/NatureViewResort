@@ -1,4 +1,3 @@
-
 .container {
     text-align: center;
     background-color: rgb(234, 229, 229);
@@ -11,7 +10,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap; /* Allow boxes to wrap to new lines */
+        flex-wrap: wrap;
         max-width: 2000px;
         margin: 0 auto;
 
@@ -26,14 +25,12 @@
             border-radius: 5px;
             margin: 10px;
             padding: 20px;
-            // border: 1px solid red;
 
             mat-icon {
-                font-size: 100px; /* Adjust the font-size as desired */
+                font-size: 50px;
                 margin-bottom: 10px;
-                padding: 20px;
-                margin: 20px;
-                //   color: white;
+                padding: 35px;
+
             }
 
             span {
@@ -62,19 +59,82 @@
     padding: 1em;
 }
 
-@media (max-width: 839px) {
+
+.custom-style-1 {
+    max-height: 365px;
+    overflow: hidden; // Hide the overflow content
+
+    .boxes {
+        max-width: 1800px;
+
+        .box {
+            width: 150px;
+            height: 100px;
+
+            mat-icon {
+                font-size: 30px; /* Adjust the font-size as desired */
+                margin-bottom: 10px;
+                padding: 35px;
+            }
+
+            span {
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                width: 100px;
+                margin-bottom: 15px;
+            }
+
+            &:hover {
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 599px) {
+    .custom-style-1 {
+        max-height: 500px;
+        overflow: hidden; // Hide the overflow content
+    }
+}
+
+@media (max-width: 859px) {
     .container {
         .boxes {
             .box {
-                width: 200px;
-                height: 200px;
+                width: 150px;
+                height: 100px;
+
+                mat-icon {
+                    font-size: 30px; /* Adjust the font-size as desired */
+                }
+
+                span {
+                    font-size: 14px;
+                    display: flex;
+                    justify-content: center;
+                    width: 150px;
+                    margin-bottom: 15px;
+                }
+
+                &:hover {
+                    span {
+                        font-size: 14px;
+                    }
+                }
             }
         }
     }
 }
 
-.custom-style-1 {
-    max-height: 36em;
-    overflow: hidden; // Hide the overflow content
-  
+@media (max-width: 339px) {
+    .container {
+        .boxes {
+            .box {
+                width: 200px;
+            }
+        }
+    }
 }
