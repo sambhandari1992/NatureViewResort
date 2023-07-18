@@ -44,8 +44,6 @@ export class HomeComponent implements OnInit {
         this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
     }
     
-    navigateToFacilities() {
-      this.router.navigate(['/facilities'], { replaceUrl: true });
-    }
+  
     
 }
