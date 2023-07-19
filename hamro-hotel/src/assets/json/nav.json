@@ -1,20 +1,20 @@
 {
   "sideLinks": [
-    { "label": "Home", "path": "/home", "icon": "home" },
-    { "label": "About", "path": "/about", "icon": "info" },
-    { "label": "Blogs", "path": "/blogs", "icon": "video_camera_front" },
-    { "label": "Contact", "path": "/contact", "icon": "help" },
-    { "label": "Gallery", "path": "/gallery", "icon": "collections_bookmark" }
+    { "label": "Home", "path": "home", "icon": "home" },
+    { "label": "About", "path": "about", "icon": "info" },
+    { "label": "Blogs", "path": "blogs", "icon": "video_camera_front" },
+    { "label": "Contact", "path": "contact", "icon": "help" },
+    { "label": "Gallery", "path": "gallery", "icon": "collections_bookmark" }
   ],
   "exploreLinks": [
-    { "label": "Local Attraction", "path": "/local-attraction" },
-    { "label": "Dining", "path": "/dining" },
-    { "label": "Accommodation", "path": "/accommodation" },
-    { "label": "Facilities", "path": "/facilities" },
-    { "label": "Promotions", "path": "/promotions" },
-    { "label": "Spa center", "path": "/spa" },
-    { "label": "Weeding & Events", "path": "/weeding&events" },
-    { "label": "Packages", "path": "/packages" }
+    { "label": "Local Attraction", "path": "local-attraction" },
+    { "label": "Dining", "path": "dining" },
+    { "label": "Accommodation", "path": "accommodation" },
+    { "label": "Facilities", "path": "facilities" },
+    { "label": "Promotions", "path": "promotions" },
+    { "label": "Spa center", "path": "spa" },
+    { "label": "Weeding & Events", "path": "weeding&events" },
+    { "label": "Packages", "path": "packages" }
   ]
 }
 

@@ -1,0 +1,52 @@
+/* topic.component.scss */
+.topic {
+    background-color: rgb(234, 229, 229);
+    // max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2%;
+    position: relative; /* Add this to make positioning work */
+    .links {
+        color: whitesmoke;
+        position: absolute; /* Position the h1 element */
+        top: 30%; /* Position the element 50% from the top */
+        left: 50%; /* Position the element 50% from the left */
+        transform: translate(-50%, -50%); /* Center the element both horizontally and vertically */
+        .sub-links {
+            margin-top: -40px;
+            display: flex;
+            justify-content: center;
+            gap: 0.2em;
+            font-weight: bold;
+            .home {
+                padding: 5% 10% 5% 10%;
+                border-radius: 5px;
+                font-weight: bold;
+                color: rgb(248, 10, 10);
+                &:hover {
+                    background-color: rgba(10, 11, 10, 0.749);
+                    color: rgb(224, 215, 215);
+                    cursor: pointer;
+                }
+            }
+            .button-active {
+                white-space: nowrap; /* Prevent text from wrapping */
+
+                padding: 5% 10% 5% 10%;
+                border-radius: 5px;
+
+                font-weight: bold;
+                background-color: rgba(10, 11, 10, 0.749);
+                color: aliceblue;
+                // width: 100%;
+                // justify-content: flex-start;
+            }
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain; /* You can use "cover" if you want the image to fill the container */
+    }
+}
