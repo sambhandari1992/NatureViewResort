@@ -13,6 +13,10 @@ export class FacilitieComponent implements OnInit {
     allItems: Facility[] = [];
     @Input() customStyle: string = '';
     @Input() showButton: boolean = false;
+    @Input() h1Text: string = ''; // Default value for the h1 text
+    @Input() h1Text2: string = ''; // Default value for the h1 text
+
+
 
     isLargeScreen: boolean = window.innerWidth > 1899;
 

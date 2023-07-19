@@ -1,6 +1,8 @@
+
+
 <section class="container" [ngClass]="customStyle">
-    <h1>The Nature View Resort</h1>
-    <h1>Facilities</h1> 
+    <h1>{{ h1Text }}</h1>
+    <h1>{{ h1Text2 }}</h1>
     <div class="boxes">
         <mat-card class="box" *ngFor="let item of allItems">
             <mat-icon>{{ item.icon }}</mat-icon>
@@ -14,18 +16,3 @@
 <section class="viewMoreSection" [ngClass]="customStyle">
     <button mat-fab extended color="primary" *ngIf="showButton" (click)="navigateToFacilities()">{{ isLargeScreen ? 'View Details' : 'View More' }}</button>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

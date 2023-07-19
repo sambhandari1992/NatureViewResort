@@ -41,6 +41,10 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
+        <ng-container *ngIf="allowedRoutes.includes(currentRouteName)" >
+            <app-topic [currentRouteName]="currentRouteName | titlecase"></app-topic>
+        </ng-container>
+
         <router-outlet></router-outlet>
         <app-testomonials></app-testomonials>
         <app-footer></app-footer>

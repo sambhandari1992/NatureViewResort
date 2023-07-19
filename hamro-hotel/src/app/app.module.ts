@@ -39,6 +39,7 @@ import { GoogleMapComponent } from './components/footer/google-map/google-map.co
 import { TestimonyComponent } from './components/home/testimony/testimony.component';
 import { SharedFeatureComponent } from './components/shared/shared-feature/shared-feature.component';
 import { TestomonialsComponent } from './components/home/testomonials/testomonials.component';
+import { TopicComponent } from './components/shared/topic/topic.component';
 
 @NgModule({
     declarations: [
@@ -72,6 +73,7 @@ import { TestomonialsComponent } from './components/home/testomonials/testomonia
         TestimonyComponent,
         SharedFeatureComponent,
         TestomonialsComponent,
+        TopicComponent,
     ],
     imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule, ReactiveFormsModule, NgxMapLibreGLModule, GoogleMapsModule, HttpClientModule],
     providers: [],
