@@ -1,2 +1,9 @@
 <!-- <app-testimony></app-testimony> -->
 <!-- <app-facilitie></app-facilitie> -->
+
+<form (ngSubmit)="uploadImage()" enctype="multipart/form-data">
+    <input type="file" (change)="onFileSelected($event)" />
+    <button (click)="uploadImage()">Upload</button>
+    
+  </form>
+  
