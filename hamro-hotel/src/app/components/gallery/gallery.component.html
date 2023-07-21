@@ -1,14 +1,18 @@
-<!-- <div class="gallery">
-    <div class="avatar mat-elevation-z8">
-        <img  src="../../../assets/images/gallery/gallery8.jpeg" />
-    </div>
-    <div class="avatar mat-elevation-z8">
-        <img  src="../../../assets/images/gallery/gallery8.jpeg" />
-    </div>
-    <div class="avatar mat-elevation-z8">
-        <img  src="../../../assets/images/gallery/gallery8.jpeg" />
-    </div>
-</div> -->
+<mat-toolbar color="primary">Responsive Card Grid for my Images</mat-toolbar>
+<div class="container responsive-grid">
+    <mat-card *ngFor="let item of imageUrls">
+        <img mat-card-image [src]="item.url" />
+    </mat-card>
+</div>
 
 
-
+<mat-toolbar color="primary">Responsive Card Grid from Unsplash</mat-toolbar>
+<div class="container responsive-grid">
+    <mat-card *ngFor="let card of cards">
+        <mat-card-header>
+            <mat-card-title>{{ card.title }}</mat-card-title>
+        </mat-card-header>
+        <br />
+        <img mat-card-image [src]="card.imageUrl" />
+    </mat-card>
+</div>

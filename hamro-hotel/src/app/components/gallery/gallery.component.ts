@@ -1,32 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { GalleryDataService } from 'src/app/services/gallery-data-service';
+import { ImageData } from '../gallery/gallery.interface';
 
-import { ImageData } from './gallery.interface';
-
+type CardContent = {
+    title: string;
+    description: string;
+    imageUrl: string;
+};
 @Component({
     selector: 'app-gallery',
     templateUrl: './gallery.component.html',
     styleUrls: ['./gallery.component.scss'],
 })
 export class GalleryComponent implements OnInit {
+    cards: CardContent[] = [];
     imageUrls: ImageData[] = [];
 
-    title = 'gridemo';
-    public lists: any = [];
-
     constructor(private galleryDataService: GalleryDataService) {}
-
-    gridColumns = 3;
-
-    toggleGridColumns() {
-        this.gridColumns = this.gridColumns === 3 ? 4 : 3;
-    }
 
     ngOnInit(): void {
         this.galleryDataService.getImageUrls().subscribe((data) => {
             this.imageUrls = data;
-            console.log(this.imageUrls); // Check if the data is fetched properly
         });
+
+        for (let i = 0; i < 100; i++) {
+            this.cards.push({
+                title: `Card ${i + 1}`,
+                description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima molestias tempore asperiores ad deserunt pariatur totam velit veritatis, quis quo voluptatum, id magni. Laborum dolor fugiat magni, ea voluptate recusandae! `,
+                imageUrl: `https://source.unsplash.com/random/500X500?sig=${i}`,
+            });
+        }
     }
 }
 
