@@ -30,7 +30,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { AccountComponent } from './components/account/account.component';
 import { SignupAndLoginComponent } from './components/account/signup-and-login/signup-and-login.component';
 import { LogininfoComponent } from './components/account/logininfo/logininfo.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/account/login/login.component';
 import { SignUpComponent } from './components/account/sign-up/sign-up.component';
 import { NavComponent } from './components/nav/nav.component';
@@ -40,6 +40,7 @@ import { TestimonyComponent } from './components/home/testimony/testimony.compon
 import { SharedFeatureComponent } from './components/shared/shared-feature/shared-feature.component';
 import { TestomonialsComponent } from './components/home/testomonials/testomonials.component';
 import { TopicComponent } from './components/shared/topic/topic.component';
+import { GalleryUploadComponent } from './components/gallery-upload/gallery-upload.component';
 
 @NgModule({
     declarations: [
@@ -58,7 +59,6 @@ import { TopicComponent } from './components/shared/topic/topic.component';
         LocalAttrectionComponent,
         PromotionsComponent,
         NotFoundComponent,
-        GalleryComponent,
         AboutComponent,
         BlogsComponent,
         ContactComponent,
@@ -74,8 +74,10 @@ import { TopicComponent } from './components/shared/topic/topic.component';
         SharedFeatureComponent,
         TestomonialsComponent,
         TopicComponent,
+        GalleryUploadComponent,
+        GalleryComponent
     ],
-    imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule, ReactiveFormsModule, NgxMapLibreGLModule, GoogleMapsModule, HttpClientModule],
+    imports: [BrowserModule, FormsModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule, ReactiveFormsModule, NgxMapLibreGLModule, GoogleMapsModule, HttpClientModule],
     providers: [],
     bootstrap: [AppComponent],
 })
