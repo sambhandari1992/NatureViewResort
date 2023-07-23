@@ -1,5 +1,9 @@
 /* topic.component.scss */
 .topic {
+    h1 {
+        white-space: nowrap;
+        // font-size: 24px; /* Set your desired font size */
+      }
     background-color: rgb(234, 229, 229);
     // max-width: 1400px;
     margin: 0 auto;
@@ -9,14 +13,14 @@
     .links {
         color: whitesmoke;
         position: absolute; /* Position the h1 element */
-        top: 30%; /* Position the element 50% from the top */
+        top: 40%; /* Position the element 50% from the top */
         left: 50%; /* Position the element 50% from the left */
         transform: translate(-50%, -50%); /* Center the element both horizontally and vertically */
         .sub-links {
             margin-top: -40px;
             display: flex;
             justify-content: center;
-            gap: 0.2em;
+            gap: 0.1em;
             font-weight: bold;
             .home {
                 padding: 5% 10% 5% 10%;
@@ -49,4 +53,22 @@
         height: auto;
         object-fit: contain; /* You can use "cover" if you want the image to fill the container */
     }
+}
+
+@media (max-width: 400px) {
+    .topic {
+        h1 {
+            font-size: 20px;
+        }
+        .links {
+            .sub-links {
+                margin-top: -30px;
+                gap: 0em;
+                .home,.button-active {
+                    padding: 2% 5% 2% 5%;
+                }
+            }
+        }
+    }
+
 }
