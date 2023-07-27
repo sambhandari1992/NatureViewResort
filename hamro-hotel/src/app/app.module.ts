@@ -41,6 +41,7 @@ import { SharedFeatureComponent } from './components/shared/shared-feature/share
 import { TestomonialsComponent } from './components/home/testomonials/testomonials.component';
 import { TopicComponent } from './components/shared/topic/topic.component';
 import { GalleryUploadComponent } from './components/gallery-upload/gallery-upload.component';
+import { HighlightsComponent } from './components/highlights/highlights.component';
 
 @NgModule({
     declarations: [
@@ -75,7 +76,8 @@ import { GalleryUploadComponent } from './components/gallery-upload/gallery-uplo
         TestomonialsComponent,
         TopicComponent,
         GalleryUploadComponent,
-        GalleryComponent
+        GalleryComponent,
+        HighlightsComponent
     ],
     imports: [BrowserModule, FormsModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule, ReactiveFormsModule, NgxMapLibreGLModule, GoogleMapsModule, HttpClientModule],
     providers: [],
