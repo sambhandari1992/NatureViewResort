@@ -3,7 +3,7 @@
 }
 
 .container {
-    max-width: 1800px;
+    // max-width: 1800px;
     margin: 0 auto; /* Center the container horizontally */
     #parent {
         display: flex;
@@ -105,6 +105,15 @@
         #parent {
             .child {
                 min-width: 450px;
+            }
+        }
+    }
+}
+@media (min-width: 2450px) {
+    .container {
+        #parent {
+            .child {
+                min-width: 300px;
             }
         }
     }
