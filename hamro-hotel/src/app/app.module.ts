@@ -7,7 +7,6 @@ import { NgxMapLibreGLModule } from '@maplibre/ngx-maplibre-gl';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { HttpClientModule } from '@angular/common/http';
 
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BodyComponent } from './components/body/body.component';
@@ -40,7 +39,8 @@ import { SharedFeatureComponent } from './components/shared/shared-feature/share
 import { TestomonialsComponent } from './components/home/testomonials/testomonials.component';
 import { TopicComponent } from './components/shared/topic/topic.component';
 import { GalleryUploadComponent } from './components/gallery-upload/gallery-upload.component';
-import { HighlightsComponent } from './components/highlights/highlights.component';
+import { HighlightsComponent } from './components/home/highlights/highlights.component';
+import { HomeContactComponent } from './components/home/home-contact/home-contact.component';
 
 @NgModule({
     declarations: [
@@ -75,7 +75,8 @@ import { HighlightsComponent } from './components/highlights/highlights.componen
         TopicComponent,
         GalleryUploadComponent,
         GalleryComponent,
-        HighlightsComponent
+        HighlightsComponent,
+        HomeContactComponent,
     ],
     imports: [BrowserModule, FormsModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule, ReactiveFormsModule, NgxMapLibreGLModule, GoogleMapsModule, HttpClientModule],
     providers: [],
