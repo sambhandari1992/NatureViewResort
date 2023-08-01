@@ -11,7 +11,7 @@
         justify-content: center;
         .child {
             flex: 1;
-            min-width: 300px;
+            min-width: 25%;
             padding: 10px;
             .card {
                 border-radius: 8px;
@@ -90,42 +90,80 @@
     }
 }
 
-// Responsive media queries
-@media (min-width: 1450px) and (max-width: 1949px) {
+
+@media (min-width: 1850px) {
     .container {
         #parent {
             .child {
-                min-width: 350px;
+                min-width: 16%;
             }
         }
     }
 }
-@media (min-width: 1950px) {
+// // Responsive media queries
+@media (max-width: 1250px) {
     .container {
         #parent {
             .child {
-                min-width: 450px;
+                min-width: 30%;
             }
         }
     }
 }
-@media (min-width: 2450px) {
+@media (max-width: 1000px) {
     .container {
         #parent {
             .child {
-                min-width: 300px;
+                min-width: 50%;
             }
         }
     }
 }
-@media (max-width: 400px) {
+
+@media (max-width: 550px) {
     .container {
         #parent {
             .child {
-                min-width: 200px;
+                min-width: 100%;
             }
         }
     }
 }
+// @media (min-width: 1450px) and (max-width: 1949px) {
+//     .container {
+//         #parent {
+//             .child {
+//                 min-width: 350px;
+//             }
+//         }
+//     }
+// }
+// @media (min-width: 1950px) {
+//     .container {
+//         #parent {
+//             .child {
+//                 min-width: 450px;
+//             }
+//         }
+//     }
+// }
+// @media (min-width: 2450px) {
+//     .container {
+//         #parent {
+//             .child {
+//                 min-width: 770px;
+//             }
+//         }
+//     }
+// }
+// @media (max-width: 400px) {
+//     .container {
+//         #parent {
+//             .child {
+//                 min-width: 200px;
+//             }
+//         }
+//     }
+// }
 
 

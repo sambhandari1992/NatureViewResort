@@ -1,5 +1,6 @@
 .testimonial {
-    background-image: url("../../../../assets/images/testomonial-background.jpeg");
+    background-color: rgb(189, 186, 186);
+    // background-image: url("../../../../assets/images/hom/review-backgroung.jpeg");
     display: flex;
     flex-direction: column;
 
@@ -15,7 +16,7 @@
         padding: 1em;
         gap: 20px;
         .testimonial-card {
-            border: 1px solid rgb(0, 255, 21);
+            // border: 1px solid rgb(0, 255, 21);
             width: 700px;
         }
         mat-icon {
