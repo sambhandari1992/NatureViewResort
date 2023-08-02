@@ -53,6 +53,9 @@
                 }
 
                 mat-card-content {
+                    min-height: 90px;
+                    max-height: 90px; /* Adjust this value as needed to limit the height */
+                    overflow: hidden;
                     padding: 16px;
                     text-align: center;
                     font-size: 14px;
@@ -89,7 +92,6 @@
         }
     }
 }
-
 
 @media (min-width: 1850px) {
     .container {
@@ -129,41 +131,3 @@
         }
     }
 }
-// @media (min-width: 1450px) and (max-width: 1949px) {
-//     .container {
-//         #parent {
-//             .child {
-//                 min-width: 350px;
-//             }
-//         }
-//     }
-// }
-// @media (min-width: 1950px) {
-//     .container {
-//         #parent {
-//             .child {
-//                 min-width: 450px;
-//             }
-//         }
-//     }
-// }
-// @media (min-width: 2450px) {
-//     .container {
-//         #parent {
-//             .child {
-//                 min-width: 770px;
-//             }
-//         }
-//     }
-// }
-// @media (max-width: 400px) {
-//     .container {
-//         #parent {
-//             .child {
-//                 min-width: 200px;
-//             }
-//         }
-//     }
-// }
-
-

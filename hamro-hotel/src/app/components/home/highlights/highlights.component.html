@@ -4,14 +4,13 @@
             <mat-card class="card">
                 <mat-card-header>
                     <mat-card-title>The Nature View Resort</mat-card-title>
-                    <mat-card-subtitle>{{ component.name}}</mat-card-subtitle>
+                    <mat-card-subtitle>{{ component.name | uppercase }}</mat-card-subtitle>
                 </mat-card-header>
-                <img mat-card-image [src]="component.imageUrl" alt="{{ component.name }}" />
+                <img mat-card-image [src]="component.profile" alt="{{ component.name }}" />
                 <mat-card-content>
                     <p class="card-description">
                         {{
-                            component.description +
-                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda obcaecati ad enim adipisci possimus a quaerat fuga sapiente, quod deserunt est architecto quis quos sint nobis inventore, velit quam voluptate."
+                            component.message 
                         }}
                     </p>
                 </mat-card-content>

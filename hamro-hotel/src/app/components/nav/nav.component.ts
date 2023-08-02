@@ -73,7 +73,6 @@ export class NavComponent {
             )
             .subscribe(() => {
                 this.currentRouteName = this.activatedRoute.root.firstChild?.snapshot.url[0]?.path;
-                console.log(this.currentRouteName);
 
                 if (this.sidenav.mode === 'over') {
                     this.sidenav.close();
@@ -89,9 +88,3 @@ export class NavComponent {
     
     
 }
-
-// ngOnInit() {
-//     this.subscription = this.router.events.pipe(
-//         filter(event => event instanceof NavigationEnd)
-//     ).subscribe(() => window.scrollTo(0, 0));
-// }
