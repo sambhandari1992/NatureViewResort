@@ -7,7 +7,6 @@ import { NgxMapLibreGLModule } from '@maplibre/ngx-maplibre-gl';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { HttpClientModule } from '@angular/common/http';
 
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BodyComponent } from './components/body/body.component';
@@ -36,11 +35,12 @@ import { SignUpComponent } from './components/account/sign-up/sign-up.component'
 import { NavComponent } from './components/nav/nav.component';
 import { FancyWordsComponent } from './components/home/fancy-words/fancy-words.component';
 import { GoogleMapComponent } from './components/footer/google-map/google-map.component';
-import { TestimonyComponent } from './components/home/testimony/testimony.component';
 import { SharedFeatureComponent } from './components/shared/shared-feature/shared-feature.component';
 import { TestomonialsComponent } from './components/home/testomonials/testomonials.component';
 import { TopicComponent } from './components/shared/topic/topic.component';
 import { GalleryUploadComponent } from './components/gallery-upload/gallery-upload.component';
+import { HighlightsComponent } from './components/home/highlights/highlights.component';
+import { HomeContactComponent } from './components/home/home-contact/home-contact.component';
 
 @NgModule({
     declarations: [
@@ -70,12 +70,13 @@ import { GalleryUploadComponent } from './components/gallery-upload/gallery-uplo
         NavComponent,
         FancyWordsComponent,
         GoogleMapComponent,
-        TestimonyComponent,
         SharedFeatureComponent,
         TestomonialsComponent,
         TopicComponent,
         GalleryUploadComponent,
-        GalleryComponent
+        GalleryComponent,
+        HighlightsComponent,
+        HomeContactComponent,
     ],
     imports: [BrowserModule, FormsModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule, ReactiveFormsModule, NgxMapLibreGLModule, GoogleMapsModule, HttpClientModule],
     providers: [],

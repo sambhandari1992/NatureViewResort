@@ -5,4 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './body.component.html',
   styleUrls: ['./body.component.scss'],
 })
-export class BodyComponent {}
+export class BodyComponent {
+  boxes: number[] = Array.from({ length: 19 }, (_, i) => i + 1);
+
+  
+}

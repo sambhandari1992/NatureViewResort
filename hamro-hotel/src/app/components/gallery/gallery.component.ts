@@ -23,13 +23,13 @@ export class GalleryComponent implements OnInit {
             this.imageUrls = data;
         });
 
-        for (let i = 0; i < 100; i++) {
-            this.cards.push({
-                title: `Card ${i + 1}`,
-                description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima molestias tempore asperiores ad deserunt pariatur totam velit veritatis, quis quo voluptatum, id magni. Laborum dolor fugiat magni, ea voluptate recusandae! `,
-                imageUrl: `https://source.unsplash.com/random/500X500?sig=${i}`,
-            });
-        }
+        // for (let i = 0; i < 100; i++) {
+        //     this.cards.push({
+        //         title: `Card ${i + 1}`,
+        //         description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima molestias tempore asperiores ad deserunt pariatur totam velit veritatis, quis quo voluptatum, id magni. Laborum dolor fugiat magni, ea voluptate recusandae! `,
+        //         imageUrl: `https://source.unsplash.com/random/500X500?sig=${i}`,
+        //     });
+        // }
     }
 }
 
