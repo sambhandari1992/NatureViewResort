@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { HighlightDescriptionData } from 'src/app/models/highlight.interface';
 import { HighlightDescDataService } from 'src/app/services/highlightData.service';
 @Component({
@@ -8,7 +9,7 @@ import { HighlightDescDataService } from 'src/app/services/highlightData.service
 })
 export class HighlightsComponent {
     allComponents: HighlightDescriptionData[] = [];
-    constructor(private highlightDescDataService: HighlightDescDataService) {}
+    constructor(private router: Router, private highlightDescDataService: HighlightDescDataService) {}
 
     ngOnInit(): void {
         this.highlightDescDataService.getHighlightData().subscribe((c) => {
@@ -18,5 +19,8 @@ export class HighlightsComponent {
                 
             }
         });
+    }
+    redirectToComponentRoute(component: HighlightDescriptionData): void {
+      this.router.navigate([component.name]); // Navigate to the route with the component's name
     }
 }
