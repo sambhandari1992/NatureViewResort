@@ -41,6 +41,7 @@ import { TopicComponent } from './components/shared/topic/topic.component';
 import { GalleryUploadComponent } from './components/gallery-upload/gallery-upload.component';
 import { HighlightsComponent } from './components/home/highlights/highlights.component';
 import { HomeContactComponent } from './components/home/home-contact/home-contact.component';
+import { HomeAboutComponent } from './components/home/home-about/home-about.component';
 
 @NgModule({
     declarations: [
@@ -77,6 +78,7 @@ import { HomeContactComponent } from './components/home/home-contact/home-contac
         GalleryComponent,
         HighlightsComponent,
         HomeContactComponent,
+        HomeAboutComponent
     ],
     imports: [BrowserModule, FormsModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule, ReactiveFormsModule, NgxMapLibreGLModule, GoogleMapsModule, HttpClientModule],
     providers: [],

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentService } from '../../../services/content.services';
-import { FancyWord } from '../../../models/fancy-word.interface'
+import { FancyWord } from './fancy-word.interface'
 
 @Component({
     selector: 'app-fancy-words',

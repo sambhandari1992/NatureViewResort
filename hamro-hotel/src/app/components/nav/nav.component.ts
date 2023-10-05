@@ -5,7 +5,7 @@ import { delay, filter } from 'rxjs/operators';
 import { NavigationEnd, ActivatedRoute, Router } from '@angular/router';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { ContentService } from 'src/app/services/content.services';
-import { NavData } from '../../models/nav.interface';
+import { NavData } from './nav.interface';
 
 @UntilDestroy()
 @Component({
@@ -23,12 +23,9 @@ export class NavComponent {
     allowedRoutes: string[] = [];
     @Input() currentRouteName: string;
 
-    
-
     constructor(private observer: BreakpointObserver, private router: Router, private contentService: ContentService, private activatedRoute: ActivatedRoute) {
         this.navData = this.contentService.navItems as NavData;
         this.allowedRoutes = this.getAllRouteNames();
-
     }
     getAllRouteNames(): string[] {
         const routeNames: string[] = [];
@@ -81,10 +78,7 @@ export class NavComponent {
             });
     }
     isValidRoute(routeName: string): boolean {
-        
         // Assuming this.navData contains the list of valid routes
         return this.navData.sideLinks.some((link) => link.path === routeName);
     }
-    
-    
 }

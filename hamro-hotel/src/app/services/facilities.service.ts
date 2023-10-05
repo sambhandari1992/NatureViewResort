@@ -1,7 +1,6 @@
-
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Facility } from '../models/facilities.interface';
+import { Facility } from '../components/facilitie/facilities.interface';
 import * as facilitiesData from '../../assets/json/facilities.json';
 
 @Injectable({
@@ -10,9 +9,7 @@ import * as facilitiesData from '../../assets/json/facilities.json';
 export class FacilitiesService {
     private allFacilities: Facility[] = facilitiesData;
 
-    constructor() {
-      
-    }
+    constructor() {}
 
     getFacilities(): Observable<Facility[]> {
         return of(this.allFacilities);

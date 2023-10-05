@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Testimonial } from '../models/testimonial.interface';
+import { Testimonial } from '../components/home/testomonials/testimonial.interface';
 import * as testimonialsData from '../../assets/json/testimonials.json';
 
 @Injectable({
