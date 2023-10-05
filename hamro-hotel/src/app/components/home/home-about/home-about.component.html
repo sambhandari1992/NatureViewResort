@@ -2,7 +2,12 @@
     <h1>{{ homeAboutDetails.homeAboutContent.h1 }}</h1>
     <h2>{{ homeAboutDetails.homeAboutContent.h2 }}</h2>
     <img src="{{ homeAboutDetails.imageUrl }}" class="spidy" />
-    <p>{{ homeAboutDetails.homeAboutContent.aboutText }}</p>
+    <p>
+        {{ homeAboutDetails.homeAboutContent.aboutText }}
+        <span *ngIf="isLargeViewport">{{ homeAboutDetails.homeAboutContent.additionalText1 }}</span>
+        <span *ngIf="isExtraLargeViewport">{{ homeAboutDetails.homeAboutContent.additionalText2 }}</span>
+      </p>
+      
     <div class="center-button">
         <button routerLink="/about" mat-fab extended color="warn">Read More</button>
     </div>

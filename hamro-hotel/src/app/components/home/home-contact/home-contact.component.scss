@@ -1,8 +1,8 @@
-.component-container {
+.container {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    height: 30%;
+    // height: 30%;
     padding: 2em;
     transform-origin: center;
     transition: transform 0.3s ease-out;
@@ -13,7 +13,7 @@
     background: rgba(0, 0, 0, 0.5);
   }
   
-  .component-container::before {
+  .container::before {
     content: "";
     position: absolute;
     top: 0;
