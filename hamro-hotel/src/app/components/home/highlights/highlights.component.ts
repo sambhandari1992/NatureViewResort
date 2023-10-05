@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { HighlightDescriptionData } from 'src/app/models/highlight.interface';
+import { HighlightDescriptionData } from 'src/app/components/home/highlights/highlight.interface';
 import { HighlightDescDataService } from 'src/app/services/highlightData.service';
 @Component({
     selector: 'app-highlights',
@@ -16,11 +16,10 @@ export class HighlightsComponent {
             this.allComponents = [];
             for (let i = 0; i < c.length; i++) {
                 this.allComponents.push(c[i]);
-                
             }
         });
     }
     redirectToComponentRoute(component: HighlightDescriptionData): void {
-      this.router.navigate([component.name]); // Navigate to the route with the component's name
+        this.router.navigate([component.name]); // Navigate to the route with the component's name
     }
 }

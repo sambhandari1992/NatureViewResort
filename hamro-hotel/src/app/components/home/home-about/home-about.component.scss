@@ -1,0 +1,109 @@
+// /* Styles for the HomeAboutComponent */
+
+// .home-about {
+//     padding: 20px;
+//     background-color: #f0f0f0;
+//     border-radius: 10px;
+//     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+//     overflow: hidden; /* Ensure content doesn't overflow the container */
+//   }
+
+//   .about-text {
+//     font-size: 16px;
+//     line-height: 1.5;
+//     color: #333;
+//   }
+
+//   .about-image {
+//     float: right; /* Float the image to the right */
+//     margin: 0 0 20px 20px; /* Adjust margins for spacing */
+//     max-width: 50%; /* Set the maximum width for the image */
+//     height: auto; /* Maintain aspect ratio */
+//   }
+
+// .wrapper {
+//     align-self: center;
+//     // display: flex;
+//     // align-items: center;
+//     // justify-content: center;
+//     max-width: 1500px;
+//     column-count: 2;
+//     column-gap: 50px;
+//     padding: 50px;
+// }
+
+// p {
+//     line-height: 1.6;
+//     font-family: Helvetica;
+//     text-align: justify;
+//     margin: 0;
+//     font-size: 14px;
+// }
+
+// .star {
+//     float: left;
+//     width: 250px;
+//     shape-outside: url(https://upload.wikimedia.org/wikipedia/commons/3/34/Red_star.svg);
+//     shape-margin: 20px;
+//     margin-right: 20px;
+//     margin-bottom: 20px;
+// }
+
+// .moon {
+//     border-radius: 50%;
+//     height: 200px;
+//     width: 200px;
+//     background-color: #2badd9;
+//     float: right;
+//     shape-outside: inset(1% round 50%);
+//     margin-left: 20px;
+//     margin-bottom: 10px;
+// }
+
+.test {
+    max-width: 3000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    h1,
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .spidy {
+        width: 100%;
+        float: right;
+        shape-margin: 20px;
+        margin-left: 5px;
+    }
+    .center-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (min-width: 1500px) {
+    .test {
+        .spidy {
+            max-width: 1200px;
+        }
+    }
+}
+
+@media (min-width: 400px) {
+    .test {
+        .spidy {
+            width: 70%;
+            margin-right: 5px;
+        }
+    }
+}
+@media (max-width: 400px) {
+    .test {
+       p {
+        text-align: center;
+       }
+    }
+}

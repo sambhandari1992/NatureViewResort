@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { interval, Subject, Subscription } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { Testimonial } from '../../../models/testimonial.interface';
+import { Testimonial } from './testimonial.interface';
 import { TestimonialService } from '../../../services/testimonial.service';
 
 @Component({

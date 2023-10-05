@@ -1,8 +1,7 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { FacilitiesService } from '../../services/facilities.service';
-import { Facility } from '../../models/facilities.interface';
+import { Facility } from './facilities.interface';
 import { Router } from '@angular/router';
-
 
 @Component({
     selector: 'app-facilitie',
@@ -16,17 +15,13 @@ export class FacilitieComponent implements OnInit {
     @Input() h1Text: string = ''; // Default value for the h1 text
     @Input() h1Text2: string = ''; // Default value for the h1 text
 
-
-
     isLargeScreen: boolean = window.innerWidth > 1899;
-
-
 
     constructor(private facilitiesService: FacilitiesService, private router: Router) {}
 
     @HostListener('window:resize', ['$event'])
     onResize(event: any) {
-      this.isLargeScreen = window.innerWidth > 1899;
+        this.isLargeScreen = window.innerWidth > 1899;
     }
 
     ngOnInit(): void {
@@ -39,5 +34,5 @@ export class FacilitieComponent implements OnInit {
     }
     navigateToFacilities() {
         this.router.navigate(['/facilities'], { replaceUrl: true });
-      }
+    }
 }

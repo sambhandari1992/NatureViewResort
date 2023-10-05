@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Testimonial } from '../../../models/testimonial.interface';
+import { Testimonial } from '../../home/testomonials/testimonial.interface';
 
 @Component({
     selector: 'app-shared-feature',
