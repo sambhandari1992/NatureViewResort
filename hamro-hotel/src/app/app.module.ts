@@ -42,6 +42,7 @@ import { GalleryUploadComponent } from './components/gallery-upload/gallery-uplo
 import { HighlightsComponent } from './components/home/highlights/highlights.component';
 import { HomeContactComponent } from './components/home/home-contact/home-contact.component';
 import { HomeAboutComponent } from './components/home/home-about/home-about.component';
+import { HomeFacilitieComponent } from './components/home/home-facilitie/home-facilitie.component';
 
 @NgModule({
     declarations: [
@@ -78,7 +79,8 @@ import { HomeAboutComponent } from './components/home/home-about/home-about.comp
         GalleryComponent,
         HighlightsComponent,
         HomeContactComponent,
-        HomeAboutComponent
+        HomeAboutComponent,
+        HomeFacilitieComponent
     ],
     imports: [BrowserModule, FormsModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule, ReactiveFormsModule, NgxMapLibreGLModule, GoogleMapsModule, HttpClientModule],
     providers: [],

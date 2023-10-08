@@ -9,7 +9,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
-
+import {MatDividerModule} from '@angular/material/divider';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -61,6 +61,7 @@ const materialModules = [
   MatDialogModule,
   MatTableModule,
   MatToolbarModule,
+  MatDividerModule,
 
   OverlayModule,
   ReactiveFormsModule
