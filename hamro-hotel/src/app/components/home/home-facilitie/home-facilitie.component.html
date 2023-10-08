@@ -1,0 +1,38 @@
+<section>
+    <div class="child1">
+        <h1>The Nature View Resort</h1>
+        <h3>Facilities</h3>
+    </div>
+    <div class="child2">
+        <mat-card *ngFor="let item of allItems">
+            <mat-icon>{{ item.icon }}</mat-icon>
+            <mat-card-content>
+                <span>{{ item.name }}</span>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <!-- <div class="child22">
+        <div class="icon">
+            <mat-icon>keyboard_double_arrow_left</mat-icon>
+        </div>
+        <div class="child2">
+            <mat-card *ngFor="let item of allItems">
+                <mat-icon>{{ item.icon }}</mat-icon>
+                <mat-card-content>
+                    <span>{{ item.name }}</span>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="icon">
+            <mat-icon>keyboard_double_arrow_right</mat-icon>
+        </div>
+    </div> -->
+    <div class="child3">
+        <mat-divider></mat-divider>
+        <button routerLink="/facilities" mat-fab extended color="primary" (mouseenter)="toggleHover()" (mouseleave)="toggleHover()">
+            <mat-icon class="arrow-icon" [class.animate-arrow]="isHovered">arrow_forward</mat-icon>
+            View Facilities Details
+        </button>
+        <mat-divider></mat-divider>
+    </div>
+</section>
