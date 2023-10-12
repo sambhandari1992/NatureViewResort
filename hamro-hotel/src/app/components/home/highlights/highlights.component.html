@@ -9,17 +9,13 @@
                 <img mat-card-image [src]="component.profile" alt="{{ component.name }}" />
                 <mat-card-content>
                     <p class="card-description">
-                        {{
-                            component.message 
-                        }}
+                        {{ component.message }}
                     </p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button (click)="redirectToComponentRoute(component)">Learn more <mat-icon>exit_to_app</mat-icon></button>
+                    <button mat-button (click)="redirectToComponentRoute(component)">Explore<mat-icon>exit_to_app</mat-icon></button>
                 </mat-card-actions>
             </mat-card>
         </div>
     </div>
 </div>
-
-

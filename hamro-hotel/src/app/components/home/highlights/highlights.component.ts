@@ -13,7 +13,7 @@ export class HighlightsComponent {
 
     ngOnInit(): void {
         this.highlightDescDataService.getHighlightData().subscribe((c) => {
-            this.allComponents = [];
+            this.allComponents = []; 
             for (let i = 0; i < c.length; i++) {
                 this.allComponents.push(c[i]);
             }
