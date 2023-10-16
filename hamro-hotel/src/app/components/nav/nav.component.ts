@@ -14,8 +14,6 @@ import { NavData } from './nav.interface';
     styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent {
-
-    
     @ViewChild(MatSidenav)
     sidenav!: MatSidenav;
     isAccountComponentVisiable: boolean = false;
