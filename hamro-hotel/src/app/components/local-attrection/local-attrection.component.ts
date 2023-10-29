@@ -1,31 +1,23 @@
 import { Component } from '@angular/core';
-
-
-type LocalAttraction = {
-  name: string;
-  description: string;
-  imageUrl: string;
-};
+import { LocalAttractionData } from './local-attraction.interface';
+import { LocalAttractionDataService } from 'src/app/services/local-attraction.service';
 
 @Component({
-  selector: 'app-local-attrection',
-  templateUrl: './local-attrection.component.html',
-  styleUrls: ['./local-attrection.component.scss'],
+    selector: 'app-local-attrection',
+    templateUrl: './local-attrection.component.html',
+    styleUrls: ['./local-attrection.component.scss'],
 })
 export class LocalAttrectionComponent {
+    localAttractionData: LocalAttractionData[] = [];
 
-  localAttractions: LocalAttraction[] = [];
+    constructor( private localAttractionDataService: LocalAttractionDataService) {}
 
-  constructor() {}
-
-  ngOnInit(): void {
-    for (let i = 1; i <= 20; i++) {
-      this.localAttractions.push({
-        name: `Local Attraction ${i}`,
-        description: `Description of Local Attraction ${i}.`,
-        imageUrl: `https://source.unsplash.com/random/500x500?sig=${i}`,
-      });
+    ngOnInit(): void {
+        this.localAttractionDataService.getLocalAttractionData().subscribe((c) => {
+            this.localAttractionData = [];
+            for (let i = 0; i < c.length; i++) {
+                this.localAttractionData.push(c[i]);
+            }
+        });
     }
-  }
-
 }

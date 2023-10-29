@@ -27,8 +27,10 @@ mat-sidenav-container {
     }
 
     mat-sidenav {
+        // border-top: 1px solid rgb(250, 252, 249);
         width: 200px;
-        background: linear-gradient(to bottom, rgb(133, 156, 156) 10%, hsl(210, 1%, 56%) 50%);
+        background-color:#929391;
+        // background: linear-gradient(to bottom, rgb(133, 156, 156) 10%, hsl(210, 1%, 56%) 50%);
         color: white;
         padding: 16px;
         text-align: center;
@@ -102,9 +104,6 @@ mat-divider {
     .mat-toolbar {
         .inquire {
             display: none;
-        }
-        .img-logo {
-            width: 7em;
         }
     }
 }
