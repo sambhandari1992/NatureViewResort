@@ -1,4 +1,4 @@
-@import '../../styles/color-variables';
+@import "../../styles/color-variables";
 
 mat-toolbar {
     background: linear-gradient(to right, $primary-color, $secondary-color);
@@ -17,7 +17,6 @@ mat-toolbar {
     }
 }
 
-
 mat-sidenav-container {
     height: calc(100vh - 65px);
     .explore-links {
@@ -27,14 +26,11 @@ mat-sidenav-container {
     }
 
     mat-sidenav {
-        // border-top: 1px solid rgb(250, 252, 249);
         width: 200px;
-        background-color:#929391;
-        // background: linear-gradient(to bottom, rgb(133, 156, 156) 10%, hsl(210, 1%, 56%) 50%);
+        background-color: #929391;
         color: white;
         padding: 16px;
         text-align: center;
-    
     }
 }
 
@@ -112,10 +108,9 @@ mat-divider {
     mat-toolbar {
         background: linear-gradient(to right, $primary-color, $primary-color);
         .inquire {
-                display: none;
+            display: none;
         }
     }
-   
 }
 .button-active {
     font-weight: bold;
@@ -131,7 +126,6 @@ mat-divider {
     }
 }
 
-
 button {
     width: 100%;
 }
@@ -140,6 +134,5 @@ button {
     button {
         display: flex;
         justify-content: center;
-        
     }
 }

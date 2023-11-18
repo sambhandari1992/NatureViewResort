@@ -1,7 +1,7 @@
-<div class="test">
+<section>
     <h1>{{ homeAboutDetails.homeAboutContent.h1 }}</h1>
     <h2>{{ homeAboutDetails.homeAboutContent.h2 }}</h2>
-    <img src="{{ homeAboutDetails.imageUrl }}" class="spidy" />
+    <img src="{{ homeAboutDetails.imageUrl }}" />
     <p>
         {{ homeAboutDetails.homeAboutContent.aboutText }}
         <span *ngIf="isLargeViewport">{{ homeAboutDetails.homeAboutContent.additionalText1 }}</span>
@@ -11,4 +11,4 @@
     <div class="center-button">
         <button routerLink="/about" mat-fab extended color="primary">Read More</button>
     </div>
-</div>
+</section>
