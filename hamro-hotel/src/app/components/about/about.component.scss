@@ -346,3 +346,88 @@
         }
     }
 }
+
+
+
+
+// <footer>
+//     <main>
+//         <section>
+//             <h3>The Nature View Resort</h3>
+//             <div class="footer-item">
+//                 <p>
+//                     Welcome! to The Nature View Resort where you become our family the moment you walk through our doors. Come join us in this cozy, and affordable hostel that is located in the Heart
+//                     of Hawkes Bay and experience New Zealand like a local.Welcome! to The Nature View Resort where you become our family the moment you walk through our doors. Come join us in this
+//                     cozy, and
+//                 </p>
+//             </div>
+//         </section>
+//         <section>
+//             <h3>Quick Links</h3>
+//             <div class="footer-item">
+//                 <div class="container">
+//                     <button class="footer-links" mat-button *ngFor="let link of getCombinedLinks()">
+//                         <mat-icon>keyboard_double_arrow_right</mat-icon>
+//                         <p>{{ link?.label }}</p>
+//                     </button>
+//                     <button mat-button class="add-link">
+//                         <mat-icon>keyboard_double_arrow_right</mat-icon>
+//                         <h4>Terms and Conditions</h4>
+//                     </button>
+//                     <button mat-button class="add-link">
+//                         <mat-icon>keyboard_double_arrow_right</mat-icon>
+//                         <h4>Useful Information</h4>
+//                     </button>
+//                 </div>
+//             </div>
+//         </section>
+//         <section>
+//             <h3>Contact Info</h3>
+//             <div class="footer-item">
+//                 <div class="container">
+//                     <button class="footer-links" mat-button *ngFor="let item of contactInfoData">
+//                         <mat-icon>{{ item.icon }}</mat-icon>
+//                         <p>{{ item.content }}</p>
+//                     </button>
+//                 </div>
+//             </div>
+//         </section>
+//         <section>
+//             <h3>The Nature View Resort</h3>
+//             <div class="footer-item">
+//                 <div class="test">
+//                     <app-google-map></app-google-map>
+//                 </div>
+//             </div>
+//         </section>
+//     </main>
+// </footer>
+
+
+
+
+
+// import { Component } from '@angular/core';
+// import { ContentService } from 'src/app/services/content.services';
+// import { CustomIcon } from 'src/app/services/custom-icon.service';
+// import { ContactInfoItem } from '../contact/contact.interface';
+// import { NavData } from '../nav/nav.interface';
+
+// @Component({
+//     selector: 'app-footer',
+//     templateUrl: './footer.component.html',
+//     styleUrls: ['./footer.component.scss'],
+// })
+// export class FooterComponent {
+//     navData: NavData;
+//     contactInfoData: ContactInfoItem[];
+
+//     constructor(private contentService: ContentService, private iconService: CustomIcon) {
+//         this.navData = this.contentService.navItems as NavData;
+//         this.contactInfoData = this.contentService.contactInfo;
+//     }
+
+//     getCombinedLinks(): any[] {
+//         return [...this.navData.sideLinks, ...this.navData.exploreLinks];
+//     }
+// }
