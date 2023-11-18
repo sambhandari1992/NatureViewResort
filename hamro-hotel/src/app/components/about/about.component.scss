@@ -1,0 +1,433 @@
+// ------------------------- section1 -----------------------------------------------------------
+
+.section1 {
+    background-color: white;
+    max-width: 2050px;
+    display: flex;
+    margin: 0 auto;
+
+    .div1,
+    .div2 {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .div1 {
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+    }
+
+    .div2 {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: -500px;
+        align-items: center;
+
+        img {
+            max-width: 50%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @media (max-width: 1800px) {
+        .div2 {
+            margin-left: -200px;
+
+            img {
+                max-width: 70%;
+            }
+        }
+    }
+
+    @media (max-width: 1300px) {
+        .div2 {
+            margin-left: 0px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        .div1,
+        .div2 {
+            padding: 1em;
+        }
+    }
+}
+
+// ------------------------- section2 -----------------------------------------------------------
+
+.section2 {
+    background-color: white;
+
+    max-width: 2050px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+
+    .box1 {
+        .middle {
+            text-align: center;
+        }
+    }
+
+    .box2 {
+        display: flex;
+
+        .div1 {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+
+            video {
+                padding: 20px;
+                max-width: 90%;
+                min-width: 400px;
+                height: auto;
+                display: block;
+                margin: 0;
+
+                &::-webkit-media-controls,
+                &::-webkit-media-controls-enclosure,
+                &::-webkit-media-controls-panel {
+                    display: none !important;
+                }
+            }
+        }
+
+        .div2 {
+            flex: 1;
+            padding: 20px;
+        }
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+
+            .div1 {
+                order: 2;
+
+                video {
+                    min-width: 100px;
+                    height: auto;
+                    display: block;
+                    margin: 0;
+                    outline: none;
+                }
+            }
+
+            .div2 {
+                order: 1;
+            }
+        }
+    }
+}
+
+// ------------------------- section3 -----------------------------------------------------------
+
+.section3 {
+    background-color: white;
+
+    margin: 0 auto 0 auto;
+    padding: 2em;
+    max-width: 2000px;
+
+    .container {
+        border-radius: 10px;
+        background-color: black;
+        display: flex;
+        justify-content: space-around;
+        padding: 1em;
+
+        .child {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 30%;
+            justify-content: center;
+            padding: 1em;
+            span {
+                text-align: center;
+                color: white;
+            }
+        }
+    }
+    @media (max-width: 500px) {
+        padding: 1em;
+        .container {
+            .child {
+                span {
+                    font-size: x-small;
+                }
+            }
+        }
+    }
+}
+
+// ------------------------- section4 -----------------------------------------------------------
+
+.section4 {
+    background-color: white;
+
+    margin: 0 auto;
+    padding: 2em;
+    max-width: 2000px;
+    display: flex;
+    flex-direction: column;
+
+    .container {
+        border-radius: 10px;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .box1 {
+            h1 {
+                text-align: center;
+                color: white;
+            }
+        }
+
+        .box2 {
+            margin: 2em;
+            margin-bottom: 2em;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1em;
+
+            .child {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                background-color: black;
+
+                &:not(:last-child) {
+                    .example-card {
+                        background-color: black;
+                        color: white;
+
+                        mat-card-header {
+                            justify-content: center;
+
+                            mat-card-subtitle {
+                                text-align: center;
+                                color: white;
+                            }
+                        }
+
+                        img {
+                            margin: 0 auto;
+
+                            width: 100%;
+                            height: auto;
+                            max-width: 300px;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    .example-card {
+                        background-color: black;
+                        color: white;
+
+                        mat-card-header {
+                            justify-content: center;
+                            mat-card-subtitle {
+                                text-align: center;
+                                color: white;
+                            }
+                        }
+                        img {
+                            width: 100%;
+                            height: auto;
+                            max-width: 300px;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+                @media (min-width: 1500px) {
+                    img {
+                        width: 100%;
+                        height: auto;
+                        min-width: 300px;
+
+                        max-width: 500px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ------------------------- section5 -----------------------------------------------------------
+
+.section5 {
+    background-color: white;
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 2025px;
+
+    .container {
+        margin: 1em;
+        h1 {
+            color: white;
+            margin-bottom: -1em;
+        }
+        p {
+            color: white;
+            padding: 1em 1em 0em 1em;
+        }
+        background-color: black;
+        border: 1px solid rgb(184, 5, 65);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        button {
+            max-width: 300px;
+            align-self: center;
+            margin-bottom: 1em;
+        }
+    }
+}
+
+
+// ------------------------- section6 -----------------------------------------------------------
+
+
+.section6 {
+    background-color: white;
+
+    h1,
+    p {
+        text-align: center;
+    }
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 2000px;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        flex-wrap: wrap;
+        padding: 1em;
+
+        .child {
+            max-width: 750px;
+            flex: 1 1 250px;
+            text-align: center;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 1em;
+
+            mat-icon {
+                align-self: center;
+            }
+
+            h1 {
+                margin: 0;
+            }
+
+            p {
+                padding: 0em 1em 0em 1em;
+            }
+        }
+    }
+}
+
+
+
+
+// <footer>
+//     <main>
+//         <section>
+//             <h3>The Nature View Resort</h3>
+//             <div class="footer-item">
+//                 <p>
+//                     Welcome! to The Nature View Resort where you become our family the moment you walk through our doors. Come join us in this cozy, and affordable hostel that is located in the Heart
+//                     of Hawkes Bay and experience New Zealand like a local.Welcome! to The Nature View Resort where you become our family the moment you walk through our doors. Come join us in this
+//                     cozy, and
+//                 </p>
+//             </div>
+//         </section>
+//         <section>
+//             <h3>Quick Links</h3>
+//             <div class="footer-item">
+//                 <div class="container">
+//                     <button class="footer-links" mat-button *ngFor="let link of getCombinedLinks()">
+//                         <mat-icon>keyboard_double_arrow_right</mat-icon>
+//                         <p>{{ link?.label }}</p>
+//                     </button>
+//                     <button mat-button class="add-link">
+//                         <mat-icon>keyboard_double_arrow_right</mat-icon>
+//                         <h4>Terms and Conditions</h4>
+//                     </button>
+//                     <button mat-button class="add-link">
+//                         <mat-icon>keyboard_double_arrow_right</mat-icon>
+//                         <h4>Useful Information</h4>
+//                     </button>
+//                 </div>
+//             </div>
+//         </section>
+//         <section>
+//             <h3>Contact Info</h3>
+//             <div class="footer-item">
+//                 <div class="container">
+//                     <button class="footer-links" mat-button *ngFor="let item of contactInfoData">
+//                         <mat-icon>{{ item.icon }}</mat-icon>
+//                         <p>{{ item.content }}</p>
+//                     </button>
+//                 </div>
+//             </div>
+//         </section>
+//         <section>
+//             <h3>The Nature View Resort</h3>
+//             <div class="footer-item">
+//                 <div class="test">
+//                     <app-google-map></app-google-map>
+//                 </div>
+//             </div>
+//         </section>
+//     </main>
+// </footer>
+
+
+
+
+
+// import { Component } from '@angular/core';
+// import { ContentService } from 'src/app/services/content.services';
+// import { CustomIcon } from 'src/app/services/custom-icon.service';
+// import { ContactInfoItem } from '../contact/contact.interface';
+// import { NavData } from '../nav/nav.interface';
+
+// @Component({
+//     selector: 'app-footer',
+//     templateUrl: './footer.component.html',
+//     styleUrls: ['./footer.component.scss'],
+// })
+// export class FooterComponent {
+//     navData: NavData;
+//     contactInfoData: ContactInfoItem[];
+
+//     constructor(private contentService: ContentService, private iconService: CustomIcon) {
+//         this.navData = this.contentService.navItems as NavData;
+//         this.contactInfoData = this.contentService.contactInfo;
+//     }
+
+//     getCombinedLinks(): any[] {
+//         return [...this.navData.sideLinks, ...this.navData.exploreLinks];
+//     }
+// }
