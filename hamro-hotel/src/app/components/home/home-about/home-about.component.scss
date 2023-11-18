@@ -1,24 +1,22 @@
-.test {
-    border: 1px solid red;
+section {
     max-width: 4000px;
     margin: 0 auto;
     box-sizing: border-box;
+    h1 {
+        color: red;
+    }
     h1,
     h2 {
         text-align: center;
         margin-bottom: 20px;
     }
-    .spidy {
-        border: 1px solid rgb(0, 255, 119);
-
+    img {
         width: 100%;
         float: right;
         shape-margin: 20px;
         margin-left: 5px;
     }
     .center-button {
-        border: 1px solid rgb(60, 0, 255);
-
         display: flex;
         justify-content: center;
         margin-top: 20px;
@@ -30,23 +28,23 @@
 }
 
 @media (min-width: 1500px) {
-    .test {
-        .spidy {
+    section {
+        img {
             max-width: 1200px;
         }
     }
 }
 
 @media (min-width: 400px) {
-    .test {
-        .spidy {
+    section {
+        img {
             width: 70%;
             margin-right: 5px;
         }
     }
 }
 @media (max-width: 400px) {
-    .test {
+    section {
         p {
             text-align: center;
         }
