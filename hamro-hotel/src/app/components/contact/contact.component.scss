@@ -1,118 +1,100 @@
-.contact-page {
-    // padding: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(197, 176, 176);
-    gap: 1em; /* Add space between the two sections */
-
-    .contact-info {
-        flex-basis: 30%;
-        background-color: black;
-        color: white;
-        padding: 1em;
-        margin-bottom: 1em;
-        border-radius: 1em;
-        max-width: 25em;
-        gap: 5em;
-        // min-width: 20em;
-
-        .con {
-            gap: 1em;
-            display: flex;
-            align-items: center;
-            margin-bottom: 1em;
-            font-size: smaller;
-
-            mat-icon {
-                // margin-right: 10px;
-                color: rgb(6, 153, 251);
-                border-radius: 50%;
-                background-color: white;
-                padding: 0.5em;
-                flex-shrink: 0; /* Prevent the icons from shrinking */
-            }
-        }
-
-        a {
-            color: white;
-            text-decoration: underline;
-
-            &:hover {
-                color: rgb(9, 160, 248);
-            }
-        }
-    }
-
-    .contact-form {
-        flex-basis: 50%;
-        padding: 2%;
-
-        form {
-            display: grid;
-            gap: 1em;
-            max-width: 35em;
-            min-width: 25em;
-
-            mat-form-field {
-                &:nth-last-child(2) textarea {
-                    height: 6em; // Increase the height as per your preference
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 1000px) {
-    .contact-page {
-        flex-direction: column;
-        .contact-info {
-            align-self: center;
-            margin: 2em;
-        }
-    }
-}
-@media (max-width: 450px) {
-    .contact-page {
-        .contact-info {
-            .con {
-                mat-icon {
-                    padding: 5px;
-                }
-            }
-        }
-        .contact-form {
-            form {
-                min-width: 20em;
-            }
-        }
-    }
-}
-
-.schedule {
-    display: flex;
-    flex-direction: column;
-
-    .schedule-title {
+main {
+    background-color: rgb(234, 229, 229);
+    .section_one {
         display: flex;
         justify-content: center;
-    }
-    
-    .mat-cards {
-        display: flex;
-        justify-content: space-around;
-        padding: 3em;
-        gap: 20px;
-        mat-card {
+        align-items: center;
+        gap: 1em;
+        flex-wrap: wrap;
+        padding: 1em;
+
+        .box1,
+        .box2 {
             padding: 1em;
+            border-radius: 1em;
+            border: 1px solid rgb(0, 38, 255);
+            min-width: 200px;
+
+            .contact-info,
+            .contact-form {
+                h2 {
+                    text-align: center;
+                }
+            }
+        }
+
+        .box1 {
+            .contact-info {
+                .content {
+                    display: flex;
+                    gap: 1em;
+                    padding: 0.5em;
+
+                    mat-icon {
+                        color: rgb(6, 153, 251);
+                        border-radius: 50%;
+                        background-color: white;
+                        padding: 0.5em;
+                        flex-shrink: 0;
+                    }
+                }
+
+                @media (max-width: 400px) {
+                    .content {
+                        font-size: x-small;
+                    }
+                }
+            }
+        }
+
+        .box2 {
+            flex-grow: 1;
+            flex-basis: 400px;
+            max-width: 1000px;
+
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+
+                    mat-form-field {
+                        &:nth-last-child(2) textarea {
+                            height: 6em;
+                        }
+                    }
+                }
+            }
         }
     }
-}
 
-@media screen and (max-width: 800px) {
-    .schedule {
-        .mat-cards {
+    .section_two {
+        .box1 {
+            display: flex;
             flex-direction: column;
+            align-items: center;
+
+            .mat-cards {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 1em;
+                gap: 1em;
+
+                mat-card {
+                    padding: 1em;
+                    min-width: 300px;
+                    flex-basis: calc(50% - 1em);
+                    flex-grow: 1;
+
+                    @media (max-width: 400px) {
+                        min-width: 200px;
+                        flex-basis: calc(100% - 1em);
+                    }
+                }
+            }
         }
     }
 }
