@@ -1,351 +1,222 @@
-// ------------------------- section1 -----------------------------------------------------------
-
-.section1 {
-    background-color: white;
-    max-width: 2050px;
-    display: flex;
+main {
+    max-width: 3000px;
     margin: 0 auto;
 
-    .div1,
-    .div2 {
-        flex: 1;
-        padding: 20px;
+    section {
+        padding: 1em;
     }
 
-    .div1 {
-        h1 {
-            text-align: center;
-        }
-        p {
-            text-align: center;
-        }
-    }
-
-    .div2 {
+    .shared-flex-container {
         display: flex;
-        justify-content: flex-end;
-        margin-left: -500px;
+        justify-content: center;
         align-items: center;
-
-        img {
-            max-width: 50%;
-            max-height: 100%;
-            object-fit: cover;
-        }
+        gap: 1em;
     }
-
-    @media (max-width: 1800px) {
-        .div2 {
-            margin-left: -200px;
-
-            img {
-                max-width: 70%;
-            }
-        }
-    }
-
-    @media (max-width: 1300px) {
-        .div2 {
-            margin-left: 0px;
-
-            img {
-                max-width: 100%;
-            }
-        }
-    }
-
-    @media (max-width: 1200px) {
-        flex-direction: column;
+    .shared-flex-child {
         .div1,
         .div2 {
+            max-width: 1000px;
+            width: 100%;
             padding: 1em;
         }
     }
-}
-
-// ------------------------- section2 -----------------------------------------------------------
-
-.section2 {
-    background-color: white;
-
-    max-width: 2050px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: no-wrap;
-
-    .box1 {
-        .middle {
-            text-align: center;
-        }
+    .shared-style-section3-section4 {
+        border-radius: 0.5em;
+        background-color: black;
+        display: flex;
     }
 
-    .box2 {
-        display: flex;
+    /////---------------- section1 ----------------------------------------------------------- -->
+
+    .section1 {
+        @extend .shared-flex-container;
+        @extend .shared-flex-child;
 
         .div1 {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-
-            video {
-                padding: 20px;
-                max-width: 90%;
-                min-width: 400px;
-                height: auto;
-                display: block;
-                margin: 0;
-
-                &::-webkit-media-controls,
-                &::-webkit-media-controls-enclosure,
-                &::-webkit-media-controls-panel {
-                    display: none !important;
-                }
-            }
+            text-align: center;
         }
 
         .div2 {
-            flex: 1;
-            padding: 20px;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
         }
 
-        @media (max-width: 1200px) {
+        @media (max-width: 1300px) {
             flex-direction: column;
+        }
+    }
+
+    /////---------------- section2 ----------------------------------------------------------- -->
+
+    .section2 {
+        display: flex;
+        flex-direction: column;
+
+        .box1,
+        .box2 > .div2 {
+            text-align: center;
+        }
+
+        .box2 {
+            @extend .shared-flex-container;
+            @extend .shared-flex-child;
 
             .div1 {
-                order: 2;
-
+                @extend .shared-flex-container;
                 video {
-                    min-width: 100px;
+                    max-width: 100%;
                     height: auto;
                     display: block;
                     margin: 0;
                     outline: none;
+
+                    &::-webkit-media-controls,
+                    &::-webkit-media-controls-enclosure,
+                    &::-webkit-media-controls-panel {
+                        display: none !important;
+                    }
                 }
             }
 
-            .div2 {
-                order: 1;
+            @media (max-width: 1300px) {
+                flex-direction: column;
+
+                .div1 {
+                    order: 2;
+                }
             }
         }
     }
-}
 
-// ------------------------- section3 -----------------------------------------------------------
+    /////---------------- section3 ----------------------------------------------------------- -->
 
-.section3 {
-    background-color: white;
-
-    margin: 0 auto 0 auto;
-    padding: 2em;
-    max-width: 2000px;
-
-    .container {
-        border-radius: 10px;
-        background-color: black;
-        display: flex;
-        justify-content: space-around;
-        padding: 1em;
-
-        .child {
-            display: flex;
-            flex-direction: column;
-            flex-basis: 30%;
-            justify-content: center;
-            padding: 1em;
-            span {
-                text-align: center;
-                color: white;
-            }
-        }
-    }
-    @media (max-width: 500px) {
-        padding: 1em;
+    .section3 {
         .container {
-            .child {
-                span {
-                    font-size: x-small;
-                }
-            }
-        }
-    }
-}
-
-// ------------------------- section4 -----------------------------------------------------------
-
-.section4 {
-    background-color: white;
-
-    margin: 0 auto;
-    padding: 2em;
-    max-width: 2000px;
-    display: flex;
-    flex-direction: column;
-
-    .container {
-        border-radius: 10px;
-        background-color: black;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .box1 {
-            h1 {
-                text-align: center;
-                color: white;
-            }
-        }
-
-        .box2 {
-            margin: 2em;
-            margin-bottom: 2em;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1em;
+            @extend .shared-style-section3-section4;
+            justify-content: space-around;
 
             .child {
-                flex-grow: 1;
                 display: flex;
                 flex-direction: column;
-                background-color: black;
+                flex-basis: 30%;
+                justify-content: center;
+                padding: 1em;
 
-                &:not(:last-child) {
-                    .example-card {
-                        background-color: black;
-                        color: white;
-
-                        mat-card-header {
-                            justify-content: center;
-
-                            mat-card-subtitle {
-                                text-align: center;
-                                color: white;
-                            }
-                        }
-
-                        img {
-                            margin: 0 auto;
-
-                            width: 100%;
-                            height: auto;
-                            max-width: 300px;
-                        }
-                    }
-                }
-
-                &:last-child {
-                    .example-card {
-                        background-color: black;
-                        color: white;
-
-                        mat-card-header {
-                            justify-content: center;
-                            mat-card-subtitle {
-                                text-align: center;
-                                color: white;
-                            }
-                        }
-                        img {
-                            width: 100%;
-                            height: auto;
-                            max-width: 300px;
-                            margin: 0 auto;
-                        }
-                    }
-                }
-                @media (min-width: 1500px) {
-                    img {
-                        width: 100%;
-                        height: auto;
-                        min-width: 300px;
-
-                        max-width: 500px;
-                        margin: 0 auto;
+                span {
+                    text-align: center;
+                    color: white;
+                    @media (max-width: 500px) {
+                        font-size: x-small;
                     }
                 }
             }
         }
     }
-}
 
-// ------------------------- section5 -----------------------------------------------------------
+    /////---------------- section4 ----------------------------------------------------------- -->
 
-.section5 {
-    background-color: white;
-    margin: 0 auto;
-    padding: 1em;
-    max-width: 2025px;
+    .section4 {
+        .container {
+            @extend .shared-style-section3-section4;
 
-    .container {
-        margin: 1em;
-        h1 {
-            color: white;
-            margin-bottom: -1em;
-        }
-        p {
-            color: white;
-            padding: 1em 1em 0em 1em;
-        }
-        background-color: black;
-        border: 1px solid rgb(184, 5, 65);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
+            flex-direction: column;
+            align-items: center;
 
-        button {
-            max-width: 300px;
-            align-self: center;
-            margin-bottom: 1em;
+            .box1 {
+                h1 {
+                    text-align: center;
+                    color: white;
+                }
+            }
+
+            .box2 {
+                padding: 2em;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1em;
+
+                .child {
+                    flex-grow: 1;
+
+                    .example-card {
+                        background-color: black;
+                        color: white;
+
+                        mat-card-header {
+                            justify-content: center;
+
+                            mat-card-subtitle {
+                                text-align: center;
+                                color: white;
+                            }
+                        }
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                            max-width: 300px;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
         }
     }
-}
 
+    /////---------------- section5 ----------------------------------------------------------- -->
 
-// ------------------------- section6 -----------------------------------------------------------
-
-
-.section6 {
-    background-color: white;
-
-    h1,
-    p {
-        text-align: center;
-    }
-    margin: 0 auto;
-    padding: 1em;
-    max-width: 2000px;
-
-    .container {
-        display: flex;
-        justify-content: center;
-        gap: 1em;
-        flex-wrap: wrap;
-        padding: 1em;
-
-        .child {
-            max-width: 750px;
-            flex: 1 1 250px;
-            text-align: center;
+    .section5 {
+        .container {
+            h1 {
+                color: white;
+                margin-bottom: 0;
+            }
+            p {
+                color: white;
+            }
+            background-color: black;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
-            box-sizing: border-box;
+            text-align: center;
             padding: 1em;
 
-            mat-icon {
+            button {
+                max-width: 300px;
                 align-self: center;
             }
+        }
+    }
 
-            h1 {
-                margin: 0;
-            }
+    /////---------------- section6 ----------------------------------------------------------- -->
 
-            p {
-                padding: 0em 1em 0em 1em;
+    .section6 {
+        h1,
+        p {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            flex-wrap: wrap;
+
+            .child {
+                max-width: 750px;
+                flex: 1 1 250px;
+                padding: 1em;
+
+                mat-icon {
+                    align-self: center;
+                }
+
+                h1 {
+                    margin-bottom: 0;
+                }
             }
         }
     }
 }
-
-
-

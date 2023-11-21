@@ -4,7 +4,6 @@
         white-space: nowrap;
         // font-size: 24px; /* Set your desired font size */
       }
-    background-color: rgb(234, 229, 229);
     // max-width: 1400px;
     margin: 0 auto;
     text-align: center;
@@ -51,7 +50,7 @@
     img {
         max-width: 100%;
         height: auto;
-        object-fit: contain; /* You can use "cover" if you want the image to fill the container */
+        object-fit: contain;
     }
 }
 
