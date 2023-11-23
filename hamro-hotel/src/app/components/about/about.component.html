@@ -2,11 +2,11 @@
     <!-- ------------------------- section1 ----------------------------------------------------------- -->
     <section class="section1">
         <div class="div1">
-            <h1>OUR MISSION</h1>
-            <p>{{ longText }}</p>
+            <h1>{{ mainData.main.section1.div1.h1 }}</h1>
+            <p>{{ mainData.main.section1.div1.p }}</p>
         </div>
         <div class="div2">
-            <img class="content" src="../../../assets/images/about/about.png" alt="" />
+            <img class="content" [src]="mainData.main.section1.div2.img" alt="" />
         </div>
     </section>
 
@@ -14,17 +14,17 @@
 
     <section class="section2">
         <div class="box1">
-            <h1 class="middle">OUR STORY</h1>
+            <h1 class="middle">{{ mainData.main.section2.box1.h1 }}</h1>
         </div>
         <div class="box2">
             <div class="div1">
                 <video autoplay loop muted playsinline controlsList="nodownload">
-                    <source src="../../../assets/images/about/about-video.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
+                    <source src="{{ mainData.main.section2.box2.div1.video.src }}" type="video/mp4" />
+                    {{ mainData.main.section2.box2.div1.video.fallbackText }}
                 </video>
             </div>
             <div class="div2">
-                <p>{{ longText }}</p>
+                <p>{{ mainData.main.section2.box2.div2.p }}</p>
             </div>
         </div>
     </section>
@@ -34,16 +34,16 @@
     <section class="section3">
         <div class="container">
             <div class="child">
-                <span> 30+</span>
-                <span>Team members</span>
+                <span>{{ mainData.main.section3.container.child1.span1 }}</span>
+                <span>{{ mainData.main.section3.container.child1.span2 }}</span>
             </div>
             <div class="child">
-                <span> 100+</span>
-                <span>Features</span>
+                <span>{{ mainData.main.section3.container.child2.span1 }}</span>
+                <span>{{ mainData.main.section3.container.child2.span2 }}</span>
             </div>
             <div class="child">
-                <span> 5K+</span>
-                <span>Componies</span>
+                <span>{{ mainData.main.section3.container.child3.span1 }}</span>
+                <span>{{ mainData.main.section3.container.child3.span2 }}</span>
             </div>
         </div>
     </section>
@@ -54,128 +54,19 @@
         <div class="container">
             <div class="box1">
                 <div class="child">
-                    <h1>Meet the team</h1>
+                    <h1>{{mainData.main.section4.container.box1.child1.h1 }}</h1>
                 </div>
             </div>
             <div class="box2">
-                <div class="child">
+                <div class="child" *ngFor="let member of teams">
                     <mat-card class="example-card">
-                        <img mat-card-image src="../../../assets/images/sam.JPG" alt="Photo of a Shiba Inu" />
+                        <img mat-card-image [src]="member.imageURL" alt="Photo of {{ member.name }}" />
                         <mat-card-header>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                            <mat-card-title>{{ member.name }}</mat-card-title>
+                            <mat-card-subtitle>{{ member.jobTitle }}</mat-card-subtitle>
                         </mat-card-header>
                     </mat-card>
                 </div>
-                <div class="child">
-                    <mat-card class="example-card">
-                        <img mat-card-image src="../../../assets/images/sam.JPG" alt="Photo of a Shiba Inu" />
-                        <mat-card-header>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                        </mat-card-header>
-                    </mat-card>
-                </div>
-                <div class="child">
-                    <mat-card class="example-card">
-                        <img mat-card-image src="../../../assets/images/sam.JPG" alt="Photo of a Shiba Inu" />
-                        <mat-card-header>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                        </mat-card-header>
-                    </mat-card>
-                </div>
-                <div class="child">
-                    <mat-card class="example-card">
-                        <img mat-card-image src="../../../assets/images/sam.JPG" alt="Photo of a Shiba Inu" />
-                        <mat-card-header>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                        </mat-card-header>
-                    </mat-card>
-                </div>
-                <div class="child">
-                    <mat-card class="example-card">
-                        <img mat-card-image src="../../../assets/images/sam.JPG" alt="Photo of a Shiba Inu" />
-                        <mat-card-header>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                        </mat-card-header>
-                    </mat-card>
-                </div>
-                <div class="child">
-                    <mat-card class="example-card">
-                        <img mat-card-image src="../../../assets/images/sam.JPG" alt="Photo of a Shiba Inu" />
-                        <mat-card-header>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                        </mat-card-header>
-                    </mat-card>
-                </div>
-                <div class="child">
-                    <mat-card class="example-card">
-                        <img mat-card-image src="../../../assets/images/sam.JPG" alt="Photo of a Shiba Inu" />
-                        <mat-card-header>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                        </mat-card-header>
-                    </mat-card>
-                </div>
-                <div class="child">
-                    <mat-card class="example-card">
-                        <img mat-card-image src="../../../assets/images/sam.JPG" alt="Photo of a Shiba Inu" />
-                        <mat-card-header>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                        </mat-card-header>
-                    </mat-card>
-                </div>
-                <div class="child">
-                    <mat-card class="example-card">
-                        <img mat-card-image src="../../../assets/images/sam.JPG" alt="Photo of a Shiba Inu" />
-                        <mat-card-header>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                        </mat-card-header>
-                    </mat-card>
-                </div>
-                <div class="child">
-                    <mat-card class="example-card">
-                        <img mat-card-image src="../../../assets/images/sam.JPG" alt="Photo of a Shiba Inu" />
-                        <mat-card-header>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                        </mat-card-header>
-                    </mat-card>
-                </div>
-                <div class="child">
-                    <mat-card class="example-card">
-                        <img mat-card-image src="../../../assets/images/sam.JPG" alt="Photo of a Shiba Inu" />
-                        <mat-card-header>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                        </mat-card-header>
-                    </mat-card>
-                </div>
-                <div class="child">
-                    <mat-card class="example-card">
-                        <img mat-card-image src="../../../assets/images/sam.JPG" alt="Photo of a Shiba Inu" />
-                        <mat-card-header>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                        </mat-card-header>
-                    </mat-card>
-                </div>
-                <div class="child">
-                    <mat-card class="example-card">
-                        <img mat-card-image src="../../../assets/images/sam.JPG" alt="Photo of a Shiba Inu" />
-                        <mat-card-header>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                        </mat-card-header>
-                    </mat-card>
-                </div>
-                
             </div>
         </div>
     </section>
@@ -184,9 +75,9 @@
 
     <section class="section5">
         <mat-card class="container">
-            <h1>Join our team</h1>
-            <p>It takes great people to make great product.Our company culture champions diversity and out team member embody Pipedrive's values</p>
-            <button routerLink="/contact" mat-fab extended color="warn">Contact Us</button>
+            <h1>{{ mainData.main.section5.container.h1 }}</h1>
+            <p>{{ mainData.main.section5.container.p }}</p>
+            <button routerLink="/{{ mainData.main.section5.container.button.routerLink }}" mat-fab extended color="warn">{{ mainData.main.section5.container.button.text }}</button>
         </mat-card>
     </section>
 
@@ -196,36 +87,13 @@
         <h1>Our Core Values</h1>
         <p>It takes great people to make great product.Our company culture champions diversity and out team member embody Pipedrive's values</p>
         <div class="container">
-            <mat-card class="child">
-                <mat-icon>home</mat-icon>
-                <h1>Team First</h1>
-                <p>Discover how we put our team at the heart and support each other</p>
-            </mat-card>
-            <mat-card class="child">
-                <mat-icon>home</mat-icon>
-                <h1>Team First</h1>
-                <p>Discover how we put our team at the heart and support each other</p>
-            </mat-card>
-            <mat-card class="child">
-                <mat-icon>home</mat-icon>
-                <h1>Team First</h1>
-                <p>Discover how we put our team at the heart and support each other</p>
-            </mat-card>
-            <mat-card class="child">
-                <mat-icon>home</mat-icon>
-                <h1>Team First</h1>
-                <p>Discover how we put our team at the heart and support each other</p>
-            </mat-card>
-            <mat-card class="child">
-                <mat-icon>home</mat-icon>
-                <h1>Team First</h1>
-                <p>Discover how we put our team at the heart and support each other</p>
-            </mat-card>
-            <mat-card class="child">
-                <mat-icon>home</mat-icon>
-                <h1>Team First</h1>
-                <p>Discover how we put our team at the heart and support each other</p>
+            <mat-card class="child" *ngFor="let value of coreValues">
+                <mat-icon>{{ value.icon }}</mat-icon>
+                <h1>{{ value.title }}</h1>
+                <p>{{ value.p }}</p>
             </mat-card>
         </div>
     </section>
 </main>
+
+

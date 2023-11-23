@@ -1,7 +1,69 @@
-[
-    {
-        "profilePicture": "/assets/images/sam.JPG",
-        "name": "Sam Bhandari",
-        "JobTitle": "Manager"
-    }
-]
+{
+    "teamMembersData": [
+        {
+            "imageURL": "/assets/images/about/team-members/sam.JPG",
+            "name": "Nathan Miller",
+            "jobTitle": "Resort Manager"
+        },
+        {
+            "imageURL": "/assets/images/about/team-members/sam.JPG",
+            "name": "Grace Thompson",
+            "jobTitle": "Hospitality Specialist"
+        },
+        {
+            "imageURL": "/assets/images/about/team-members/sam.JPG",
+            "name": "Lucas Anderson",
+            "jobTitle": "Guest Services Manager"
+        },
+        {
+            "imageURL": "/assets/images/about/team-members/sam.JPG",
+            "name": "Sophie Martinez",
+            "jobTitle": "Event Coordinator"
+        },
+        {
+            "imageURL": "/assets/images/about/team-members/sam.JPG",
+            "name": "Henry Wright",
+            "jobTitle": "Culinary Director"
+        },
+        {
+            "imageURL": "/assets/images/about/team-members/sam.JPG",
+            "name": "Ella Garcia",
+            "jobTitle": "Front Desk Supervisor"
+        },
+        {
+            "imageURL": "/assets/images/about/team-members/sam.JPG",
+            "name": "Liam Harris",
+            "jobTitle": "Resort Activities Manager"
+        },
+        {
+            "imageURL": "/assets/images/about/team-members/sam.JPG",
+            "name": "Chloe Lopez",
+            "jobTitle": "Spa Manager"
+        },
+        {
+            "imageURL": "/assets/images/about/team-members/sam.JPG",
+            "name": "Jackson Young",
+            "jobTitle": "Security Supervisor"
+        },
+        {
+            "imageURL": "/assets/images/about/team-members/sam.JPG",
+            "name": "Lily Adams",
+            "jobTitle": "Housekeeping Manager"
+        },
+        {
+            "imageURL": "/assets/images/about/team-members/sam.JPG",
+            "name": "Isaac Rivera",
+            "jobTitle": "Maintenance Supervisor"
+        },
+        {
+            "imageURL": "/assets/images/about/team-members/sam.JPG",
+            "name": "Mia Torres",
+            "jobTitle": "Marketing Coordinator"
+        },
+        {
+            "imageURL": "/assets/images/about/team-members/sam.JPG",
+            "name": "William Baker",
+            "jobTitle": "Groundskeeper"
+        }
+    ]
+}
