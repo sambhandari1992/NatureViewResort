@@ -2,6 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "strictNullChecks": false,
     "skipLibCheck": true,
     "resolveJsonModule": true,

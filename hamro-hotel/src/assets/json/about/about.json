@@ -1,0 +1,127 @@
+{
+    "main": {
+        "section1": {
+            "div1": {
+                "h1": "OUR MISSION",
+                "p": "The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting. The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting."
+            },
+            "div2": {
+                "img": "../../../assets/images/about/about.png"
+            }
+        },
+        "section2": {
+            "box1": {
+                "h1": "OUR STORY"
+            },
+            "box2": {
+                "div1": {
+                    "video": {
+                        "src": "../../../assets/images/about/about-video.mp4",
+                        "type": "video/mp4",
+                        "fallbackText": "Your browser does not support the video tag."
+                    }
+                },
+                "div2": {
+                    "p": "The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting. The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting."
+                }
+            }
+        },
+        "section3": {
+            "container": {
+                "child1": {
+                    "span1": "30+",
+                    "span2": "Team members"
+                },
+                "child2": {
+                    "span1": "100+",
+                    "span2": "Features"
+                },
+                "child3": {
+                    "span1": "5K+",
+                    "span2": "Companies"
+                }
+            }
+        },
+        "section4": {
+            "container": {
+                "box1": {
+                    "child1": {
+                        "h1": "Meet the team"
+                    }
+                },
+                "box2": {
+                    "child1": {
+                        "matCard": {
+                            "img": {
+                                "src": "{{ member.imageURL }}",
+                                "alt": "Photo of {{ member.name }}"
+                            },
+                            "header": {
+                                "title": "member.name ",
+                                "subtitle": "{{ member.jobTitle }}"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "section5": {
+            "container": {
+                "h1": "Join our team",
+                "p": "It takes great people to make great products...",
+                "button": {
+                    "routerLink": "/contact",
+                    "text": "Contact Us"
+                }
+            }
+        },
+        "section6": {
+            "h1": "Our Core Values",
+            "p": "It takes great people to make great products...",
+            "container": {
+                "child1": {
+                    "matCard": {
+                        "icon": "home",
+                        "title": "Team First",
+                        "p": "Discover how we put our team at the heart..."
+                    }
+                },
+                "child2": {
+                    "matCard": {
+                        "icon": "work",
+                        "title": "Work-Life Balance",
+                        "p": "Exploring the balance between personal and professional life..."
+                    }
+                },
+                "child3": {
+                    "matCard": {
+                        "icon": "trending_up",
+                        "title": "Continuous Improvement",
+                        "p": "Embracing the path of constant growth and improvement..."
+                    }
+                },
+                "child4": {
+                    "matCard": {
+                        "icon": "people",
+                        "title": "Diversity and Inclusion",
+                        "p": "Our commitment to fostering a diverse and inclusive workplace..."
+                    }
+                },
+                "child5": {
+                    "matCard": {
+                        "icon": "star",
+                        "title": "Excellence",
+                        "p": "Pursuing excellence in everything we do..."
+                    }
+                },
+                "child6": {
+                    "matCard": {
+                        "icon": "security",
+                        "title": "Safety First",
+                        "p": "Ensuring a safe and secure environment for all..."
+                    }
+                }
+            }
+        }
+    }
+}

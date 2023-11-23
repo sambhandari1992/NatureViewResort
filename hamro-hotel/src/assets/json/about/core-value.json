@@ -1,0 +1,35 @@
+{
+    "coreValuesData": [
+      {
+        "icon": "group_work",
+        "title": "Team First",
+        "p": "Discover how we put our team at the heart..."
+      },
+      {
+        "icon": "scales",
+        "title": "Work-Life Balance",
+        "p": "Exploring the balance between personal and professional life..."
+      },
+      {
+        "icon": "trending_up",
+        "title": "Continuous Improvement",
+        "p": "Embracing the path of constant growth and improvement..."
+      },
+      {
+        "icon": "people",
+        "title": "Diversity and Inclusion",
+        "p": "Our commitment to fostering a diverse and inclusive workplace..."
+      },
+      {
+        "icon": "grade",
+        "title": "Excellence",
+        "p": "Pursuing excellence in everything we do..."
+      },
+      {
+        "icon": "security",
+        "title": "Safety First",
+        "p": "Ensuring a safe and secure environment for all..."
+      }
+    ]
+  }
+  
