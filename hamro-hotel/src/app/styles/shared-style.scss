@@ -2,17 +2,18 @@
     box-sizing: border-box;
 }
 
-.container {
-    max-width: 5000px;
+main {
+    max-width: 4000px;
     margin: 0 auto;
-    #parent {
+    padding: 1em;
+    section {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-        .child {
-            min-width: 20em;
-            padding: 10px;
-            flex: 1;
+        gap: 1em;
+        flex-wrap: wrap;
+        .container {
+            max-width: 850px;
+            flex: 1 1 350px;
             .card {
                 mat-card-header {
                     position: absolute;
@@ -30,7 +31,6 @@
                     justify-content: center;
                     color: black;
                     opacity: 0.9;
-
                 }
 
                 mat-card-subtitle {
@@ -42,8 +42,8 @@
                 }
                 img {
                     height: 200px;
-                    width: 100%; /* Set width to 100% to maintain aspect ratio */
-                    object-fit: cover; /* Preserve aspect ratio and cover the container */
+                    width: 100%;
+                    object-fit: cover;
                     opacity: 0.3;
                 }
 
@@ -64,27 +64,9 @@
     }
 }
 
-
-@media (min-width: 2000px) and (max-width: 2800px) {
-    .container {
-        #parent {
-            .child {
-                min-width: 20%;
-            }
-        }
+@media (max-width: 1750px) {
+    main section .container {
+        max-width: 500px;
+        flex: 1 1 250px;
     }
-}
-
-@media (max-width: 400px) {
-    .container {
-        #parent {
-            .child {
-                min-width: 15em;
-            }
-        }
-    }
-}
-.mat-sidenav-content::-webkit-scrollbar {
-    display: none;
-    overflow: hidden;
 }
