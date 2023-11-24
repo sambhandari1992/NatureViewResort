@@ -1,16 +1,15 @@
-
-<div class="container">
-    <div id="parent">
-        <div class="child" *ngFor="let component of localAttractionData">
+<main>
+    <section>
+        <div class="container" *ngFor="let item of localAttractionData">
             <mat-card class="card">
                 <mat-card-header>
-                    <mat-card-title>{{ component.title | uppercase }}</mat-card-title>
-                    <mat-card-subtitle>{{component.subTitle}}</mat-card-subtitle>
+                    <mat-card-title>{{ item.title | uppercase }}</mat-card-title>
+                    <mat-card-subtitle>{{ item.subTitle }}</mat-card-subtitle>
                 </mat-card-header>
-                <img mat-card-image [src]="component.imageUrl" alt="{{ component.title }}" />
+                <img mat-card-image [src]="item.imageUrl" alt="{{ item.title }}" />
                 <mat-card-content>
                     <p class="card-description">
-                        {{ component.description }}
+                        {{ item.description }}
                     </p>
                 </mat-card-content>
                 <mat-card-actions>
@@ -18,5 +17,5 @@
                 </mat-card-actions>
             </mat-card>
         </div>
-    </div>
-</div> 
+    </section>
+</main>
