@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>{{ usefulInfo?.header }}</h2>
+<mat-dialog-content class="exclude-global-style">
+  <ng-container *ngFor="let section of usefulInfo?.sections">
+    <h3>{{ section.title }}</h3>
+    <p>{{ section.content }}</p>
+  </ng-container>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

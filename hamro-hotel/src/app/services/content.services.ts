@@ -5,6 +5,8 @@ import * as homeInfoDataJSON from '../../assets/json/home-about.json';
 import * as fancyWordDataJSON from '../../assets/json/fancy-word.json';
 import * as contactInfoDataJSON from '../../assets/json/contact-info.json'
 import * as testimonialsDataJSON from '../../assets/json/testimonials.json';
+import * as termsAndConditionJSON from '../../assets/json/terms-and-conditions.json';
+import * as usefulInfoJSON from '../../assets/json/useful-info.json';
 
 
 @Injectable({
@@ -32,6 +34,12 @@ export class ContentService {
   }
   get testimonials() {
     return testimonialsDataJSON;
+  }
+  get termsAndConditions() {
+    return termsAndConditionJSON;
+  }
+  get usefulInformation() {
+    return usefulInfoJSON;
   }
   
 }

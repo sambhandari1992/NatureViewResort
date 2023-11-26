@@ -43,6 +43,8 @@ import { HighlightsComponent } from './components/home/highlights/highlights.com
 import { HomeContactComponent } from './components/home/home-contact/home-contact.component';
 import { HomeAboutComponent } from './components/home/home-about/home-about.component';
 import { HomeFacilitieComponent } from './components/home/home-facilitie/home-facilitie.component';
+import { UsefulInfoComponent } from './components/footer/useful-information/useful-info.component';
+import { TermsAndConditionComponent } from './components/footer/terms-and-condition/terms-and-condition.component';
 
 @NgModule({
     declarations: [
@@ -80,7 +82,9 @@ import { HomeFacilitieComponent } from './components/home/home-facilitie/home-fa
         HighlightsComponent,
         HomeContactComponent,
         HomeAboutComponent,
-        HomeFacilitieComponent
+        HomeFacilitieComponent,
+        UsefulInfoComponent,
+        TermsAndConditionComponent,
     ],
     imports: [BrowserModule, FormsModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule, ReactiveFormsModule, NgxMapLibreGLModule, GoogleMapsModule, HttpClientModule],
     providers: [],
