@@ -1,0 +1,33 @@
+{
+    "header": "Useful Information",
+    "sections": [
+        {
+            "title": "Check-in",
+            "content": "1400"
+        },
+        {
+            "title": "Check-in Instructions",
+            "content": "Check in is between 1400 and 2100 Hours. Check in at reception. For after hours check-in procedures, please contact office before your arrival date."
+        },
+        {
+            "title": "Check-out",
+            "content": "10:00"
+        },
+        {
+            "title": "Parking",
+            "content": "On-site free parking available."
+        },
+        {
+            "title": "Things To Do",
+            "content": "Fishing, biking, wining & dining, swimming, boating, or just lazing around, Lake Taupo has something for everyone. Ask at reception, and we will help plan your stay."
+        },
+        {
+            "title": "Business Facilities",
+            "content": "Complimentary Wi-Fi. Corporate rates available - please inquire."
+        },
+        {
+            "title": "Terms and Conditions",
+            "content": "Payment is required in full before departure if not already done so. Overdue/recovery charges may be made if your account is not paid on time. We only collect personal information we really need, we don't share it with anyone unless you let us and do everything we can to keep it safe."
+        }
+    ]
+}
