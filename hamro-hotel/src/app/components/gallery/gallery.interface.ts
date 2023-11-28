@@ -1,4 +1,5 @@
-export interface ImageData {
-    id: string;
-    url: string;
+export interface GalleryItem {
+  imageUrl: string;
+  caption: string;
+  index: number;
 }

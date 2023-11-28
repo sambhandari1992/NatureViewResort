@@ -1,54 +1,54 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { GalleryDataService } from 'src/app/services/gallery-data-service';
-import { ImageData } from '../gallery/gallery.interface';
 
-type CardContent = {
-    title: string;
-    description: string;
-    imageUrl: string;
-};
+import { GalleryItem } from './gallery.interface';
+
 @Component({
     selector: 'app-gallery',
     templateUrl: './gallery.component.html',
     styleUrls: ['./gallery.component.scss'],
 })
 export class GalleryComponent implements OnInit {
-    cards: CardContent[] = [];
-    imageUrls: ImageData[] = [];
+    galleryItems: GalleryItem[] = [];
+    private subscription: Subscription | undefined;
+    isLoaded: boolean = false;
 
     constructor(private galleryDataService: GalleryDataService) {}
 
     ngOnInit(): void {
-        this.galleryDataService.getImageUrls().subscribe((data) => {
-            this.imageUrls = data;
-        });
+        this.loadGalleryItems();
+        this.shuffleArray(this.galleryItems);
 
-        // for (let i = 0; i < 100; i++) {
-        //     this.cards.push({
-        //         title: `Card ${i + 1}`,
-        //         description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima molestias tempore asperiores ad deserunt pariatur totam velit veritatis, quis quo voluptatum, id magni. Laborum dolor fugiat magni, ea voluptate recusandae! `,
-        //         imageUrl: `https://source.unsplash.com/random/500X500?sig=${i}`,
-        //     });
-        // }
+    }
+
+    loadGalleryItems(): void {
+        this.subscription = this.galleryDataService.getImageUrls().subscribe({
+            next: (data: GalleryItem[]) => {
+                this.galleryItems = data;
+                this.shuffleArray(this.galleryItems); 
+
+            },
+            error: (error: any) => {
+                console.error('Error fetching gallery items:', error);
+            },
+            complete: () => {
+                console.log('Gallery items loaded successfully!');
+                  console.log('isLoaded =>' , this.isLoaded = true);
+            },
+        });
+    }
+
+    private shuffleArray(array: any[]): void {
+        const shuffledArray = array.slice();
+        shuffledArray.sort(() => Math.random() - 0.5); 
+        this.galleryItems = [...new Set(shuffledArray)];
+    }
+    
+    
+    ngOnDestroy(): void {
+        if (this.subscription) {
+            this.subscription.unsubscribe();
+        }
     }
 }
-
-// this.lists = [
-//     { rows: 2, cols: 2, data: 1 },
-//     { rows: 1, cols: 1, data: 2 },
-//     { rows: 2, cols: 1, data: 3 },
-//     { rows: 1, cols: 1, data: 4 },
-
-//     { rows: 1, cols: 1, data: 5 },
-//     { rows: 2, cols: 2, data: 6 },
-//     { rows: 1, cols: 1, data: 7 },
-//     { rows: 1, cols: 1, data: 8 },
-//     { rows: 1, cols: 1, data: 9 },
-
-//     { rows: 1, cols: 1, data: 10 },
-//     { rows: 1, cols: 1, data: 11 },
-//     { rows: 2, cols: 2, data: 12 },
-//     { rows: 1, cols: 1, data: 13 },
-//     { rows: 1, cols: 1, data: 14 },
-
-//   ];

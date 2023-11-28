@@ -1,35 +1,14 @@
-<!-- <mat-toolbar color="primary">Responsive Card</mat-toolbar>
-<div class="container responsive-grid">
-    <mat-card *ngFor="let item of imageUrls">
-        <img mat-card-image [src]="item.url" />
-    </mat-card>
-</div> -->
-
-
-<!-- <mat-toolbar color="primary">Responsive Card</mat-toolbar>
-<div class="container responsive-grid">
-    <mat-card *ngFor="let card of cards">
-        <mat-card-header>
-            <mat-card-title>{{ card.title }}</mat-card-title>
-        </mat-card-header>
-        <br />
-        <img mat-card-image [src]="card.imageUrl" />
-    </mat-card>
-</div> -->
-<!-- <div id="jarallax-container-1" style="position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;overflow: hidden;z-index: -100;"><div style="background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; background-image: url(&quot;https://travellerslodge.co.nz/assets/img/incredible/queen-bed.png&quot;); position: fixed; top: 0px; left: 0px; width: 943px; height: 409.5px; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform, opacity; margin-top: 56.75px; transform: translate3d(0px, -21.0703px, 0px);"></div></div>
-
-<div style="background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; background-image: url(&quot;https://travellerslodge.co.nz/assets/img/incredible/queen-bed.png&quot;); position: fixed; top: 0px; left: 0px; width: 943px; height: 409.5px; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform, opacity; margin-top: 56.75px; transform: translate3d(0px, -21.0703px, 0px);"></div> -->
-
-
-
-<div class="container">
-    <div id="parent">
-        <div class="child"*ngFor="let component of imageUrls">
-            <mat-card class="card">
-                <img mat-card-image [src]="component.url" alt="{{ component.id }}" />
-            </mat-card>
+<main>
+    <section>
+        <div *ngFor="let item of galleryItems; let i = index" class="grid-item">
+            <img [src]="item.imageUrl" [alt]="item.caption" />
+            <p>{{ i + 1 }}. {{ item.caption }}</p>
         </div>
+    </section>
+    <div>
+        <form enctype="multipart/form-data">
+            <input type="file" />
+            <button>Upload</button>
+        </form>
     </div>
-</div>
-
-
+</main>
