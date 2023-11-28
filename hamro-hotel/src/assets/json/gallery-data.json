@@ -1,85 +1,360 @@
-{
-    "imageUrls": [
-      {
-        "id": "1",
-        "url": "../../../assets/images/gallery/gallery0.jpeg"
-      },
-      {
-        "id": "2",
-        "url": "../../../assets/images/gallery/gallery1.jpeg"
-      },
-      {
-        "id": "3",
-        "url": "../../../assets/images/gallery/gallery2.jpeg"
-      },
-      {
-        "id": "4",
-        "url": "../../../assets/images/gallery/gallery3.jpeg"
-      },
-      {
-        "id": "5",
-        "url": "../../../assets/images/gallery/gallery4.jpeg"
-      },
-      {
-        "id": "6",
-        "url": "../../../assets/images/gallery/gallery5.jpeg"
-      },
-      {
-        "id": "7",
-        "url": "../../../assets/images/gallery/gallery6.jpeg"
-      },
-      {
-        "id": "8",
-        "url": "../../../assets/images/gallery/gallery7.jpeg"
-      },
-      {
-        "id": "9",
-        "url": "../../../assets/images/gallery/gallery8.jpeg"
-      },
-      {
-        "id": "10",
-        "url": "../../../assets/images/gallery/gallery9.jpeg"
-      },
-      {
-        "id": "11",
-        "url": "../../../assets/images/gallery/gallery10.jpeg"
-      },
-      {
-        "id": "12",
-        "url": "../../../assets/images/gallery/gallery11.jpeg"
-      },
-      {
-        "id": "13",
-        "url": "../../../assets/images/gallery/gallery12.jpeg"
-      },
-      {
-        "id": "14",
-        "url": "../../../assets/images/gallery/gallery13.jpeg"
-      },
-      {
-        "id": "15",
-        "url": "../../../assets/images/gallery/gallery14.jpeg"
-      },
-      {
-        "id": "16",
-        "url": "../../../assets/images/gallery/gallery15.jpeg"
-      },
-      {
-        "id": "17",
-        "url": "../../../assets/images/gallery/gallery16.jpeg"
-      },
-      {
-        "id": "18",
-        "url": "../../../assets/images/gallery/gallery17.jpeg"
-      },
-      {
-        "id": "19",
-        "url": "../../../assets/images/gallery/gallery18.jpeg"
-      },
-      {
-        "id": "20",
-        "url": "../../../assets/images/gallery/gallery19.jpeg"
-      }
-    ]
-  }
-  
+[
+    {
+        "imageUrl": "../../../assets/images/gallery/img0.jpeg",
+        "caption": "This is Image number.",
+        "index": 0
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img1.jpeg",
+        "caption": "This is Image number different content.",
+        "index": 1
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img2.jpeg",
+        "caption": "This is x-large Image long content.",
+        "index": 2
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img3.jpeg",
+        "caption": "Custom Caption 3",
+        "index": 3
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img4.jpeg",
+        "caption": "Custom Caption 4",
+        "index": 4
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img5.jpeg",
+        "caption": "Custom Caption 5",
+        "index": 5
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img6.jpeg",
+        "caption": "Custom Caption 6",
+        "index": 6
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img7.jpeg",
+        "caption": "Custom Caption 7",
+        "index": 7
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img8.jpeg",
+        "caption": "Custom Caption 8",
+        "index": 8
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img9.jpeg",
+        "caption": "Custom Caption 9",
+        "index": 9
+    },
+
+    {
+        "imageUrl": "../../../assets/images/gallery/img10.jpeg",
+        "caption": "Custom Caption 10",
+        "index": 10
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img11.jpeg",
+        "caption": "Custom Caption 11",
+        "index": 11
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img12.jpeg",
+        "caption": "Custom Caption 12",
+        "index": 12
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img13.jpeg",
+        "caption": "Custom Caption 13",
+        "index": 13
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img14.jpeg",
+        "caption": "Custom Caption 14",
+        "index": 14
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img15.jpeg",
+        "caption": "Custom Caption 15",
+        "index": 15
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img16.jpeg",
+        "caption": "Custom Caption 16",
+        "index": 16
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img17.jpeg",
+        "caption": "Custom Caption 17",
+        "index": 17
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img18.jpeg",
+        "caption": "Custom Caption 18",
+        "index": 18
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img19.jpeg",
+        "caption": "Custom Caption 19",
+        "index": 19
+    },
+
+    {
+        "imageUrl": "../../../assets/images/gallery/img20.jpeg",
+        "caption": "Custom Caption 20",
+        "index": 20
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img21.jpeg",
+        "caption": "Custom Caption 21",
+        "index": 21
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img22.jpeg",
+        "caption": "Custom Caption 22",
+        "index": 22
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img23.jpeg",
+        "caption": "Custom Caption 23",
+        "index": 23
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img24.jpeg",
+        "caption": "Custom Caption 24",
+        "index": 24
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img25.jpeg",
+        "caption": "Custom Caption 25",
+        "index": 25
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img26.jpeg",
+        "caption": "Custom Caption 26",
+        "index": 26
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img27.jpeg",
+        "caption": "Custom Caption 27",
+        "index": 27
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img28.jpeg",
+        "caption": "Custom Caption 28",
+        "index": 28
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img29.jpeg",
+        "caption": "Custom Caption 29",
+        "index": 29
+    },
+
+    {
+        "imageUrl": "../../../assets/images/gallery/img30.jpeg",
+        "caption": "Custom Caption 30",
+        "index": 30
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img31.jpeg",
+        "caption": "Custom Caption 31",
+        "index": 31
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img32.jpeg",
+        "caption": "Custom Caption 32",
+        "index": 32
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img33.jpeg",
+        "caption": "Custom Caption 33",
+        "index": 33
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img34.jpeg",
+        "caption": "Custom Caption 34",
+        "index": 34
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img35.jpeg",
+        "caption": "Custom Caption 35",
+        "index": 35
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img36.jpeg",
+        "caption": "Custom Caption 36",
+        "index": 36
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img37.jpeg",
+        "caption": "Custom Caption 37",
+        "index": 37
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img38.jpeg",
+        "caption": "Custom Caption 38",
+        "index": 38
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img39.jpeg",
+        "caption": "Custom Caption 39",
+        "index": 39
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img40.jpeg",
+        "caption": "Custom Caption 40",
+        "index": 40
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img41.jpeg",
+        "caption": "Custom Caption 41",
+        "index": 41
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img42.jpeg",
+        "caption": "Custom Caption 42",
+        "index": 42
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img43.jpeg",
+        "caption": "Custom Caption 43",
+        "index": 43
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img44.jpeg",
+        "caption": "Custom Caption 44",
+        "index": 44
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img45.jpeg",
+        "caption": "Custom Caption 45",
+        "index": 45
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img46.jpeg",
+        "caption": "Custom Caption 46",
+        "index": 46
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img47.jpeg",
+        "caption": "Custom Caption 47",
+        "index": 47
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img48.jpeg",
+        "caption": "Custom Caption 48",
+        "index": 48
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img49.jpeg",
+        "caption": "Custom Caption 49",
+        "index": 49
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img50.jpeg",
+        "caption": "Custom Caption 50",
+        "index": 50
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img51.jpeg",
+        "caption": "Custom Caption 51",
+        "index": 51
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img52.jpeg",
+        "caption": "Custom Caption 52",
+        "index": 52
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img53.jpeg",
+        "caption": "Custom Caption 53",
+        "index": 53
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img54.jpeg",
+        "caption": "Custom Caption 54",
+        "index": 54
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img55.jpeg",
+        "caption": "Custom Caption 55",
+        "index": 55
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img56.jpeg",
+        "caption": "Custom Caption 56",
+        "index": 56
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img57.jpeg",
+        "caption": "Custom Caption 57",
+        "index": 57
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img58.jpeg",
+        "caption": "Custom Caption 58",
+        "index": 58
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img59.jpeg",
+        "caption": "Custom Caption 59",
+        "index": 59
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img60.jpeg",
+        "caption": "Custom Caption 60",
+        "index": 60
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img61.jpeg",
+        "caption": "Custom Caption 61",
+        "index": 61
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img62.jpeg",
+        "caption": "Custom Caption 62",
+        "index": 62
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img63.jpeg",
+        "caption": "Custom Caption 63",
+        "index": 63
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img64.jpeg",
+        "caption": "Custom Caption 64",
+        "index": 64
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img65.jpeg",
+        "caption": "Custom Caption 65",
+        "index": 65
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img66.jpeg",
+        "caption": "Custom Caption 66",
+        "index": 66
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img67.jpeg",
+        "caption": "Custom Caption 67",
+        "index": 67
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img68.jpeg",
+        "caption": "Custom Caption 68",
+        "index": 68
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img69.jpeg",
+        "caption": "Custom Caption 69",
+        "index": 69
+    },
+    {
+        "imageUrl": "../../../assets/images/gallery/img70.jpeg",
+        "caption": "Custom Caption 70",
+        "index": 70
+    }
+]
