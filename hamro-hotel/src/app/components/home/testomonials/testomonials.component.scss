@@ -1,95 +1,233 @@
 .testimonial {
-    border-bottom: 1px solid #ababaa;
-    background-color: #929391;
-    display: flex;
-    flex-direction: column;
-
-    .testimonial-title {
-        display: flex;
-        justify-content: center;
-        color: white;
+    background-color: rgb(136, 139, 138);
+    padding: 0.5em;
+    // border: 2px solid red;
+    .box1 {
+        // border: 2px solid rgb(0, 255, 51);
+        text-align: center;
     }
-    .mat-cards {
+    .box2 {
+        // background-image: url("/assets/images/sam.JPG");
         display: flex;
         justify-content: center;
-        padding: 1em;
-        gap: 20px;
-        .testimonial-card {
-            width: 700px;
+        padding: 0.5em;
+        gap: 0.5em;
+
+        .example-header-image {
+            background-image: url("/assets/images/sam.JPG");
+            background-size: cover;
         }
-        mat-icon {
-            align-self: center;
-            font-size: xx-large;
-            padding: 1em;
+        .example-card1 {
+            border: 3px solid red;
+            width: 800px;
         }
 
-        mat-card {
+        .example-card2 {
+            border: 3px solid rgb(77, 255, 0);
+            width: 800px;
+
+        }
+
+        .animate-slide-left {
             opacity: 0;
-            animation: slide 7s infinite;
-            animation-fill-mode: forwards; 
-            .profile {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-self: flex-end;
-                h3 {
-                    align-self: flex-end;
-                }
-                .responsive-image {
-                    max-width: 20%;
-                    min-width: 15%;
-                    height: auto;
-                    border-radius: 100%;
-                }
-            }
-            p {
-                margin-top: 0;
-            }
+            animation: slideLeft 7s infinite;
+            animation-fill-mode: forwards;
         }
-        &.disable-animation mat-card {
-            animation: none;
-            opacity: 1;
+        .animate-slide-right {
+            opacity: 0;
+            animation: slideRight 7s infinite;
+            animation-fill-mode: forwards;
+        }
+
+
+        .animate-fade-out {
+            opacity: 0;
+            animation: fadeInOut 7s infinite; 
+            animation-fill-mode: forwards;
         }
     }
-
-    @keyframes slide {
-        0% {
-            transform: translateX(0%);
-        }
-        20% {
-            transform: translateX(0);
-        }
-        30% {
-            opacity: 1; 
-        }
-        70% {
-            opacity: 1; 
-        }
-        80% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-100%);
-        }
+    .box3 {
+        display: flex;
+        justify-content: center;
+        padding: 0.5em;
+        gap: 0.5em;
     }
 }
 
-.arrow-icons-below {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0%);
+    }
+    20% {
+        transform: translateX(0);
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    80% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
-@media (max-width: 600px) {
-    .arrow-icons-up {
-        display: none;
+@keyframes slideRight {
+    0% {
+        transform: translateX(0%);
     }
-    mat-card {
-        height: 10em; 
+    20% {
+        transform: translateX(0);
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    80% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
     }
 }
-@media (min-width: 600px) {
-    .arrow-icons-below {
-        display: none;
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
+
+// .testimonial {
+//     padding: 0.5em;
+//     border-bottom: 1px solid #ababaa;
+//     background-color: #929391;
+//     display: flex;
+//     flex-direction: column;
+
+//     .testimonial-top {
+//         text-align: center;
+
+//         h2 {
+//             color: rgb(89, 3, 3);
+//         }
+//     }
+
+//     .mat-cards-container {
+//         display: flex;
+//         justify-content: center;
+//         padding: 1em;
+//         gap: 1em;
+
+//         .testimonial-card {
+//             width: 700px;
+//         }
+//         mat-icon {
+//             align-self: center;
+//             font-size: xx-large;
+//             padding: 1em;
+//         }
+
+//         mat-card {
+// opacity: 0;
+// animation: slide 7s infinite;
+// animation-fill-mode: forwards;
+//             .profile {
+//                 display: flex;
+//                 flex-direction: row;
+//                 justify-content: space-between;
+//                 align-self: flex-end;
+//                 h3 {
+//                     align-self: flex-end;
+//                 }
+//                 .responsive-image {
+//                     max-width: 80px;
+//                     min-width: 60px;
+//                     height: auto;
+//                     border-radius: 100%;
+
+//                     @media (max-width: 400px) {
+//                         max-width: 60px;
+//                         min-width: 40px;
+//                     }
+//                 }
+//             }
+//             p {
+//                 margin-top: 0;
+//                 @media (max-width: 400px) {
+//                     font-size: smaller;
+//                 }
+//             }
+//         }
+//         &.disable-animation mat-card {
+//             animation: none;
+//             opacity: 1;
+//         }
+//     }
+
+//     .testimonial-button {
+//         display: flex;
+//         justify-content: center;
+//         gap: 1em;
+//         align-items: center;
+//         @media (max-width: 400px) {
+//             .content {
+//                 font-size: x-small;
+//             }
+//         }
+//     }
+
+// @keyframes slide {
+//     0% {
+//         transform: translateX(0%);
+//     }
+//     20% {
+//         transform: translateX(0);
+//     }
+//     30% {
+//         opacity: 1;
+//     }
+//     70% {
+//         opacity: 1;
+//     }
+//     80% {
+//         transform: translateX(0);
+//     }
+//     100% {
+//         transform: translateX(-100%);
+//     }
+// }
+// }
+
+// // .arrow-icons-below {
+// //     display: flex;
+// //     justify-content: center;
+// //     gap: 20px;
+// // }
+
+// // @media (max-width: 600px) {
+// //     .arrow-icons-up {
+// //         display: none;
+// //     }
+// //     mat-card {
+// //         height: 10em;
+// //     }
+// // }
+// // @media (min-width: 600px) {
+// //     .arrow-icons-below {
+// //         display: none;
+// //     }
+// // }
