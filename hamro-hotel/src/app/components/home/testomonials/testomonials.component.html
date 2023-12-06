@@ -1,28 +1,46 @@
-<div class="testimonial">
-  <div class="testimonial-title">
-      <h2>Testimonial</h2>
-  </div>
+<main class="exclude-global-style">
+    <div class="testimonial">
+        <div class="box1">
+            <h2 class="content">Testimonial</h2>
+        </div>
+        <div class="box2">
+            <ng-container *ngFor="let item of testimonial1">
+                <mat-card class="example-card1" [ngClass]="{ 'animate-slide-right': !isMobile, 'animate-fade-out': isMobile }">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>{{ item.name }}</mat-card-title>
+                        <mat-card-subtitle>{{ item.country }}</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>{{ item.description }}</p>
+                    </mat-card-content>
+                    <mat-card-actions align="end">
+                        <button mat-button>{{ item.date }}</button>
+                    </mat-card-actions>
+                </mat-card>
+            </ng-container>
 
-  <div class="mat-cards" [ngClass]="{ 'disable-animation': !animationEnabled }" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
-      <mat-icon class="arrow-icons-up" (click)="slideRight()">arrow_circle_left</mat-icon>
-
-      <ng-container *ngFor="let testimonial of visibleTestimonials">
-          <mat-card class="testimonial-card">
-              <mat-card-content>
-                  <div class="profile">
-                      <h3>- {{ testimonial.name }}</h3>
-                      <img [src]="testimonial.profilePicture" alt=" " class="responsive-image" />
-                  </div>
-                  <p>{{ testimonial.message }}</p>
-              </mat-card-content>
-          </mat-card>
-      </ng-container>
-
-      <mat-icon class="arrow-icons-up" (click)="slideLeft()">arrow_circle_right</mat-icon>
-  </div>
-  <!-- <div class="arrow-icons-below">
-      <mat-icon (click)="slideRight()">arrow_circle_left</mat-icon>
-      <mat-icon (click)="slideLeft()">arrow_circle_right</mat-icon>
-  </div>
-</div> -->
-<!-- <app-gallery-upload></app-gallery-upload> -->
+            <ng-template [ngIf]="!isMobile">
+                <ng-container *ngFor="let item of testimonial2">
+                    <mat-card class="example-card2" [ngClass]="{ 'animate-slide-left': !isMobile }">
+                        <mat-card-header>
+                            <div mat-card-avatar class="example-header-image"></div>
+                            <mat-card-title>{{ item.name }}</mat-card-title>
+                            <mat-card-subtitle>{{ item.country }}</mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p>{{ item.description }}</p>
+                        </mat-card-content>
+                        <mat-card-actions align="end">
+                            <button mat-button>{{ item.date }}</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+            </ng-template>
+        </div>
+        <div class="box3">
+            <button class="content" mat-raised-button>View All Review</button>
+            <button class="content" mat-raised-button>Leave a Review</button>
+        </div>
+    </div>
+</main>
