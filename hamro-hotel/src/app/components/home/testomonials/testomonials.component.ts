@@ -103,7 +103,7 @@ export class TestomonialsComponent {
     ];
     isMobile: boolean;
     private destroy$: Subject<void> = new Subject<void>();
-    private currentTestimonialIndex = 0;
+    private currentTestimonialIndex = 1;
     private testimonials: Testimonial[];
     testimonial1: Testimonial[];
     testimonial2: Testimonial[];
@@ -112,32 +112,31 @@ export class TestomonialsComponent {
     constructor() {}
 
     ngOnInit() {
-        this.shuffleAndUpdateTestimonials(); // Shuffle the testimonials initially
-        this.displayNextTestimonial(); // Display the first testimonial immediately
-        this.showTestimonials(); // Start the interval for cycling through testimonials
-        this.checkViewportSize(); // Set initial isMobile value
+        this.shuffleAndUpdateTestimonials();
+        this.displayTestimonials();
+        this.showTestimonials();
+        this.checkViewportSize();
     }
 
     showTestimonials() {
         interval(this.intervalDuration)
             .pipe(takeUntil(this.destroy$))
             .subscribe(() => {
-                this.displayNextTestimonial();
+                this.displayTestimonials();
             });
     }
-
-    displayNextTestimonial() {
+    displayTestimonials() {
         const index = this.currentTestimonialIndex % this.testimonials.length;
+        this.testimonial1 = [this.testimonials[index]];
 
-        if (index % 2 === 0) {
-            this.testimonial1 = [this.testimonials[index]];
-            if (!this.isMobile) {
-                this.testimonial2 = [this.testimonials[(index + 1) % this.testimonials.length]];
-            }
-        } else {
-            this.testimonial2 = [this.testimonials[index]];
-            this.testimonial1 = [this.testimonials[(index - 1) % this.testimonials.length]];
+        let randomIndex = Math.floor(Math.random() * this.testimonials.length);
+
+        // Ensure randomIndex is different from the first index
+        if (randomIndex === index) {
+            randomIndex = randomIndex < this.testimonials.length ? randomIndex + 1 : randomIndex - 1;
         }
+
+        this.testimonial2 = [this.testimonials[randomIndex]]; // Display the next item
 
         this.currentTestimonialIndex++;
     }
@@ -164,262 +163,3 @@ export class TestomonialsComponent {
         this.destroy$.complete();
     }
 }
-
-// displayedTestimonials: Testimonial[];
-
-// constructor(private breakpointObserver: BreakpointObserver) {}
-
-// ngOnInit() {
-//     console.log(this.shuffleAndUpdateTestimonials())
-
-//     // console.log(this.testomonial1)
-//   this.breakpointObserver
-//     .observe([Breakpoints.Small, Breakpoints.XSmall]) // Define your breakpoints here
-//     .pipe(map((result) => result.matches))
-//     .subscribe((isSmallScreen) => {
-//       this.isMobile = isSmallScreen;
-//       this.displayedTestimonials = isSmallScreen ? this.testomonial1 : this.allTestomonials;
-//     });
-// }
-
-// shuffleAndUpdateTestimonials(): void {
-//     const shuffledTestimonials = this.shuffleArray(this.allTestomonials);
-//     console.log('Shuffled Testimonials:', shuffledTestimonials);
-
-//     this.testomonial2.length = 0; // Clear the existing content of testomonial1
-//     this.testomonial2.push(...shuffledTestimonials); // Push the shuffled testimonials
-//     console.log(this.testomonial2);
-// }
-// constructor() {
-//     this.checkViewportSize();
-// }
-
-// currentTestimonialIndex = 0;
-// displayedTestimonial: Testimonial | undefined;
-
-// ngOnInit(): void {
-//     this.checkViewportSizeOnResize();
-//     this.shuffleAndUpdateTestimonials();
-
-//     if (!this.isMobile) {
-//         this.restartInterval(); // Use restartInterval instead of startInterval
-//         this.displayedTestimonial = this.testomonial1[this.currentTestimonialIndex];
-
-//         const testimonialCard2 = document.querySelector('.example-card2');
-//         if (testimonialCard2) {
-//             testimonialCard2.classList.add('animate-slide-right');
-//         }
-
-//         const testimonialCard1 = document.querySelector('.example-card1');
-//         if (testimonialCard1) {
-//             testimonialCard1.classList.add('animate-slide-left');
-//         }
-//     }
-// }
-// startTestimonialRotation(testimonials: Testimonial[]): number {
-//     let currentIndex = 1;
-//     return setInterval(() => {
-//         this.displayedTestimonial = testimonials[currentIndex];
-//         currentIndex = (currentIndex + 1) % testimonials.length;
-//     }, 7000) as any; // Cast to any if TypeScript is unable to infer the type
-// }
-
-// intervalSubscription: Subscription | undefined;
-
-// animationStarted = false;
-
-// private destroy$: Subject<void> = new Subject<void>();
-
-// startInterval(): void {
-//     let currentIndex = 0; // Adjust this based on your logic
-
-//     this.intervalSubscription = interval(7000)
-//         .pipe(takeUntil(this.destroy$))
-//         .subscribe(() => {
-//             if (!this.isMobile && this.animationStarted) {
-//                 this.displayedTestimonial = this.testomonial1[currentIndex];
-//                 currentIndex = (currentIndex + 1) % this.testomonial1.length;
-//                 this.animationStarted = false; // Reset animation after a certain time (adjust as needed)
-//             }
-//         });
-// }
-
-// // resetInterval(): void {
-// //     clearInterval(this.startTestimonialRotation(this.testomonial1));
-// // }
-// resetInterval(): void {
-//     if (this.intervalSubscription) {
-//         this.intervalSubscription.unsubscribe();
-//     }
-// }
-// restartInterval(): void {
-//     this.resetInterval(); // First, clear any existing interval
-//     let currentIndex = 0; // Adjust this based on your logic
-
-//     this.intervalSubscription = interval(7000)
-//         .pipe(takeUntil(this.destroy$))
-//         .subscribe(() => {
-//             if (!this.isMobile && this.animationStarted) {
-//                 this.displayedTestimonial = this.testomonial1[currentIndex];
-//                 currentIndex = (currentIndex + 1) % this.testomonial1.length;
-//                 this.animationStarted = false; // Reset animation after a certain time (adjust as needed)
-//             }
-//         });
-// }
-
-// checkViewportSize(): void {
-//     this.isMobile = window.innerWidth < 1000;
-// }
-
-// checkViewportSizeOnResize(): void {
-//     window.addEventListener('resize', () => {
-//         this.checkViewportSize();
-//     });
-// }
-
-// ngOnDestroy(): void {
-//     if (this.intervalSubscription) {
-//         this.intervalSubscription.unsubscribe();
-//     }
-//     this.destroy$.next();
-//     this.destroy$.complete();
-// }
-// }
-
-// getAnimationClasses(): string {
-//     if (this.animationStarted && !this.isMobile) {
-//         return 'animate-slide-left';
-//     } else if (this.animationStarted && this.isMobile) {
-//         return 'animate-fade-out';
-//     }
-//     return '';
-// }
-
-// import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
-// import { interval, Subject, Subscription } from 'rxjs';
-// import { takeUntil } from 'rxjs/operators';
-// import { Testimonial } from './testimonial.interface';
-// import { TestimonialService } from '../../../services/testimonial.service';
-
-// @Component({
-//     selector: 'app-testomonials',
-//     templateUrl: './testomonials.component.html',
-//     styleUrls: ['./testomonials.component.scss'],
-// })
-// export class TestomonialsComponent implements OnInit, OnDestroy {
-//     testimonials: Testimonial[] = [];
-//     visibleTestimonials: Testimonial[] = [];
-//     currentIndex = 0;
-//     private destroy$ = new Subject<void>();
-//     private intervalSubscription: Subscription;
-//     animationEnabled = true;
-//     isMobile = false;
-
-//     constructor(private testimonialService: TestimonialService) {}
-
-//     ngOnInit(): void {
-//         this.checkViewportSize();
-//         this.testimonialService.getTestimonials().subscribe((testimonials) => {
-//             this.testimonials = testimonials;
-//             this.updateVisibleTestimonials();
-//             this.startInterval();
-//         });
-//     }
-
-//     ngOnDestroy(): void {
-//         this.destroy$.next();
-//         this.destroy$.complete();
-//         this.clearInterval();
-//     }
-
-//     @HostListener('window:resize')
-//     checkViewportSize(): void {
-//         const previousIsMobile = this.isMobile;
-//         this.isMobile = window.innerWidth < 1000;
-
-//         if (previousIsMobile !== this.isMobile) {
-//             this.clearInterval();
-//             this.updateVisibleTestimonials();
-//             this.resetInterval();
-//         }
-//     }
-
-//     updateVisibleTestimonials(): void {
-//         const count = this.isMobile ? 1 : 2;
-//         const currentIndex = this.currentIndex;
-//         this.visibleTestimonials.splice(0);
-//         const randomIndexes = this.generateRandomIndexes(currentIndex, this.testimonials.length, count);
-//         randomIndexes.forEach((index) => {
-//             this.visibleTestimonials.push({ ...this.testimonials[index] } as Testimonial);
-//         });
-//     }
-
-//     slideLeft(): void {
-//         this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
-//         this.updateVisibleTestimonials();
-//         this.resetInterval();
-//     }
-
-//     slideRight(): void {
-//         this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
-//         this.updateVisibleTestimonials();
-//         this.resetInterval();
-//     }
-
-//     startInterval(): void {
-//         this.intervalSubscription = interval(7000)
-//             .pipe(takeUntil(this.destroy$))
-//             .subscribe(() => {
-//                 if (this.animationEnabled) {
-//                     this.slideRight();
-//                 }
-//             });
-//     }
-
-//     clearInterval(): void {
-//         if (this.intervalSubscription) {
-//             this.intervalSubscription.unsubscribe();
-//         }
-//     }
-
-//     resetInterval(): void {
-//         this.clearInterval();
-//         this.startInterval();
-//     }
-
-//     onMouseEnterTimeout: any;
-
-//     onMouseEnter(): void {
-//         this.clearInterval();
-//         this.onMouseEnterTimeout = setTimeout(() => {
-//             this.animationEnabled = false;
-//         }, 2000);
-//     }
-
-//     onMouseLeave(): void {
-//         clearTimeout(this.onMouseEnterTimeout);
-//         this.animationEnabled = true;
-//         this.startInterval();
-//     }
-
-//     onTouchStart(): void {
-//         this.clearInterval();
-//         this.animationEnabled = false;
-//     }
-
-//     generateRandomIndexes(currentIndex: number, length: number, count: number): number[] {
-//         const availableIndexes = Array.from({ length }, (_, i) => i);
-//         const remainingIndexes = availableIndexes.filter((index) => index !== currentIndex);
-//         const shuffledIndexes = this.shuffleArray(remainingIndexes);
-//         return shuffledIndexes.slice(0, count);
-//     }
-
-//     shuffleArray(array: any[]): any[] {
-//         const newArray = array.slice();
-//         for (let i = newArray.length - 1; i > 0; i--) {
-//             const j = Math.floor(Math.random() * (i + 1));
-//             [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-//         }
-//         return newArray;
-//     }
-// }

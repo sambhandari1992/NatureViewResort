@@ -5,7 +5,7 @@
         </div>
         <div class="box2">
             <ng-container *ngFor="let item of testimonial1">
-                <mat-card class="example-card1" [ngClass]="{'animate-slide-right': !isMobile, 'animate-fade-out': isMobile}">
+                <mat-card class="example-card1" [ngClass]="{ 'animate-slide-right': !isMobile, 'animate-fade-out': isMobile }">
                     <mat-card-header>
                         <div mat-card-avatar class="example-header-image"></div>
                         <mat-card-title>{{ item.name }}</mat-card-title>
@@ -22,7 +22,7 @@
 
             <ng-template [ngIf]="!isMobile">
                 <ng-container *ngFor="let item of testimonial2">
-                    <mat-card class="example-card2" [ngClass]="{'animate-slide-left': !isMobile}">
+                    <mat-card class="example-card2" [ngClass]="{ 'animate-slide-left': !isMobile }">
                         <mat-card-header>
                             <div mat-card-avatar class="example-header-image"></div>
                             <mat-card-title>{{ item.name }}</mat-card-title>
@@ -44,45 +44,3 @@
         </div>
     </div>
 </main>
-
-<!-- <ng-template #desktopView>
-                <mat-card *ngFor="let testimonial of testomonial2" [class]="'example-card' + testimonial.id">
-                    <mat-card-header>
-                        <div mat-card-avatar class="example-header-image"></div>
-                        <mat-card-title>{{ testimonial.name }}</mat-card-title>
-                        <mat-card-subtitle>{{ testimonial.country }}</mat-card-subtitle>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <p>{{ testimonial.description }}</p>
-                    </mat-card-content>
-                    <mat-card-actions align="end">
-                        <button mat-button>{{ testimonial.date }}</button>
-                    </mat-card-actions>
-                </mat-card>
-            </ng-template> -->
-
-<!-- <mat-card class="testimonial-card">
-                <mat-card-content>
-                    <div class="profile">
-                        <h3>Sam</h3>
-                        <img src="../../../../../assets/images/sam.JPG" class="responsive-image" />
-                    </div>
-                    <p>Cum sociis natoque penatibus et magnis dis parturient montes...</p>
-                </mat-card-content>
-            </mat-card> -->
-
-<!-- <mat-card class="testimonial-card">
-                <mat-card-header>
-                    <div mat-card-avatar class="example-header-image" ></div>
-                    <mat-card-title>Sam Bhandari</mat-card-title>
-                    <mat-card-subtitle>Nepal</mat-card-subtitle>
-                </mat-card-header>
-                <mat-card-content>
-                    <p>Cum sociis natoque penatibus et magnis dis parturient montes...</p>
-                </mat-card-content>
-                <mat-card-actions align="end">
-                    <button mat-button>09-12-1998</button>
-                </mat-card-actions>
-            </mat-card> -->
-
-<!-- <mat-icon class="arrow-icons-up" (click)="slideLeft()">arrow_circle_right</mat-icon> -->
