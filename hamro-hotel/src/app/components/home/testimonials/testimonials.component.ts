@@ -1,7 +1,10 @@
 import { Component, HostListener } from '@angular/core';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { interval, Subject, Subscription, takeUntil } from 'rxjs';
+import { DialogService } from 'src/app/services/dialogs.service';
 import { TestimonialService } from 'src/app/services/testimonial.service';
 import { Testimonials } from './testimonial.interface';
+import { ViewAllReviewsComponent } from './view-all-reviews/view-all-reviews.component';
 
 @Component({
     selector: 'app-testimonials',
@@ -20,12 +23,43 @@ export class TestimonialsComponent {
     myTestimonials: Testimonials[] = [];
     intervalSubscription: Subscription | undefined;
 
-    constructor(private testimonialService: TestimonialService) {}
+    constructor(public dialog: MatDialog, private testimonialService: TestimonialService, private dialogService: DialogService) {}
 
     ngOnInit() {
         this.fetchTestimonials();
         this.checkViewportSize();
     }
+
+    // openDialog() {
+    //     const dialogRef = this.dialog.open(ViewAllReviewsComponent);
+    
+    //     dialogRef.afterClosed().subscribe(result => {
+    //       console.log(`Dialog result: ${result}`);
+    //     });
+    //   }
+
+    openViewAllReviewsDialog(): void {
+        this.dialogService.viewAllReviews();
+    }
+
+    // fetchTestimonials() {
+    //     this.testimonialService.getTestimonials().subscribe({
+    //         next: (data) => {
+    //             if (data.length === 0) {
+    //                 console.log('No testimonials available.');
+    //             } else {
+    //                 this.myTestimonials.push(...data);
+    //                 this.shuffleAndUpdateTestimonials();
+    //                 this.displayTestimonials();
+    //                 this.showTestimonials();
+    //             }
+    //         },
+    //         error: (error) => {
+    //             console.error('Error fetching testimonials:', error);
+    //         },
+    //     });
+    // }
+
     fetchTestimonials() {
         this.testimonialService.getTestimonials().subscribe({
             next: (data) => {
@@ -40,6 +74,8 @@ export class TestimonialsComponent {
             },
             error: (error) => {
                 console.error('Error fetching testimonials:', error);
+                // Handle error scenario here
+                // For instance, setting a default value or showing an error message
             },
         });
     }

@@ -45,6 +45,7 @@ import { HomeAboutComponent } from './components/home/home-about/home-about.comp
 import { HomeFacilitieComponent } from './components/home/home-facilitie/home-facilitie.component';
 import { UsefulInfoComponent } from './components/footer/useful-information/useful-info.component';
 import { TermsAndConditionComponent } from './components/footer/terms-and-condition/terms-and-condition.component';
+import { ViewAllReviewsComponent } from './components/home/testimonials/view-all-reviews/view-all-reviews.component';
 
 @NgModule({
     declarations: [
@@ -85,6 +86,7 @@ import { TermsAndConditionComponent } from './components/footer/terms-and-condit
         HomeFacilitieComponent,
         UsefulInfoComponent,
         TermsAndConditionComponent,
+        ViewAllReviewsComponent
     ],
     imports: [BrowserModule, FormsModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule, ReactiveFormsModule, NgxMapLibreGLModule, GoogleMapsModule, HttpClientModule],
     providers: [],

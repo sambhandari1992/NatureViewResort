@@ -8,7 +8,7 @@ import { Reviews } from './reviews.interface';
   providedIn: 'root'
 })
 export class ReviewsService {
-  private reviewsUrl = 'assets/testimonials.json'; // Path to your JSON file
+  private reviewsUrl = '/assets/json/testimonials.json'; // Path to your JSON file
 
   constructor(private http: HttpClient) { }
 

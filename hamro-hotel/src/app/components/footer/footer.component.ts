@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ContentService } from 'src/app/services/content.services';
 import { CustomIcon } from 'src/app/services/custom-icon.service';
+import { DialogService } from 'src/app/services/dialogs.service';
 import { ContactInfoItem } from '../contact/contact.interface';
 import { NavData } from '../nav/nav.interface';
 import { TermsAndConditionComponent } from './terms-and-condition/terms-and-condition.component';
@@ -16,32 +17,18 @@ export class FooterComponent {
     navData: NavData;
     contactInfoData: ContactInfoItem[];
 
-    constructor(private contentService: ContentService, private iconService: CustomIcon, public dialog: MatDialog) {
+    constructor(private contentService: ContentService, private iconService: CustomIcon, public dialog: MatDialog,private dialogService: DialogService) {
         this.navData = this.contentService.navItems as NavData;
         this.contactInfoData = this.contentService.contactInfo;
     }
 
-    openTermsAndConditionDialog(): void {
-        const dialogRef = this.dialog.open(TermsAndConditionComponent, {
-            // width: '2000px',
-        });
-
-        dialogRef.afterClosed().subscribe((result) => {
-            console.log(`Dialog result: ${result}`);
-        });
-    }
-
-    openUsefulInfoDialog(): void {
-        const dialogRef = this.dialog.open(UsefulInfoComponent, {
-            // width: '600px',
-        });
-
-        dialogRef.afterClosed().subscribe((result) => {
-            console.log(`Dialog result: ${result}`);
-        });
-    }
-
     getCombinedLinks(): any[] {
         return [...this.navData.sideLinks, ...this.navData.exploreLinks];
+    }
+    openTermsAndConditionDialog(): void {
+        this.dialogService.openTermsAndConditions();
+    }
+    openUsefulInfoDialog(): void {
+        this.dialogService.openUsefulInfo();
     }
 }
