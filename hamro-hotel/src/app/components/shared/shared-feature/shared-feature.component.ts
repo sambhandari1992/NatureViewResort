@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Testimonial } from '../../home/testomonials/testimonial.interface';
+import { Testimonials } from '../../home/testimonials/testimonial.interface';
 
 @Component({
     selector: 'app-shared-feature',
@@ -8,7 +8,7 @@ import { Testimonial } from '../../home/testomonials/testimonial.interface';
 })
 export class SharedFeatureComponent {
     @Input() title: string;
-    @Input() testimonials: Testimonial[];
+    @Input() testimonials: Testimonials[];
 
     // Other component logic goes here
 }

@@ -1,0 +1,50 @@
+<main class="exclude-global-style">
+    <div class="testimonial">
+        <div class="box1">
+            <h2 class="content">Testimonial</h2>
+        </div>
+        <div class="box2">
+            <ng-container *ngIf="myTestimonials.length > 0; else noTestimonials"> 
+                <ng-container *ngFor="let item of testimonial1; let i = index">
+                    <mat-card class="example-card1" [ngClass]="{ 'animate-slide-right': !isMobile, 'animate-fade-out': isMobile }">
+                        <mat-card-header>
+                            <div mat-card-avatar [style.background-image]="'url(' + item.imgUrl + ')'" class="example-header-image"></div>
+                            <mat-card-title>{{ item?.name }}</mat-card-title>
+                            <mat-card-subtitle>{{ item?.country }}</mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p>{{ item?.description }}</p>
+                        </mat-card-content>
+                        <mat-card-actions align="end">
+                            <button mat-button>{{ item?.date }}</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+                <ng-template [ngIf]="!isMobile">
+                    <ng-container *ngFor="let item of testimonial2">
+                        <mat-card class="example-card2" [ngClass]="{ 'animate-slide-left': !isMobile }">
+                            <mat-card-header>
+                                <div mat-card-avatar [style.background-image]="'url(' + item.imgUrl + ')'" class="example-header-image"></div>
+                                <mat-card-title>{{ item?.name }}</mat-card-title>
+                                <mat-card-subtitle>{{ item?.country }}</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <p>{{ item?.description }}</p>
+                            </mat-card-content>
+                            <mat-card-actions align="end">
+                                <button mat-button>{{ item?.date }}</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </ng-container>
+                </ng-template>
+            </ng-container>
+            <ng-template #noTestimonials>
+                <p>No testimonials available.</p>
+            </ng-template>
+        </div>
+        <div class="box3">
+            <button (click)="openViewAllReviewsDialog()" class="content" mat-raised-button>View All Review</button>
+            <button class="content" mat-raised-button>Leave a Review</button>
+        </div>
+    </div>
+</main>

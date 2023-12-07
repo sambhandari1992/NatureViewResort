@@ -1,0 +1,38 @@
+.example-header-image {
+    background-size: cover;
+}
+
+mat-dialog-content {
+    mat-card {
+        margin: 1em;
+    }
+}
+
+@media (max-width: 500px) {
+    :host-context(.dialog-content-sm) mat-card {
+        font-size: small;
+        mat-card-header {
+            mat-card-title {
+                font-size: small;
+            }
+            mat-card-subtitle {
+                font-size: x-small;
+            }
+        }
+
+        mat-card-content p {
+            margin: 0;
+            font-size: xx-small;
+        }
+
+        mat-card-actions button {
+            font-size: xx-small;
+        }
+    }
+
+    mat-dialog-actions {
+        button {
+            font-size: xx-small;
+        }
+    }
+}

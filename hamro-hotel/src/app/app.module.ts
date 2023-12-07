@@ -36,7 +36,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { FancyWordsComponent } from './components/home/fancy-words/fancy-words.component';
 import { GoogleMapComponent } from './components/footer/google-map/google-map.component';
 import { SharedFeatureComponent } from './components/shared/shared-feature/shared-feature.component';
-import { TestomonialsComponent } from './components/home/testomonials/testomonials.component';
+import { TestimonialsComponent } from './components/home/testimonials/testimonials.component';
 import { TopicComponent } from './components/shared/topic/topic.component';
 import { GalleryUploadComponent } from './components/gallery-upload/gallery-upload.component';
 import { HighlightsComponent } from './components/home/highlights/highlights.component';
@@ -45,6 +45,7 @@ import { HomeAboutComponent } from './components/home/home-about/home-about.comp
 import { HomeFacilitieComponent } from './components/home/home-facilitie/home-facilitie.component';
 import { UsefulInfoComponent } from './components/footer/useful-information/useful-info.component';
 import { TermsAndConditionComponent } from './components/footer/terms-and-condition/terms-and-condition.component';
+import { ViewAllReviewsComponent } from './components/home/testimonials/view-all-reviews/view-all-reviews.component';
 
 @NgModule({
     declarations: [
@@ -75,7 +76,7 @@ import { TermsAndConditionComponent } from './components/footer/terms-and-condit
         FancyWordsComponent,
         GoogleMapComponent,
         SharedFeatureComponent,
-        TestomonialsComponent,
+        TestimonialsComponent,
         TopicComponent,
         GalleryUploadComponent,
         GalleryComponent,
@@ -85,6 +86,7 @@ import { TermsAndConditionComponent } from './components/footer/terms-and-condit
         HomeFacilitieComponent,
         UsefulInfoComponent,
         TermsAndConditionComponent,
+        ViewAllReviewsComponent
     ],
     imports: [BrowserModule, FormsModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule, ReactiveFormsModule, NgxMapLibreGLModule, GoogleMapsModule, HttpClientModule],
     providers: [],
