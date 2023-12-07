@@ -36,7 +36,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { FancyWordsComponent } from './components/home/fancy-words/fancy-words.component';
 import { GoogleMapComponent } from './components/footer/google-map/google-map.component';
 import { SharedFeatureComponent } from './components/shared/shared-feature/shared-feature.component';
-import { TestomonialsComponent } from './components/home/testomonials/testomonials.component';
+import { TestimonialsComponent } from './components/home/testimonials/testimonials.component';
 import { TopicComponent } from './components/shared/topic/topic.component';
 import { GalleryUploadComponent } from './components/gallery-upload/gallery-upload.component';
 import { HighlightsComponent } from './components/home/highlights/highlights.component';
@@ -75,7 +75,7 @@ import { TermsAndConditionComponent } from './components/footer/terms-and-condit
         FancyWordsComponent,
         GoogleMapComponent,
         SharedFeatureComponent,
-        TestomonialsComponent,
+        TestimonialsComponent,
         TopicComponent,
         GalleryUploadComponent,
         GalleryComponent,
