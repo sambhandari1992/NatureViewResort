@@ -1,0 +1,47 @@
+<main>
+    <section class="section1">
+        <h2 mat-dialog-title>Your rating</h2>
+        <div class="icons">
+            <mat-icon svgIcon="fill-star"></mat-icon>
+            <mat-icon svgIcon="fill-star"></mat-icon>
+            <mat-icon svgIcon="fill-star"></mat-icon>
+            <mat-icon svgIcon="fill-star"></mat-icon>
+            <!-- <mat-icon svgIcon="half-star"></mat-icon> -->
+            <mat-icon svgIcon="empty-star"></mat-icon>
+        </div>
+    </section>
+    <section class="section2">
+        <mat-dialog-content class="mat-typography" class="exclude-global-style">
+            <h2>Leave a Review</h2>
+
+            <form class="expanded-form">
+                <div class="child">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Your First Name</mat-label>
+                        <input matInput placeholder="Enter your first name" required />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Your Last Name</mat-label>
+                        <input matInput placeholder="Enter your last name" required />
+                    </mat-form-field>
+                </div>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Country From</mat-label>
+                    <input matInput placeholder="Enter where you visit us from" required />
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Tell us your experience with us</mat-label>
+                    <textarea matInput placeholder="Type your message" required></textarea>
+                </mat-form-field>
+
+                <button routerLink="/contact" mat-fab extended color="warn">Submit</button>
+            </form>
+        </mat-dialog-content>
+    </section>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Close</button>
+    </mat-dialog-actions>
+</main>

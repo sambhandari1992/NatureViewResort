@@ -4,7 +4,6 @@ import { interval, Subject, Subscription, takeUntil } from 'rxjs';
 import { DialogService } from 'src/app/services/dialogs.service';
 import { TestimonialService } from 'src/app/services/testimonial.service';
 import { Testimonials } from './testimonial.interface';
-import { ViewAllReviewsComponent } from './view-all-reviews/view-all-reviews.component';
 
 @Component({
     selector: 'app-testimonials',
@@ -30,35 +29,12 @@ export class TestimonialsComponent {
         this.checkViewportSize();
     }
 
-    // openDialog() {
-    //     const dialogRef = this.dialog.open(ViewAllReviewsComponent);
-    
-    //     dialogRef.afterClosed().subscribe(result => {
-    //       console.log(`Dialog result: ${result}`);
-    //     });
-    //   }
-
     openViewAllReviewsDialog(): void {
         this.dialogService.viewAllReviews();
     }
-
-    // fetchTestimonials() {
-    //     this.testimonialService.getTestimonials().subscribe({
-    //         next: (data) => {
-    //             if (data.length === 0) {
-    //                 console.log('No testimonials available.');
-    //             } else {
-    //                 this.myTestimonials.push(...data);
-    //                 this.shuffleAndUpdateTestimonials();
-    //                 this.displayTestimonials();
-    //                 this.showTestimonials();
-    //             }
-    //         },
-    //         error: (error) => {
-    //             console.error('Error fetching testimonials:', error);
-    //         },
-    //     });
-    // }
+    openAddReviewsDialog(): void {
+        this.dialogService.addReviews();
+    }
 
     fetchTestimonials() {
         this.testimonialService.getTestimonials().subscribe({

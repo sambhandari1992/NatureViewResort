@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { UsefulInfoComponent } from '../components/footer/useful-information/useful-info.component';
 import { TermsAndConditionComponent } from '../components/footer/terms-and-condition/terms-and-condition.component';
 import { ViewAllReviewsComponent } from '../components/home/testimonials/view-all-reviews/view-all-reviews.component';
+import { AddReviewComponent } from '../components/home/testimonials/add-review/add-review.component';
 
 @Injectable({
     providedIn: 'root',
@@ -15,30 +16,37 @@ export class DialogService {
             // width: '400px',
         });
 
-        dialogRef.afterClosed().subscribe(result => {
-            console.log("active");
+        dialogRef.afterClosed().subscribe((result) => {
+            console.log(result);
         });
     }
 
     openTermsAndConditions(): void {
         const dialogRef = this.dialog.open(TermsAndConditionComponent, {
             // width: '400px',
-
         });
 
-        dialogRef.afterClosed().subscribe(result => {
-            console.log("active");
+        dialogRef.afterClosed().subscribe((result) => {
+            console.log(result);
         });
     }
 
     viewAllReviews(): void {
         const dialogRef = this.dialog.open(ViewAllReviewsComponent, {
-            width: '1000px',
             panelClass: 'dialog-content-sm',
         });
 
-        dialogRef.afterClosed().subscribe(result => {
-            console.log("works");
+        dialogRef.afterClosed().subscribe((result) => {
+            console.log(result);
+        });
+    }
+    addReviews(): void {
+        const dialogRef = this.dialog.open(AddReviewComponent, {
+            width: '1000px',
+        });
+
+        dialogRef.afterClosed().subscribe((result) => {
+            console.log(result);
         });
     }
 }

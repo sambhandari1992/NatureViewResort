@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { ReviewsService } from './reviews.service';
-import { Reviews } from './reviews.interface'; 
+import { ReviewsService } from './view-all-reviews.service';
+import { Testimonials } from '../testimonial.interface'; 
 
 @Component({
     selector: 'app-view-all-reviews',
@@ -10,7 +10,7 @@ import { Reviews } from './reviews.interface';
     styleUrls: ['./view-all-reviews.component.scss'],
 })
 export class ViewAllReviewsComponent implements OnInit, OnDestroy {
-    reviews$: Observable<Reviews[]>; 
+    reviews$: Observable<Testimonials[]>; 
     private destroy$ = new Subject<void>();
 
     constructor(private reviewsService: ReviewsService) {}
