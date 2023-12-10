@@ -1,0 +1,14 @@
+<form class="example-form">
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Country</mat-label>
+        <input matInput placeholder="Country you visit from" aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl" />
+        <mat-autocomplete #auto="matAutocomplete">
+            <ng-container *ngFor="let item of myountriesNameAndSvgData">
+                <mat-option [value]="item.name">
+                    <img alt="" class="example-option-img" [src]="item.flag" height="25" />
+                    <span>{{ item.name }}</span>
+                </mat-option>
+            </ng-container>
+        </mat-autocomplete>
+    </mat-form-field>
+</form>

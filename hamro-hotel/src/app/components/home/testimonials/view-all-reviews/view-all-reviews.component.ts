@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { ReviewsService } from './view-all-reviews.service';
+import { TestimonialService } from 'src/app/services/testimonial.service';
 import { Testimonials } from '../testimonial.interface'; 
 
 @Component({
@@ -13,10 +13,10 @@ export class ViewAllReviewsComponent implements OnInit, OnDestroy {
     reviews$: Observable<Testimonials[]>; 
     private destroy$ = new Subject<void>();
 
-    constructor(private reviewsService: ReviewsService) {}
+    constructor(private testimonialService: TestimonialService) {}
 
     ngOnInit(): void {
-        this.reviews$ = this.reviewsService.getReviews().pipe(takeUntil(this.destroy$));
+        this.reviews$ = this.testimonialService.getTestimonials().pipe(takeUntil(this.destroy$));
 
         // this.reviews$.subscribe({
         //     next: (reviews) => console.log(reviews),

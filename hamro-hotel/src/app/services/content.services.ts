@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import * as navDataJSON from '../../assets/json/nav.json';
 import * as loginInfoDataJSON from '../../assets/json/login-info.json';
-import * as homeInfoDataJSON from '../../assets/json/home-about.json';
+import * as homeInfoDataJSON from '../../assets/json/home/home-about.json';
 import * as fancyWordDataJSON from '../../assets/json/fancy-word.json';
 import * as contactInfoDataJSON from '../../assets/json/contact-info.json'
-import * as testimonialsDataJSON from '../../assets/json/testimonials.json';
+import * as testimonialsDataJSON from '../../assets/json/home/testimonials.json';
 import * as termsAndConditionJSON from '../../assets/json/terms-and-conditions.json';
 import * as usefulInfoJSON from '../../assets/json/useful-info.json';
 
