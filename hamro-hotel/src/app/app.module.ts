@@ -47,7 +47,7 @@ import { UsefulInfoComponent } from './components/footer/useful-information/usef
 import { TermsAndConditionComponent } from './components/footer/terms-and-condition/terms-and-condition.component';
 import { ViewAllReviewsComponent } from './components/home/testimonials/view-all-reviews/view-all-reviews.component';
 import { AddReviewComponent } from './components/home/testimonials/add-review/add-review.component';
-import { MatFormFieldCountryComponent } from './components/dining/mat-form-field-country/mat-form-field-country.component';
+import { MatFormFieldCountryComponent } from './components/home/testimonials/add-review/mat-form-field-country/mat-form-field-country.component';
 
 @NgModule({
     declarations: [
