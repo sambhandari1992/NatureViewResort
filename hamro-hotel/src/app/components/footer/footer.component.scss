@@ -4,7 +4,7 @@ footer {
 
     main {
         display: flex;
-        gap: 3em;
+        gap: 1em;
         flex-wrap: wrap;
         justify-content: center;
 
@@ -37,6 +37,16 @@ footer {
                     min-width: 200px;
                 }
             }
+            .social-media {
+                display: flex;
+                gap: 0.5em;
+                align-items: center;
+                justify-content: center;
+                @media (max-width: 350px) {
+                    font-size: small;
+                }
+            }
+
         }
     }
 
